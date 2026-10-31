@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Syllabusलय – CTEVT Diploma in Engineering</title>
+<style>
+:root{--bg:#f5f8ff;--card:#fff;--ink:#0f1b3d;--mute:#5b6784;--pri:#0a3fc4;--pri2:#0a84ff;--line:#dbe4f7;--ok:#0b8a4b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1226;--card:#121c38;--ink:#e8eeff;--mute:#9aa8cc;--pri:#6ea2ff;--pri2:#3d8bff;--line:#223056;--ok:#4cd68a}}
+:root[data-theme="dark"]{--bg:#0b1226;--card:#121c38;--ink:#e8eeff;--mute:#9aa8cc;--pri:#6ea2ff;--pri2:#3d8bff;--line:#223056;--ok:#4cd68a}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:20px 16px 60px}
+header{display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+header img{width:52px;height:52px;border-radius:12px;object-fit:cover;flex:none}
+header .home-brand{display:flex;align-items:center;gap:12px;flex:1;min-width:120px;color:inherit;text-decoration:none;border-radius:10px;cursor:pointer}
+header .home-brand:hover h1{text-decoration:underline;text-decoration-color:var(--pri);text-underline-offset:4px}
+header .home-brand:focus-visible{outline:2px solid var(--pri);outline-offset:4px}
+header .brand{flex:1;min-width:120px}
+h1{font-size:1.35rem;margin:0;line-height:1.2}
+header p{margin:2px 0 0;color:var(--mute);font-size:.85rem}
+header .top-search{flex:1;min-width:140px;max-width:280px;margin-left:auto}
+header .top-search input{width:100%;padding:9px 12px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:.9rem;font-family:inherit}
+header .top-search input:focus{outline:none;border-color:var(--pri)}
+button.th{flex:none;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:8px 10px;cursor:pointer}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px}
+.stat b{display:block;font-size:1.4rem;color:var(--pri)}.stat span{font-size:.8rem;color:var(--mute)}
+.bar{height:8px;background:var(--line);border-radius:8px;overflow:hidden;margin-bottom:16px}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--pri),var(--pri2));transition:width .3s}
+/* search in header .top-search */
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:10px}
+.tabs button{flex:none;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;font-size:.9rem}
+.progs button{font-weight:600}
+.prog-group{margin:10px 0 12px}
+.education-toggle{border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:var(--card);margin:10px 0 14px}
+.education-toggle>summary{cursor:pointer;list-style:none;font-weight:800;font-size:1.02rem;padding:4px 2px;display:flex;align-items:center;justify-content:flex-start;gap:12px;flex-wrap:wrap}.education-toggle>summary::-webkit-details-marker{display:none}.education-toggle>summary::before{content:"▶";display:inline-block;font-size:.78em;color:var(--pri);transition:transform .18s ease;flex:0 0 auto}.education-toggle[open]>summary::before{transform:rotate(90deg)}.education-toggle>summary .education-search{display:flex;align-items:center;gap:10px;margin-left:auto;padding-left:12px}.education-toggle>summary .search-icon{width:32px;height:32px;border:1px solid var(--line);border-radius:50%;background:var(--bg);color:var(--pri);font-size:1.1rem;cursor:pointer;display:grid;place-items:center}.education-toggle>summary .search-input-wrap{width:min(170px,38vw)}.education-toggle>summary .search-input-wrap[hidden]{display:none}.education-toggle>summary .search-input-wrap input{width:100%;min-width:0;padding:7px 10px;border-radius:18px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;font-size:.84rem}.education-toggle>summary .search-input-wrap input:focus{outline:2px solid var(--pri);outline-offset:1px}
+.education-toggle-content{padding-top:8px}
+.prog-label{font-size:.78rem;font-weight:700;letter-spacing:.06em;color:var(--mute);margin:0 0 6px 2px;text-transform:uppercase}
+.prog-row{display:flex;gap:8px;overflow-x:auto;padding:0 0 6px}
+.tabs button.on{background:var(--pri);border-color:var(--pri);color:#fff}
+:root:not([data-theme="light"]) .tabs button.on{color:#06122e}
+.sub{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;padding:12px 14px}
+.row{display:flex;align-items:flex-start;gap:12px}
+.row input{width:20px;height:20px;margin-top:3px;accent-color:var(--pri);flex:none}
+.row .t{flex:1;min-width:0}.t strong{display:block}.t small{color:var(--mute)}
+.mk{font-weight:600;color:var(--pri);white-space:nowrap}
+.done strong{text-decoration:line-through;color:var(--mute)}
+details{margin:8px 0 0 32px}summary{cursor:pointer;color:var(--pri);font-size:.88rem}
+details ul{margin:6px 0 0;padding-left:18px;color:var(--mute);font-size:.9rem}
+.tot{text-align:right;color:var(--mute);font-size:.9rem;margin:4px 2px 14px}
+.info{background:var(--card);border:1px dashed var(--line);border-radius:14px;padding:12px 14px;color:var(--mute);font-size:.88rem}
+.tag{display:inline-block;font-size:.72rem;border:1px solid var(--line);border-radius:6px;padding:0 6px;margin-left:6px;color:var(--mute)}
+/* th in header */
+body.emb{--bg:#101014;--card:#19191f;--line:#292930;--ink:#f7f7fa;--mute:#92929c;--pri:#25e5dc;--pri2:#ff315b}body.emb .wrap{padding-top:78px}body.emb .tabs button.on{color:#101014}body.emb .th{display:none}
+
+.topics{list-style:none;padding-left:0}
+.topics>li{margin:4px 0}
+.topics details{margin:2px 0 2px 8px}
+.prog-group{margin:10px 0;padding:8px 10px;border:1px solid var(--line);border-radius:10px}
+.prog-group>summary,.ctevt-faculty-toggle>summary{cursor:pointer;color:var(--pri);font-weight:650;padding:5px 0;display:flex;align-items:center;gap:10px;flex-wrap:wrap}.prog-group>summary{list-style:none}.prog-group>summary::-webkit-details-marker{display:none}.prog-group>summary::before{content:"▶";display:inline-block;flex:0 0 14px;width:14px;font-size:.72em;line-height:1;color:var(--pri);transition:transform .18s ease}.prog-group[open]>summary::before{transform:rotate(90deg)}.prog-group{position:relative;padding-right:42px}.prog-group>.prog-label{display:block;padding-right:4px}.study-places-btn{position:absolute;top:2px;right:2px;margin:0;border:0;border-radius:8px;padding:4px 7px;background:transparent;color:var(--pri);font:inherit;font-size:1.15rem;line-height:1;cursor:pointer;white-space:nowrap;display:inline-flex;align-items:center;justify-content:center}.study-places-btn:hover,.study-places-btn:focus-visible{background:var(--bg);outline:2px solid var(--pri);outline-offset:2px}.study-places-panel{margin:8px 0 12px;padding:12px;border:1px dashed var(--line);border-radius:12px;background:var(--card)}.study-places-panel[hidden]{display:none}.study-places-panel h4{margin:0 0 7px;font-size:.9rem}.study-places-panel p{margin:5px 0;font-size:.82rem;color:var(--mute)}.study-place-links{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}.study-place-links a{display:inline-block;padding:6px 10px;border:1px solid var(--line);border-radius:18px;color:var(--pri);text-decoration:none;font-size:.78rem}.study-place-links a:hover{border-color:var(--pri)}
+.ctevt-faculty-toggle{margin:6px 0 6px 14px;padding:5px 10px;border-left:2px solid var(--line)}
+.topics summary{font-weight:500;color:var(--pri)}
+.topics ul{margin:4px 0 6px 12px;padding-left:14px;color:var(--mute);font-size:.88rem}
+
+.papers{margin:8px 0 0 32px;font-size:.88rem}
+.papers a{color:var(--pri);text-decoration:none;border-bottom:1px dashed var(--line)}
+.papers a:hover{border-bottom-style:solid}
+.tlinks{white-space:nowrap;margin-left:4px}
+.tlinks a{color:var(--pri);text-decoration:none;font-size:.78rem;margin-left:3px;opacity:.8}
+.tlinks a:hover{opacity:1}
+.res{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:16px 0;font-size:.9rem;color:var(--mute)}
+.res h3{margin:0 0 8px;color:var(--ink);font-size:1rem}
+.res ul{margin:6px 0 0;padding-left:18px}
+.res li{margin:4px 0}
+
+.university-toggle{border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:var(--card)}
+.university-toggle>summary,.university-item>summary{cursor:pointer;font-weight:700;padding:5px 2px}
+.university-list{display:grid;gap:10px;margin-top:10px}
+.university-item{border:1px solid var(--line);border-radius:10px;padding:9px;background:var(--bg)}
+.university-item .prog-row,.university-list>.prog-row{margin-top:8px}
+body.intro-only #tabs,body.intro-only #list,body.intro-only #tot{display:none!important}
+body.intro-only header{display:flex!important;align-items:center;margin-bottom:18px}
+body.intro-only header .top-search,body.intro-only header .th,body.intro-only header #sub{display:none!important}
+body.intro-only .wrap{padding-top:20px}
+
+.subject-open{border:1px solid var(--line);border-radius:12px;padding:12px;background:var(--card)}.subject-open>summary{cursor:pointer;list-style:none;font-weight:650}.subject-open>summary::-webkit-details-marker{display:none}.subject-open>summary:after{content:"＋";float:right;color:var(--pri)}.subject-open[open]>summary:after{content:"−"}.subject-content{padding-top:10px}.subject-content .row{margin-top:4px}
+</style></head><body class="intro-only"><div class="wrap">
+<header id="home">
+<a class="home-brand" href="#home" aria-label="Syllabusलय home" title="Back to top">
+<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCACgAKADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD7Kooryn42/FaLwiraJopjn1uRMux5S1U9CR3Y9h+J9D14HA18dWVGgryf4eb8jmxeLpYSk6tV2SO38YeMfDvhO2E2t6jHA7DMcK/NLJ9FHP49K8g8QftCSmRo/D+hIqDgTXsmSffYvT/vqvC9S1G91O+lvtQupbq6mO6SWVizMfrVcNX6dl/BmCw8U8R78vuX3f5n5/juKMXWbVD3I/e/v/yPVJ/jf46kbKXVjCPRLVSP1zUY+NXj7/oJWv8A4CJ/hXmIfFKZPSvaWQ5cv+XEfuR4zzXMH/y+l97PTv8AhdPj3/oJWv8A4CJ/hSj40+Pf+gla/wDgIn+FeYeZ7ik833FH9g5f/wA+I/chf2pmH/P6X3s9QPxp8e/9BK1/8BI/8KT/AIXT4+/6CVr/AOAkf+FeYxu8kiRoNzuwVQO5PSvT4vgZ4/dQWTTI89mu+n5Ka48VgclwdvbwhG+10jqw1fOMTf2M5yt2bE/4XT49/wCgla/+Akf+FKPjR49P/MStf/ARP8KWT4F+PkGVXS5PZbv/ABUV5jP5lvcSW8y7JInKOvoQcEfnRhcDkuMv7CEJW3skGJr5xhre1nON+7Z6afjR4+/6CVr/AOAif4UD40+Pv+gla/8AgJH/AIV5gZvegS12f2Dl/wDz4j9yOT+1Mw/5/S+9np5+NHj0f8xK1/8AASP/AAp8Pxu8dRuC93YzD0e1XH6Yry4y0hkpf2Dlz/5cR+5DWa5h/wA/pfez3jw/+0HcLIqa/oUbp3lsnKkf8AbOfzFeveDvGnhzxbbmTRNSjmkUZkt3+SVPqp5/EZHvXxM0nFPsNQvNOvYr6wupbW5hbdHLExVlPsRXj5hwXgsRFvD+5L7181/ke1gOJ8ZRaVf34/j9/wDmfe9JXknwP+LUfizZoOutHDrarmKQfKl2B1wOz9yO/UeleuV+Y4/AV8BWdGurNfj5ryP0DCYuli6Sq0ndP+tTkvix4vi8E+C7vWDta6P7mzjb+OZs4/AcsfYV8W3l9c397Ne3k7z3M8hklkc5Z2JySa9b/a88QPc+MdO8PI58mwtvOdc9ZJD/AEVV/M14qj8V+o8IZfHC4FVmveqa/Lov1+Z8LxJipYjE+zXwx0+fX/IuBjTt9VPM/wA5pDL719Xc+b9nctNL71t+DvC3iHxdf/Y9B06W5KkeZKfljiHqzHgfz9q5dpPevpz9kbxNDe+GL7wxJsW50+UzxgDBeKQ8k+pDZ/AivHz3Ma2X4OVejHmatv0v18z1Mpy+li8QqVR2T/HyLPgr4AaJZwCbxTeSancsvMMDGKFD9R8zH34HtXhXxQ8KXngjxbc6PcFntz+9tJiOJYieD9R0PuK+365nx3p/gqeG2v8AxnDpRis2ZoJL9lCqT1xk4PQcc9K/Psq4sxlLFOeIbqKXRfhZH2GO4ews6ChRSi11/O7Pjr4f2k2qeNtEtYoZJVfUIA+xCwC+YMk46DFfddeRah8cfhjoEZtdJ867VOAmn2YSP822j8qwJf2ltKeZYrLwlqM7OwVA1wisxJwAAAea6c6pZnnk4VI4ZxUU9339bGWVvBZXGUHWUm+3/Aue+V8O/FGyn0z4g6/DJBJHH/aM5jZkIDKXJBGeo5r2g/tJ6dBdSW2oeENStpYnKSJ9oUujA4IIIGCDW5pvx3+GuuRi11UXNkr8FL+zDx/iV3D86WS0szySpKrLDOSkuj/HS48zlgs0hGmqyi0+q/zsfPXw28L3vjTxZa6LabljY+ZczAcQxD7zfXsPcivevGX7P+g3tt5nhi7l0q6RcCOZjLDIQO+fmUn1GR7V6D4EsfA6Lc6n4Mi0jbebTPJYMpDYzgED7vU8cV1FYZrxZjKuKU8O3TUej79br8i8v4ew1Og41kpt9fysfDHjTwn4j8H332XXtOktwxxFMvzRS/7rjg/Tr7VhLLnqa+l/2t/E8GneDLXw2mx7rVJg7AgEpFGQS3sS20f99V8tLL719/kOZVswwar1oqLd9utuvlqfJZtl1LCYh06Tuvy8i+XHrTGbiqwlFL5nGa9rmPL9nYs215cWV3Fd2szwzwuHikQ4ZGByCDX2n8HvGUfjfwTbaq21b2M+ReoP4ZVAyQPRgQw+uO1fD7vXs37IviCSz8eXmgu58jU7Uuq5482LkH/vkv8AkK+V4vy6OLwLrJe9T1+XVfr8j6Ph3FSw+JVP7MtPn0OU/aRmaT4069uP3DCg+ghSuAV67f8AaOOPjX4i/wCukX/olK4Hd716uUu2Ao/4Y/kjkzCN8VU/xP8AMmaXivU/g18Hb/x9pd1q97fSaXpwBjtJRFuaeQdSASPkHQnueB0NcT8MPD1t4t8eaXoF5fR2Vvcy/vJHYKWUDJRf9psYHua+8dLsLPS9Ot9O0+3S3tLaMRQxIMBFAwBXgcUZ/UwEY0KGk5a37L/NnqZJlMMS3Uq/CundnxZ4s+EPjvQNeg0v+yZNRS6lEdtc2gLRSE+p/gPc7sd+a+h/g38LNK+HGnya5q14kusNAftNy0myG3j4LKueMcDLH07V6hdTwWttLdXMyQwQoXkkdsKigZJJ7ACvjj48/F288calJpGjyyW/hyB8Ko+Vrsg/ff8A2fRfxPPTw6GPzLiKKwukYL45Lr/XZb+h6lTCYPKW628vsr+vzPQPin+0OI5ZtL8CIj7SVfU5kyP+2SHr/vN+Xevn/W9Z1XXL5r7WNRub+5Y8yTyFiPYZ6D2FZSnB5p+8Yr7jLcpwmXQ5aEder6v5/psfNYzHV8XK9R6duhLmvdf2ZvAtu3nfEXxGEh0zTgz2fm8KzKPmmP8Aspg49/pXmfwk8F3nj3xjb6PDvjtE/e3s4H+qiB5/4Eeg9z7GvUP2mvHFnp9lb/DHwvst7GzjRb7yTgAKBsg/Dgt74HrXn5ziamJqRy3Du0p/E/5Y9fm9v+HOrLsPGjF4uqtI7Lu/+ATftJ+C7LVtLg+J/hUpc2V1Gj3xhHDKcBZsfkrfgfWvn/Ne3fsxeP4LW4k+H3iMrJpWp7ltPO5VJHHzRHP8L549/wDerhvjd4DuPAHjGS0jV20q6zNYTHnKZ5Qn+8vT3GD3qcoxE8HWeW13dx1g/wCaPb1X9bFZhQjiILGUlv8AEuz/AOCcto2ranot8l9pF/c2NynSWCQo36dR7GvfvhZ+0Q3mxaX48jXaxCrqcKYx/wBdUH/oS/l3r5wD01jXpZjlWFzGHLXjr36r5/0jjweNr4SV6b07dD7Q+L/wx0f4m6VDrGm30cWqpABZ3aSb4Zo+SFbHG3JOGHIz36V84+GvhD4+1rxJcaL/AGO9j9kk8u5urn5YY/cN/HkcjbnqKu/An4uXvgTU003U5Jbnw5O/72L7zWxP/LSP+q9/rX2XY3VtfWUN5ZzpPbToJIpUbKupGQQfSviK+NzLhxPDXUoP4W+n9dvmfS08NhM2arNWkviXf+u58h/GL4M6h4D0W21qxvpNVsQAl7J5WwwSHo2AT8h6Z7Hr1rypZMiv0Q1CztdQsZ7G9gS4triMxyxOMq6kYINfCfxZ8NWvg7x/qWhWN9Hd2sLhoir7mjVuRG/+0vQ/ge9e1wvn9THqVDEO81rfuv8ANHm53lMMNarS+F6W7M5tm4ruP2epni+NHhwqcbp3Q/QxOK4Fm4rt/wBn9v8Ai83hkf8AT03/AKLevoc0d8FWX92X5M8nARtiafqvzJf2kG/4vZ4iH/TSL/0THXn24V3v7SZ/4vd4j/66Rf8AomOuJ0HTbrW9csdHsgDc3twlvFu6bmYAE+3NY5bNRwFGT2UI/kjoxlNyxU0v5n+ZWLlXV0YqykFSDggjuK+wv2WvGPirxZ4Vu18QRi4t7B1gt9QY/vJzjJVh/EVG35u+ecnmvJNU/Zo8e26lrLUdDvcfwiZ4yf8AvpMfrX0Bo1vY/CX4LL9oCH+yLAzXGP8AltOeSM/7TnA/CvlOJczweOw0aVBqc20l3X/D7HuZRg8RhqrnUvGKWvmee/tH+Itd8Uayvwq8ExfarxoftOqKkyIWUYKxAsRnghmHpj3rxpfgl8Ugf+RUm/8AAmH/AOLrjrXxVrdv4yHi6O8YauLs3ZmPdyckH/ZOSMenFfXGv+MPEfjH4MxeM/hvqX2PUrZTJd2fkpKWKj97FhgfmH3lx1H1FbzeKyKlRoYdR5ZaOUr/ABPu09n006EJUcxnOpVvdbJW28j57/4Up8Uv+hUm/wDAmH/4uk/4Up8Uj/zKk3/gTD/8XS/8L8+Kn/QyJ/4Awf8AxFKPj58U+/iRP/AKD/4ivU5s87Uv/Jjh9nlv9/8AA9klay+APwbCKYZfFerfjmbHX/cjB/E/71eIfC/wB4g+JOvyz75ItPWUyajqc/3VydzYJ+855OPxOBXN+M/F3iDxlqkepeI9Sa8uEjESMUVFRM5wFUADk56c19L+PYhav8P/AITeGpBY6HrMfmXtxCdrXECAM6hh/fG4se+R2zXnS9tlcLNp16vM5S6JRV3bvZbLudcfZ4yW1qcLJLq2/wDN7s4L9qPw1puj6p4Xl8NQN5Q0gjMHJ8qArslJH+y33vYV23hC/sPjx8Ibjw5q80cfiXS1BWZvvbwMJN9G+6w9c+1ddaeIPA/ibWvEs2m25vrXS9GezvNTYYtoYsEmCInrkbmYjj5V5PFfHfhDxNrfhPWU1jw/fPZ3iIyBwoYFW6ggggj6jqBXNgKVXMMIqWsatGzjJ73d3Z+Vrfg7GuJlDC1+feE7ppeWh2jfBH4pqxX/AIRaRsHGRdQ4P/j9N/4Un8Uj/wAypN/4Ew//ABdSf8L6+Kf/AEMif+AUH/xFI3x7+KY/5mRP/AKD/wCIr2ubPe1L/wAmODly3+/+BEfgh8U/+hUm/wDAmH/4uvYP2ctf1/wdr3/CrPG8X2OeaL7TpavOjlM5LREqTgHBYA+h9RXUeD/F3iTwt8Hbjxz8StUa6uZ0EtpZ+SkTKGH7uPCgZZzyc9B9DXyPqvirWtR8Zy+Lprtl1Z7oXSyr/A4IKgewwAB6CvLpvFZ5Cth8Qo8sdFKN/i8m3suuh2yVHL5QqU27vo7bef6H1z+0/wCMPFPhHwfbS+HYlhivZTb3F+DmS2JGVCjoC3zfN2x6kGvjgyvLI0srs8jkszMcliepJ7mvueQWPxa+C2QqKus6flc/8sbgf/EyL+lfP+mfs0+PJ1DXmoaHZexmeQ/+Opj9a5+GcyweBw86WIahOLs+7/4bYvN8HXxNSM6V5Ra08jxkmu5/Z9P/ABenwz/19N/6LeuR8TaVd+H/ABDqGh3+37TY3DwSFfukqcZHseo+tdX+z0f+L0+GP+vpv/Rb19bmFRTwNWUXo4P8jwsJBxxME97r8yT9pQ/8Xw8R/wDXSH/0THV79ljSRqnxm0yR13JYRS3bfULtX/x5xWf+0scfHDxH/wBdIf8A0THWB8OfHOueAddfWNCNt50kRhlSeLejoSDjqCOQOQRXBGlUrZPGlS+J00l84o7ZThTx7nPZSf5n6FV4P+2lrbWPw907RY32tqd8DIM9Y4huI/76KflV/wCBHxtufiHr8mgX+gRWV1Fatcm4gnLRsFZRjaRkfe9TXAftzzP/AGx4VgJOwW9y4HuWQf0r4PKMuq4fN6dGurNa99k2j6TG4qFXBSnTej0PnTNerfs2fEc+B/GS2OoTbdD1Vliudx+WGTokv4ZwfY+wrybPFIzDHJ4r9JxeGp4ujKjU2f8AX4HylCrKjUVSO6PZ/wBp/wCHI8I+K/7e0qHGh6u5dAg+WCc8snsD95fxHavH+K+tNMO/9k1j8T8iEWZ+xn/l42f8ux5/5aZxj/ZxnvXzL4R8K614nNy+m26i0s1El7eStsgtUwTvkbsMA8AEnHAry8kx7eHnCvL+G+Xm6O23z/4Hc68wwq9qpU18avbqjGya+kfhdaeDvF3grSbRdV8eXV5oyK0kVqgkFlK6kERv5ZIRgGwucY+leU3PwzmjgEkfirRcnp9piurVD9JJYVT8yK7T9mrTtc8I/G2w0/V7SW1TU7KeONw4eGcBd4ZHUlXHydQT1pZxWpYjCynSnaULtdL2Wu67dh4ClOlWUZx0lodV8RbPwV4R+Gc+gS6h470+zmjkFlYywLBFczAZAciMFhnBOT0H0r5mU+te8ftTWOteKvjOmj6PZz3jWGmRbwpxHCGLMWdiQqDBHJI6CuDtPhlcSxky+J9F8wfeW1S5vAp9C8MTJ+RNTktalh8IqlWfvT95rff0V9e73HmFKdWs4wjpHQ4U16z+zR8Ov+E08XDVNSg3aJpTrJOGHyzy9Ui9x3PsMd64TxZ4O1vw5Z2+pXMSXOlXTbbTUbclrec4PAJAIIwQQwBBU8cV9J2TFP2Tmb4Y/NN9kP2wn/X7v+Xk8f8ALTGcf7OMdq0zrMXHDRjQlrUfLzdI33v2f9dCMvwl6zdVfCr27nkv7TnxH/4TPxd/ZGmT7tE0h2jiKn5Z5ujye4/hX2ye9eRZqMMMcdO1KWx0r08HhqeDoxo09l/V/mcuIqyr1HUluz63/Yo1t7vwVrGhyPk6feiWME9ElXp/30jH8a9/r5R/Ybmf/hKPEsIPyNZQsR7hyB/M16T8evjVcfDjWrfRLHQY7+7uLUXImmnKxqCzLjaBkn5fUV+b5zl9TEZvUo0Fduz7dE2fVYHExpYKM6j0Wn4niH7WWlDTPjFd3CrtTUbWG6HucbG/VP1rD/Z5OfjV4Y/6+m/9FvWN8SfHuvfEHWotV177KskMXkwx28WxETJOOSSeT1JrW/Z2P/F6/DH/AF9N/wCi3r7v2VWhk7pVfijBr7kz5xyhUxynDZyX5k/7S/8AyXHxJ/10h/8ARMdedRxyTSrFDG8kjnCoiklj6ADrXoX7TJ/4vl4kH/TSH/0THUv7MWswaP8AGjRjcBPLvd9nuYfdaRflI9DuCj8avDVpUMrhViruME7d7RCrSVTGSi3a8n+Z6H+yf4D8aaJ46PiLVdAudP0uSxkgMlziN2LFSuEPzfw9cVe/bp09zaeFtWUfIklxbOfQsEZf/QWr6ZrzL9pzww/if4P6rFbxmS60/F/AAMkmPO4D6oXr4DD5zLEZtTxVVJdNOzuv1PpamBjSwcqMNep8I7uK9T/Zr+HTePPGy3F/AW0PS2Wa8JHyyt1SL8SMn2B9RXmeg6Zf67rNno+lwNcXt5KsMMa/xMT+g7k9hX154003VvhT8ErXwd4E0fUtT1rUFZLi8srV5CjMB5sxKg4J+6g7DH92vs86x0qUI4ek7VKmi8l1Z4eBwqnJ1Jr3Y/j5Hkv7U/xHHizxUvhrR5t2i6PIYx5f3bi46Mwx1C/dX8T3rpb3TLbwX8PdC+HU1zaWuo6qF1nxE011DDiMEeXATI6g5YKCAc4Rj3rzDwD4V8WaB4x03WtW+G/iTVLWymExtRZSJ5jKCVySh4DYPTnFev8Aif4z+I7F5tb1T4HC0j+VZbzUIXBx0UFzEPoBXn4ik6UaWFwkVKMdfiiry6de+vrbsdVJ87nVrOzfk9F/Wg3THku3Y6TNJcEZ3NpmoR3DdO629zvP4xv9DVDSrtbD4k+DZ7cqsH9urFMIsogkkRkO+NVVFkwxySkTnurfeqvF8bvhj4iK2/jD4W29upP/AB82Qjd0PqCAjj8DXQt4a0TxxdaPrfgLxHH4qtdKu47iTSb+5MOoxov8CXJxIEBIID5GRwwrjaqUbrEwcU010a1TW6bX32RsuWdvZSTt9/3f5XM3xhfR3vxc8aPOUaBL+3gVZjuiLpCFHyMCjP1xlZWHO2PuLWoGe2RW1WWeA4yh1K9W2GP9lbi4QgfSFB7Crs/hnS/Cms614o8c+II/BtpqtwZYrC1uvtGpSLtAZftGC4ViCSI+ecFuK5u4+NHwp8OSPH4R+GUd/Jnm8v8AYJJD6lmDufxIpQU6yisNBySSWm2iSeraX3NoJcsG3Vkldv137f52NTwfBpniWx174WXd9YSW+sxvqOiyRXkM4t7tOXUeW74B4fnGcyVxn7Ofjy5+HXxBufDHiEm30y9uDa3iSHi1uFO0OfQZ+VvbB7V2Ph/4z+INVMOsaV8DYr+KOQiK6soWYow4O1xEcEZ7V5z8YdK8V+OfGk3iPTvhh4k0g3MSfaYmtJJA8oGC4IQYyNv5Z7114elOo6uGxUVGE1r70XaS679dPmvMyqNR5KtJ3lHye39fgWf2nvh0fBHjH+09Ng26Fq7tJb7R8sEvV4vp3X2OO1eR7hX2D8N7DVviZ8GL3wH4+0XVNN1GxjWO1vLy0eMuAP3Uqlhyy42sO4+pr5I8S6PqPh3Xr3RNVgMF7ZStFMh6ZHceoIwQe4Ir0slx0qkZYaq7zp6X7ro/8zlx2GUWqsFaMvwfY+kP2FtPczeKdWI+QLb2yn1Pzsf/AGWj9rXwH4017xnb+INH0K41DTYNPSAvbYkcMHdmyg+bHzDkA16X+yt4Yfw38H9Pe4jKXWqu2oSgjBAfAQf98Kp/GvVq+MxWcSw+b1MTSSdtNey0/Q9ulgVUwcaU9Ov6n5nyxSwSvDPE8UqHDo6lWU+hB6V3n7O//Ja/C/8A19N/6LetP9qrWYdW+M2pRwBNmnxRWZZQBuZRubPqQzEfhWX+zqf+L2eGP+vpv/Rb1+gVq8sRlcqslZyg3b1R8zCkqWMUE72kvzH/ALTh/wCL6eJP+ukP/oiOvPbC7nsL+3vrVylxbSrNEw/hZSCD+Yrvv2nTj47eJf8ArpD/AOiI685zxWmWpPA0U/5Y/kisXpiJvzf5n1zqP7U/hO30+FrPQdWvLxolMqNsijV8cjdkkjPfFeifBP4j2PxO8K3GoraJZ3UE7QXVn5nmbAeVOcDIZfbqCO1fn+54r6e/Y28B+LNPv5fGd3M+naNeW5iS1dPnvRnKvg/dVTyG6nJxwc18nnWQ4DB4OU4e7Lo23r5HsYHH4itWUZar+tTg/GMWrfAL4y315o2mafcQ3UbyaVLeRM6xwueQuGHzLyh9vrV4ftSfET/oH+Hv/AaT/wCOV9JfHD4c2XxI8HSaZIUg1K3Jl0+6Yf6uTH3T/st0P4HtXwNr+kaloGs3Wj6xaSWl9aSGOaJxyD/UHqCOCK6cong83pJ4iCdWKs79V0f+fmRjI1sHL927RZ7Sn7UXxFdgiaboDMxwALWUkn/v5WP8S/jd488U+F7nwx4j0bTrO2vNjEizlik+VgwK7m9QO1dV+zXaad4Z+FHi/wCKTadDqOr6bvhs0lXIiCorZHpkuMkc4WuV8XfHbVvGPgK98O+KvD2lahdTShra+VTGbbvlV5+YHocjjIINa0sPh/rTWHwyag0m72ae90vL19CJVKnsk6lV3ktrHln2C/wD9guuf+mLf4VLpx1ixvvO07+0LW8iH37fekiA+68jNfWXwp+LHivX/gx4z8T3/wDZ/wBv0OJvsfl25VPli3DcM88/Ssz9lzxXrXjHxN4/8SajNZQ6pcWdqPMEeyFCiyKrEZ6DAJ59a1qZzXhTrSqUlanZP3r3bt/d2syI4Gm5QUZv3vL18z5i1N9b1C8+06odRu7mT5RJc73dsdstyfpVKSKWOXypI3SQHGxlIP5V9C/G7xj450O98J6hq/izwrrpstR+2wroy4ZHjABD8n5WVyPzrt/FXgW28U/tFeCvGVjGJdJ1KxXUp2xlS0CqUJ+u+Efga0WdeyhGVSCUWpNWfWPTVLdEvA88moyu01+PXc8Z+Hfxm8d+BPDUXhrRtGsHt4XeUG4s5WkJdiSThhxnjp2ropP2mPifGheTRNHRB1ZrGYAfjvqPV/jV4gtPjxrd/wCH5LR7S+u4NNUzxGQCCJyoK8jGSzt/wKuo/bE+IXiHS9Yl8B2v2P8AsfUdMjln3w5lyZG6Nnj7i9vWuGdGnVxMI1MLG9Rczd9el+m6v8zojOUKUnGq7R02+7qcmf2pPiH/ANA/w/8A+A0n/wAcrN8PNrX7QPxe0xtX03T7ZLeJW1KeyiZA1ujZw2WOWOdgPv7V5Poml6hrerWuk6VaS3d9dSCOGGMZZmP8h3J7Dmvvb4EfDa0+G/g9bEmOfVrvEuo3Kj7z44Rf9hc4Hrye9PN54LJ6XNQglVkrK3Tu/wCuosGq+Mlao24rcm+MvxAsPhh4Lj1P7HHczPKltZWQfyw5784OAqg9vQd6840j9qnwlcWrtqWgavZXIQlUjKTRs2OBuyp6+1Zn7ZPgTxXrD23i3T5mv9I063KS2SJ89tzlpQP4geMnqMDt0+V06ZrkyTIsBjcGpzfNK+tm9PL+ka4/H4ihWcY6Iv6tqFxqmq3mp3blri7neeVvVnYsf1Ndt+zm3/F7/C//AF9N/wCi3rz3Negfs5f8lv8AC3/X03/op6+vzBKOCqpfyv8AJniYbWvBvuvzJP2ogV+O/iQHjLwH/wAgR15wpyK9f/bL0ySw+NE14y4j1GxgnQ9iVBjP/oA/OvHEascoqKeBotfyr8jfGwarz9WWLaUwXMVwqRu0Tq4WRdykg5wR3HtX6AfBX4h6V8Q/CMV/ZiO3vrZVivrJT/qHx2H9w4yp/DqDX59jpXQeAfGOveBvEUeueH7oQ3CqUkjcbo5kPVXXIyO/seRXLnuTrMqK5Xacdv8AJ+ppl+MeFnrs9z9A/GXivw/4P0g6r4j1OGwtc7VL5LO3oqjlj7AVxHxZ+GPhX4veHbfVbK7gi1Aw7rDVbfDq6dQr4++n6jt3B+LPHHizxD4z1p9W8R6jLeXByEB4jiX+6i9FH0/HNev/ALGOp+L5PHUmi6dfuPDsUL3OoW8o3xqeilP7rliOnUA5BxXzNXh2rluG+twq2qR1fb0X/B0fY9SGYwxNT2TheLM3wnrXi/4A65qOgeL/AA1/aGg6qNs0JbMM/BG+JyCpypwVI5GM4xUHjn4r+DJ/A174T8B/D620W31Bw91PdBJHB9UHOGxwGzwCcCvtHXNH0rXdNl03WdPtr+zlGHhnjDqffB7+9eA+Pf2WdDvpJLrwfrEukSMci0ugZoPoG++o+u6pwWc4DEVVUxcXGel2m+VtbNpdfkyq+Dr04ctF3X4r5niXw8+JVn4X+FvizwfPpdxcz66jrHcJIoWLMezkHk+tT/AT4m6X8Ol16PVdEuNVh1aGOFkilVAFXfuBz1yHpfEn7P8A8UtGdtmgpqkQPElhOsmf+AnDfpXHXvgXxvZOUuvB+vxMPXT5f/ia+nUcuxUJxU01Npu0uqt56bHl3xNKUW4tcu2h0fxO8VfDnXdFt7Xwf4BPhy8juA8lx5+/fHtYbMZ9SD+Fdh4I/aAk8N/CP/hDzpNxPqcFtNbWV+JgFiV87CQRn5c/oK8rs/A3jW8cJbeENflY+mnS/wDxNdh4d+AXxS1mRc+Hv7NiPWW/nWID/gIJb9KnE0ctVFU6804p31ld3+bv8h054pzcoR1emiPN9KuVs9UtLx1Z1gnSVgDywVgcfpXrHj281r9oD4lW134Q8N3cPlWcdtMZpAY4sO7b3cDCj5unU44zXqXgP9lfSLOSO68Za1Lqjqcm0swYofoXPzMPptr6A8P6JpHh7S49M0PTbbT7OP7sMEYVfqfU+55rxMz4kwsaiqYZc00mk9UlffTr/Wp3YXLari41HaL6dTzv4P8Awq8NfCbRJtWv7q3n1XySb3U58IkSdSqZ+4nqep79gO48F+LvDnjLTG1Lw3qsGoW6uUcpkMjejKcFfbI5FfMP7aup+L4PFlrpF1fuPDVzAs9nBENqO68P5n99gcEZ4AYYFeI+DPFGv+ENaj1fw9qMtjdLwxU5WRf7rqeGX2Nc9Lh+rmmH+t1Kt6ktV29H/wADbzLnmEMLU9jGFoo+9vjB4/0n4eeEZtW1DZNcygx2Vpn5riTHT/dHVj2HuRX5+ahdPfX9xeyRxRvcStKyRIFRSxJIUDoOeBW18QvGviDx54gOteIbpZZggSKKMbYoUH8KLk455Pcmuer6XIcmWW0XzO85b/5I8vMMb9anp8K2DNeg/s3Zb44+FwP+flz/AOQnrztmr1v9kLTH1H422FwqEx6fbT3Ln0+Tyx+riu7Naihgqzf8r/IwwcHKvD1R7R+2n4Lk1zwHbeKLGEyXWhOxmCjk2z4Dn/gJCn6bq+M0ev1EuoIbq2ltrmJJYZUMckbjKupGCCO4Ir4K/aK+Et98N/Ej3djFJN4avZCbOfk+QTz5LnsR2J6j3Br5PhTNY8n1So9V8P6r9T280wjb9rH5nm6N708GqaSVOkgPevuYyPn5QaJmGa93/ZV+J/hDwNHqGj+IYJbKXUbhZP7TA3oFC4WNwOVAJY5GR83OK8HVgaUjNcuPwNPHUHRqXs+xeHryw81OO5+mumX9jqljFfabeW95ayjdHNBIHRh7EcV86/tE/HjV/C3jaDw94MntGbTwTqTyxCRHkPSL22jkkEHJx2NfOPhDxj4q8IXDzeG9dvNOL/fSN8xv7lDlSfcisO5kmubmW5uJXlmlcvJI5yzsTkknuSa+ZwHCcMPiHOs1OPRW/P0PVxGbupTSgrM+pPh1+09e6xr+l6Hrvha2WW+uorb7TaXJVULsF3FGB45/vV9M1+ZWg3R07XtP1DkfZbqKb/vlw39K++4Pi/8ADGdQyeN9HAPOHn2H8jivI4jyaOHqQeFpuzve13/nY7Mtxrqxaqy2O6r5s+Jn7TV14f8AE2reHtF8LQSzafdSWxurq6JR2QkEhFAOMj+9XrU3xe+GMIy/jfRjj+5PuP6Zr4L8XXq6v4s1jVI23JeX086nHUPIzD9DS4cyaOIqzeKpuySte61/AMyxrpQXspas+lPgD8ftZ8SePX0HxnNZpHqQC6e8MQjSGYZ/d+pDDoSTyAO9fSOoXtnp9nJeX91BaW0Q3STTSBEQepJ4FfmREZIZUlido5EYMjKcFSOQQexroPF/jTxZ4ueNvEmvXuorGAEjkfEa47hBhc++M17OYcJwxGIU6LUI9Vb8jiw+bunTamrvoexftV/FLwd400+z8P8Ah+KTUJ7G687+0gNsSjaVZEzywPHPA+UYzXz6BxSgAUu4CvpcBgaeBoKjTvZdzy8RiJYibnLcQDFNZqSRx64qvJLXW5WM4xbHu9fYX7FHgyXSfB974vvoik+ssEtQw5FuhPzf8CbP4KDXgn7Pvwr1H4leJVkuI5YPDtnIDfXWMb+/koe7Hv8A3Rz6Z++bG1t7Gzhs7SFILaCNY4okGFRVGAAPQAV8PxXmsVD6pTer+LyXRHvZXhGpe1l8iWqeuaVpuuaTcaVq9lBe2NyhSaCZdyuP89+oq7RXwSbi7o95q58e/F39l/WNMmm1P4fSnU7E5Y6dM4FxF7Ix4kH1wfrXz5q2n6pot89jq+n3en3SHDQ3MTRuPwIr9RKo61o2j63bfZtY0qx1GH/nndQLKv5MDX1WB4rxFFKNePOu+z/4J5lfLKc3eOh+YaXHrUqzj1r9Abz4HfCe6kMkvgjTlY/88i8Y/JWAqD/hQnwj/wChMtv/AAIm/wDi69qPGOFtrCX4f5nE8mm+qPgcTr607z1r72/4UL8JP+hNtv8AwIm/+Lo/4UL8JP8AoTbb/wACJv8A4uq/1ywn8kvw/wAyP7Fqd0fBPmqaQunrX3v/AMKG+Ev/AEJtt/4ETf8AxdH/AAoX4Sf9Cbbf+BE3/wAXR/rlhP5Jfh/mH9i1P5kfBAdPWl85RX3v/wAKG+Ev/Qm23/gRN/8AF0n/AAob4S/9Cbbf+BE3/wAXR/rlhP5Jfh/mH9i1P5kfBPnr600zr6198f8AChfhJ/0Jtt/4Ezf/ABdH/ChfhJ/0Jtt/4ETf/F0f65YT+SX4f5h/YtT+ZHwKbhfWo3uK+/f+FCfCP/oTLX/wIm/+Lqe0+B3wntZA8fgnTmYf89WkkH5MxFS+MsLbSEvw/wAylk011R+f+mWeo6xepY6VY3V/dOcLDbxNI5P0UE17/wDCT9mHXdWnh1Lx9I2kafw32CJwbmUejEcRj82+nWvrbRND0bQ7b7Nouk2Omw/3LW3WIH/vkCtGvGx3FmIrJxoR5F33f/AO6hllODvLUz/D2jaV4f0e30fRbGGxsbZdsUMS4VR/UnuTya0KKSvlJScndvU9JK2iP//Z" alt="Syllabusलय CTEVT logo">
+<div class="brand">
+<h1>Syllabusलय</h1>
+<p id="sub">CTEVT Diploma in Civil Engineering · 3 years · 6 semesters</p>
+</div>
+</a>
+<div class="top-search"><input type="search" id="q" placeholder="Search subjects or topics…" aria-label="Search"></div>
+<button class="th" id="th" aria-label="Toggle theme">◐</button>
+</header>
+<div class="progs" id="progs"></div><div class="tabs" id="tabs"></div><div id="list"></div><div class="tot" id="tot"></div>
+
+</div>
+<script>
+var CIVIL=[
+{n:"Semester 1",s:[
+["EG 1101 SH","Applied Nepali",4,100,[
+["1. Communicative Nepali language & grammar",["1.1 Language varieties (oral/written, formal/informal)","1.2 Letters & pronunciation","1.3 Spelling & sandhi rules","1.4 Word stock & formation","1.5 Word inflection (noun, pronoun, adjective, verb)","1.6 Sentence synthesis & analysis","1.7 Concord"]],
+["2. Writing skills",["2.1 Note-making & summarising","2.2 Dialogue & paragraph writing","2.3 Official letters, applications, notices, advertisements","2.4 Essay writing","2.5 Report writing"]],
+["3. Literary texts – introduction & review",["3.1 Drama, novel, poetry introduction","3.2 Story, essay, poem, one-act play review"]]
+]],
+["EG 1102 SH","Applied English",4,100,[
+["1. Language Development",["1.1 Technology","1.2 Money and Economy","1.3 Human Culture","1.4 Ecology and Environment","1.5 Career Opportunities","1.6 Human Rights","1.7 Migration and Diaspora","1.8 Power and Politics"]],
+["2. Literature",["2.1 Short stories","2.2 Poems"]],
+["3. Grammar & skills",["3.1 Subject-verb agreement, conditionals, reported speech","3.2 Writing (press release, news article, CV, review)","3.3 Comprehension & project work"]]
+]],
+["EG 1103 SH","Engineering Mathematics I",6,100,[
+["1. Set, Functions and Graphs",["1.1 Cardinality, power set, algebra of sets","1.2 Domain, range, types of functions","1.3 Exponential & logarithmic functions"]],
+["2. Trigonometry",["2.1 Identities, conditional identities","2.2 Sine, cosine, tangent laws","2.3 Solution of triangles"]],
+["3. Calculus",["3.1 Limits & continuity","3.2 Derivatives & applications","3.3 Integration (substitution, parts, definite)"]],
+["4. Algebra",["4.1 Arithmetic, geometric, harmonic progressions","4.2 Binomial theorem"]],
+["5. Coordinate Geometry",["5.1 Straight lines (standard forms)","5.2 Pair of lines","5.3 Circle"]]
+]],
+["EG 1104 SH","Engineering Physics I",8,100,[
+["1. Mechanics",["1.1 Units and measurement","1.2 Scalars and vectors","1.3 Kinematics & projectile","1.4 Newton’s laws","1.5 Circular motion","1.6 Work, energy, power","1.7 Rotational dynamics & angular momentum"]],
+["2. Heat and Thermodynamics",["2.1 Quantity of heat, calorimetry","2.2 Change of phase & hygrometry","2.3 Thermal expansion","2.4 Kinetic theory & gas laws","2.5 Thermodynamics (laws, processes)"]],
+["3. Optics",["3.1 Reflection (plane & spherical)","3.2 Refraction through plane surfaces","3.3 Lenses & optical instruments"]]
+]],
+["EG 1105 SH","Engineering Chemistry I",8,100,[
+["1. Language of Chemistry",["1.1 Symbols, formulae, valency, radicals","1.2 Chemical equations & balancing"]],
+["2. General Chemistry",["2.1 Atom, molecule, atomic/molecular weight","2.2 Equivalent weight, mole concept","2.3 Avogadro’s hypothesis"]],
+["3. System of Classification",["3.1 Acids, bases, salts, pH","3.2 Periodic table & electronic configuration","3.3 Quantum numbers & Pauli’s principle"]]
+]],
+["EG 1101 AR","Engineering Drawing I",5,100,[
+["1. Introduction to Engineering Drawing",["1.1 Types of drawings, instruments, paper sizes"]],
+["2. Lettering, scales and dimensioning"],
+["3. Geometrical constructions"],
+["4. Engineering curves (involute, spiral, cycloid, helix)"],
+["5. Conic sections"],
+["6. Orthographic projections"]
+]],
+["EG 1101 CT","Computer Application",4,100,[
+["1. Introduction to Computers",["1.1 History, generations, types","1.2 Hardware & software"]],
+["2. Hardware Components",["2.1 Input/output devices","2.2 CPU, memory, storage"]],
+["3. Software & Operating Systems"],
+["4. Application Packages",["4.1 Word processor","4.2 Spreadsheet","4.3 Database (Access)","4.4 Presentation (PowerPoint)"]],
+["5. Utility Programs & Multimedia"],
+["6. Networks and Internet",["6.1 LAN/MAN/WAN, topologies","6.2 Internet services"]]
+]]
+]},
+{n:"Semester 2",s:[
+["EG 1201 SH","Engineering Mathematics II",6,100,[
+["1. Algebra",["1.1 Polynomial & quadratic equations","1.2 Matrices & determinants","1.3 Linear inequalities & linear programming"]],
+["2. Conic Sections",["2.1 Parabola","2.2 Ellipse","2.3 Hyperbola"]],
+["3. Geometry in Space",["3.1 Coordinates, distance, direction cosines","3.2 Planes"]],
+["4. Vectors",["4.1 Algebra of vectors","4.2 Scalar & vector products"]],
+["5. Statistics and Probability",["5.1 Measures of central tendency & dispersion","5.2 Probability distributions"]]
+]],
+["EG 1202 SH","Engineering Physics II",8,100,[
+["1. Electrostatics, Current & Electromagnetism",["1.1 Electrostatics & capacitors","1.2 Current electricity","1.3 Magnetic effect of current","1.4 Electromagnetic induction","1.5 Alternating current"]],
+["2. Sound and Physical Optics",["2.1 Sound waves, intensity, Doppler","2.2 Interference, diffraction, polarization"]],
+["3. Properties of Matter",["3.1 Elasticity","3.2 Surface tension","3.3 Viscosity"]],
+["4. Modern Physics",["4.1 Photoelectric effect","4.2 Atomic models","4.3 Radioactivity & nuclear physics"]]
+]],
+["EG 1203 SH","Engineering Chemistry II",8,100,[
+["1. Non-metals and their compounds",["1.1 Water","1.2 Hydrogen, oxygen, nitrogen compounds","1.3 Sulphur, carbon, phosphorus, halogens"]],
+["2. Metals and their compounds",["2.1 General study of metals","2.2 Important compounds of Na, Ca, Al, Cu, Zn, Fe, Pb"]],
+["3. Organic Chemistry",["3.1 Hydrocarbons & homologous series","3.2 Functional groups, alcohols, aldehydes, acids","3.3 Polymers & rubber"]]
+]],
+["EG 1201 CE","Workshop Practice I",8,100,[
+["1. Bench work & safety"],
+["2. Layout / lying tools"],
+["3. Cutting tools (chisels, files, hacksaw, scrapers)"],
+["4. Measuring instruments (vernier, micrometer, gauges)"],
+["5. Rivet and riveting"],
+["6. Solder and soldering"],
+["7. Sheet metal work"],
+["8. Drilling"],
+["9. Basic electricity & circuits"]
+]],
+["EG 1201 AR","Engineering Drawing II",4,100,[
+["1. Axonometric / Isometric / Oblique projection"],
+["2. Projection of points, lines and planes"],
+["3. Projection of solids"],
+["4. Section of solids"],
+["5. Development of surfaces"],
+["6. Intersection of solids"]
+]],
+["EG 2102 CE","Applied Mechanics",6,100,[
+["1. Forces on particle and rigid body"],
+["2. Equilibrium of forces"],
+["3. Friction"],
+["4. Centre of gravity and centroid"],
+["5. Moment of inertia"],
+["6. Analysis of statically determinate beams"],
+["7. Axial force, shear force and bending moment"],
+["8. Analysis of statically determinate plane truss"]
+]]
+]},
+{n:"Semester 3",s:[
+["EG 2101 SH","Engineering Mathematics III",4,100,[
+["1. Applications of Derivatives",["1.1 Inverse circular & hyperbolic functions","1.2 Tangents, normals, maxima-minima","1.3 Rate measures, indeterminate forms"]],
+["2. Partial Derivatives",["2.1 Functions of several variables","2.2 First & higher order partial derivatives","2.3 Euler’s theorem"]],
+["3. Applications of Anti-derivatives",["3.1 Standard integrals","3.2 Curve sketching","3.3 Area under/between curves"]],
+["4. Differential Equations",["4.1 First-order ODEs (variable separable, homogeneous, linear, exact)","4.2 Simple applications","4.3 Linear first-order PDEs"]],
+["5. Fourier Series",["5.1 Periodic functions","5.2 Fourier series in [−π, π]"]]
+]],
+["EG 2101 CE","Surveying I",7,200,[
+["1. Introduction to surveying",["1.1 Definition, purpose, classification, principles","1.2 Units of measurement","1.3 Scales (plain, diagonal, vernier)","1.4 Maps & conventional symbols"]],
+["2. Errors, Accuracy and Correction",["2.1 Sources & types of error","2.2 Accuracy, precision, permissible error, correction"]],
+["3. Linear Distance Measurement",["3.1 Chain, tape, pedometer","3.2 Ranging (direct & reciprocal)","3.3 Measurement on level & sloping ground","3.4 Tape corrections (standard, slope, pull, temperature, sag)"]],
+["4. Chain Surveying",["4.1 Principles, survey lines, offsets","4.2 Reconnaissance, station selection","4.3 Obstacles, field book, plotting"]],
+["5. Compass Surveying",["5.1 Prismatic & surveyor’s compass","5.2 Bearings, local attraction, traverse","5.3 Angular error & graphical adjustment"]],
+["6. Leveling",["6.1 Principles, instruments, terms","6.2 Types of level & leveling","6.3 Curvature & refraction, two-peg test","6.4 Booking (HI & Rise-Fall methods)","6.5 Profile & cross-section, error adjustment"]]
+]],
+["EG 2102 CE","Workshop Practice II",12,200,[
+["1. Bricklaying",["1.1 Materials, bonds (English, Flemish)","1.2 Walls, pointing, curing","1.3 Foundation footing courses"]],
+["2. Plumbing",["2.1 Tools, pipes & fittings","2.2 Sanitary fixtures & installation","2.3 Water supply & drainage connections"]],
+["3. Carpentry and scaffolding",["3.1 Tools & joints","3.2 Formwork","3.3 Scaffolding"]]
+]],
+["EG 2103 CE","Fluid Mechanics and Hydraulics",5,125,[
+["1. Introduction & Fluid Properties",["1.1 Density, specific weight/volume/gravity","1.2 Viscosity, surface tension, capillarity, compressibility"]],
+["2. Hydrostatics",["2.1 Pressure & pressure measurement","2.2 Hydrostatic forces on surfaces"]],
+["3. Hydrokinematics",["3.1 Types of flow, streamline","3.2 Continuity equation"]],
+["4. Hydrodynamics (Bernoulli)",["4.1 Energy of flowing fluid","4.2 Bernoulli’s theorem, HGL & EGL"]],
+["5. Flow Measurement",["5.1 Orifice, venturimeter","5.2 Weirs & notches","5.3 Area-velocity method"]],
+["6. Pipe Flow",["6.1 Laminar & turbulent flow","6.2 Major & minor losses","6.3 Darcy-Weisbach & Hagen-Poiseuille"]],
+["7. Open Channel Flow",["7.1 Classification of open-channel flow","7.2 Uniform flow concepts"]]
+]],
+["EG 2104 CE","Building Construction",7,125,[
+["1. Introduction to building construction"],
+["2. Foundations, walls, masonry"],
+["3. Damp proofing"],
+["4. Concrete and formwork"],
+["5. Floors, stairs, roofs, doors, windows"],
+["6. Finishing works"],
+["7. Earthquake and seismic resistance"],
+["8. Building planning and services"]
+]],
+["EG 2105 CE","Engineering Materials",5,125,[
+["1. Stones"],
+["2. Bricks"],
+["3. Tiles"],
+["4. Lime"],
+["5. Cement"],
+["6. Timber and timber products"],
+["7. Metals and alloys"],
+["8. Paints and varnishes"],
+["9. Miscellaneous materials"]
+]]
+]},
+{n:"Semester 4",s:[
+["EG 2201 SH","Social Engineering",2,50,[
+["1. Sociology, social study & social science"],
+["2. Economy of Nepal"],
+["3. Social and cultural change"],
+["4. Social development and services"],
+["5. Social survey"],
+["6. Ethics and moral"]
+]],
+["EG 2201 AR","Construction Drawing and CAD",5,100,[
+["1. Introduction to Construction Drawing & CAD"],
+["2. Starting / opening drawings & setup"],
+["3. Drawing commands (line, circle, polyline, text, dimension…)"],
+["4. Modify commands (trim, extend, offset, array, fillet…)"],
+["5. Features (layers, blocks, inquiry, layout, viewport)"],
+["6. Application of CADD in civil engineering"],
+["7. Basic 3-D modeling"],
+["8. Plotting"],
+["9. Hand drawing and field work"]
+]],
+["EG 2201 CE","Surveying II",7,200,[
+["1. Contouring",["1.1 Contour interval, characteristics","1.2 Methods (direct, grid, cross-section, radial)","1.3 Interpolation & uses"]],
+["2. Plane table surveying",["2.1 Principles, accessories, orientation","2.2 Methods: radiation, intersection, traversing, resection"]],
+["3. Theodolite",["3.1 Types, temporary adjustments","3.2 Measurement of horizontal & vertical angles"]],
+["4. Theodolite traversing",["4.1 Traverse computation & adjustment","4.2 Gale’s table"]],
+["5. Area and volume measurement",["5.1 Graphical & instrumental methods","5.2 Trapezoidal & Simpson’s rules","5.3 Prismoidal formula"]]
+]],
+["EG 2202 CE","Estimating and Costing I",7,125,[
+["1. Introduction to estimating and costing"],
+["2. Types of estimates (preliminary, detailed, revised, supplementary)"],
+["3. Estimation of building (earthwork, foundation, superstructure, finishes)"],
+["4. Analysis of rates (materials, labour, tools & plant, overhead)"]
+]],
+["EG 2203 CE","Mechanics of Structure",6,125,[
+["1. Stability and determinacy"],
+["2. Simple stress and strain"],
+["3. Axial force, shear force, bending moment diagrams"],
+["4. Theory of simple bending"],
+["5. Deflection of beams"],
+["6. Torsion"],
+["7. Simple strut theory / columns"]
+]],
+["EG 2204 CE","Soil Mechanics and Foundation Engineering",7,125,[
+["1. Basic terminology & phase relationships"],
+["2. Index properties"],
+["3. Soil classification (IS / USCS)"],
+["4. Soil water and effective stress"],
+["5. Compaction"],
+["6. Consolidation"],
+["7. Shear strength"],
+["8. Earth pressure (Rankine, Coulomb)"],
+["9. Bearing capacity"]
+]],
+["EG 2205 CE","Water Supply Engineering",6,125,[
+["1. Sources of water"],
+["2. Quantity of water (demand, variation, factors)"],
+["3. Quality of water & water-borne diseases"],
+["4. Treatment of water (sedimentation, filtration, disinfection)"],
+["5. Distribution system"],
+["6. Plumbing system in buildings"]
+]]
+]},
+{n:"Semester 5",s:[
+["EG 3101 CE","Surveying III",7,200,[
+["1. Tachometry surveying"],
+["2. Horizontal curve"],
+["3. Vertical curve"],
+["4. Transition curve"],
+["5. Total Station surveying"],
+["6. Geographic Information System (GIS)"],
+["7. Global Positioning System (GPS)"],
+["8. Construction surveying"]
+]],
+["EG 3102 CE","Estimating and Costing II",6,100,[
+["1. Estimate of road construction"],
+["2. Analysis of rates (road, sanitary, water-supply works)"],
+["3. Property valuation"],
+["4. Specifications"]
+]],
+["EG 3103 CE","Design of Reinforced Concrete (RC) Structure",8,150,[
+["1. Design concept by Limit State Method (LSM)"],
+["2. Design of RC beams by LSM"],
+["3. Design of RC beams for shear by LSM"],
+["4. Design of one-way and two-way slabs by LSM"],
+["5. Design of columns by LSM"],
+["6. Introduction to pre-stressed concrete"]
+]],
+["EG 3104 CE","Transportation Engineering I",5,125,[
+["1. Introduction to transportation system"],
+["2. Highway alignment and engineering survey"],
+["3. Geometric design of highways"],
+["4. Highway materials"],
+["5. Pavement design"],
+["6. Highway drainage"],
+["7. Highway maintenance"]
+]],
+["EG 3105 CE","Sanitary Engineering",4,100,[
+["1. Introduction to sanitary engineering"],
+["2. Quantity of sewage"],
+["3. Sewerage systems"],
+["4. Sewers and sewer appurtenances"],
+["5. Sewage treatment"],
+["6. Solid waste management"],
+["7. Plumbing system"]
+]],
+["EG 3106 CE","Construction Management",6,100,[
+["1. Introduction to construction management"],
+["2. Project planning & scheduling (bar chart, CPM, PERT)"],
+["3. Construction organisation & site management"],
+["4. Contract administration"],
+["5. Quality control and safety"],
+["6. Equipment management"],
+["7. Financial management"]
+]],
+["EG 3107 CE","Design of Steel and Timber Structure",4,75,[
+["1. Introduction to steel structures"],
+["2. Design of tension members"],
+["3. Design of compression members"],
+["4. Design of beams"],
+["5. Design of connections (riveted, bolted, welded)"],
+["6. Timber structures (beams, columns, joints)"]
+]]
+]},
+{n:"Semester 6",s:[
+["EG 3201 CE","Field Survey Camp (8 days)",0,100,[
+["1. Reconnaissance and control survey"],
+["2. Detail survey and contouring"],
+["3. Theodolite / Total Station traverse"],
+["4. Road / canal alignment survey"],
+["5. Preparation of maps, longitudinal & cross-sections, report"]
+]],
+["EG 3202 CE","Transportation Engineering II",3,100,[
+["1. Traffic engineering"],
+["2. Highway materials testing"],
+["3. Pavement construction"],
+["4. Bridge and culvert"],
+["5. Hill roads"],
+["6. Airport engineering (basic)"]
+]],
+["EG 3203 CE","Estimating and Costing III",6,100,[
+["1. Detailed estimate of buildings and structures"],
+["2. Rate analysis of civil works"],
+["3. Valuation of properties"],
+["4. Tender documents and specifications"],
+["5. Computer application in estimating"]
+]],
+["EG 3204 CE","Water Resources and Irrigation Engineering",8,150,[
+["1. Hydrology"],
+["2. Irrigation water requirements"],
+["3. Irrigation canals and structures"],
+["4. Diversion head works"],
+["5. Cross drainage works"],
+["6. River training works"],
+["7. Groundwater and wells"],
+["8. Drainage"]
+]],
+["EG 3201 MG","Entrepreneurship Development",5,100,[
+["1. Introduction to entrepreneurship"],
+["2. Business idea generation and opportunity"],
+["3. Business plan preparation"],
+["4. Marketing and sales"],
+["5. Financial management"],
+["6. Legal aspects and registration"],
+["7. Small enterprise management"]
+]],
+["EG 3205 CE","Project Work",10,100,[
+["1. Project identification and proposal"],
+["2. Data collection and analysis"],
+["3. Design / estimation / drawing"],
+["4. Report writing"],
+["5. Presentation and viva"]
+]],
+["EG 3206 CE","Elective (one of five)",6,150,[
+["Trail Bridge"],
+["Hill Road"],
+["Hill Irrigation Engineering"],
+["Gravity Flow Water Supply System"],
+["Micro Hydro Power Engineering"]
+]]
+]}
+];
+var ENT=CIVIL[5].s.filter(function(x){return x[0]==="EG 3201 MG"})[0];
+var MECH=[
+CIVIL[0],
+{n:CIVIL[1].n,s:CIVIL[1].s.map(function(x){return x[0]==="EG 2102 CE"?["EG 1202 CE"].concat(x.slice(1)):x})},
+{n:"Semester 3",s:[
+["EG 2101 ME","Basic Electronics Engineering",5,125,[
+["1. Introduction",["1.1 Status of electronics in Nepal","1.2 Basic components and their use in mechanical & automobile engineering"]],
+["2. Semiconductor Diode and Applications",["2.1 Intrinsic & extrinsic semiconductors, N and P type","2.2 PN junction diode: structure, biasing, VI characteristics","2.3 Half & full wave rectifiers with filter","2.4 Zener diode & voltage regulation","2.5 LED, photodiode, varactor, tunnel diodes"]],
+["3. Bipolar Junction Transistor (BJT)",["3.1 Structure, PNP and NPN operation","3.2 Biasing, load line, Q-point","3.3 BJT as amplifier and switch","3.4 CE, CB, CC configurations & VI characteristics"]],
+["4. Special Semiconductor Devices",["4.1 SCR","4.2 UJT","4.3 JFET","4.4 MOSFET","4.5 Photodiode and optocoupler"]],
+["5. Integrated Circuit",["5.1 Introduction & schematic symbol","5.2 SSI, LSI, VLSI"]],
+["6. Fundamentals of Digital Electronics",["6.1 Number systems & conversion","6.2 Binary arithmetic","6.3 Logic gates, truth tables, Boolean expressions","6.4 Boolean algebra, De Morgan’s theorem","6.5 Universal gates"]],
+["7. Combinational Logic Devices",["7.1 Encoder / decoder","7.2 Multiplexer / de-multiplexer","7.3 Adder & subtractor"]],
+["8. Sequential Logic Devices",["8.1 Latches & flip-flops (SR, JK, D, T)","8.2 Counters (synchronous, asynchronous, ring)","8.3 Shift registers"]]
+]],
+["EG 2102 ME","Electrical Technology",5,125,[
+["1. Introduction",["1.1 Electric sources (AC/DC, current/voltage)","1.2 Charge, current, emf, potential difference","1.3 Generation, transmission & distribution in Nepal","1.4 Resistance, inductance, capacitance; series/parallel"]],
+["2. Electric Circuit and Theorem",["2.1 Ohm’s law","2.2 Electrical power & energy","2.3 Kirchhoff’s laws: mesh & nodal analysis","2.4 Ideal & practical sources","2.5 Maximum power transfer"]],
+["3. AC Circuit Analysis",["3.1 1-phase AC generation & waveform terms","3.2 Average, r.m.s, peak values","3.3 AC in R, L, C and series RL, RC, RLC","3.4 Power types, power factor & improvement","3.5 Power measurement (1-phase)","3.6 3-phase system basics"]],
+["4. Lighting, Wiring, Electrical Safety and Protection",["4.1 Lighting systems (incandescent to LED)","4.2 Open vs concealed wiring","4.3 Earthing & grounding","4.4 Fuse, MCB, lightning arrestor","4.5 Electric shock, prevention & first aid"]],
+["5. Transformer",["5.1 Construction & working principle","5.2 Emf equation, transformation ratio","5.3 Losses & efficiency"]],
+["6. DC Machines",["6.1 DC generator: principle, excitation, armature reaction","6.2 DC motor: principle, back emf, types","6.3 Speed & direction control"]],
+["7. AC Machines",["7.1 Synchronous generator","7.2 Synchronous motor","7.3 Induction motor"]],
+["8. Selection of Motor",["8.1 Force, torque, rpm & power relations","8.2 Sizing & selection","8.3 Practical applications"]]
+]],
+["EG 2103 ME","Machine Drawing",4,100,[
+["1. Standard symbols",["1.1 Machining & surface roughness symbols","1.2 Welding symbols","1.3 Pipe & fittings symbols","1.4 Electrical & electronic symbols"]],
+["2. Limits, tolerances and fits",["2.1 Nominal/basic size, limits of size","2.2 Fundamental deviations, tolerances","2.3 Clearance, interference, transition fits","2.4 Hole basis & shaft basis systems","2.5 Go/no-go gauges, interchangeability"]],
+["3. Gear, Pulley and Belt",["3.1 Spur gear terminology & involute tooth profile","3.2 Fast & loose, V-belt, rope pulleys"]],
+["4. Working Drawing (Detail)",["4.1 Layout, title box, bill of materials","4.2 Freehand sketch of details with dimensioning","4.3 Sectioning types & dimensioning review"]],
+["5. Working Drawing (Assembly)",["5.1 Item list, drawing numbers, sheet folding & filing","5.2 Norms & practices for assembly drawing","5.3 Sectioning & dimensioning in assembly","5.4 Sequence of preparing an assembly drawing","5.5 Plant/machine layout & installation drawing"]]
+]],
+["EG 2104 ME","Material Science",4,125,[
+["1. Introduction",["1.1 Importance & scope","1.2 Classification of materials","1.3 Physical, mechanical, electrical, magnetic, thermal properties"]],
+["2. Arrangement of Atoms",["2.1 Crystalline & amorphous solids","2.2 Unit cell, coordination number, APF","2.3 BCC, FCC, HCP","2.4 Crystal imperfections"]],
+["3. Fracture",["3.1 Ductile, brittle, fatigue & creep failure","3.2 Mechanisms & remedies"]],
+["4. Testing of Metals",["4.1 Non-destructive: X-ray, ultrasonic, magnetic","4.2 Destructive: tensile, fatigue","4.3 Hardness: Brinell, Vickers, Rockwell","4.4 Impact: Charpy & Izod"]],
+["5. Steels and Cast Iron",["5.1 Micro-constituents & cooling curve","5.2 Effect of carbon in iron","5.3 Steel types: HSLA, stainless, tool","5.4 Cast iron: grey, white, malleable, ductile","5.5 Steel making: Bessemer, open hearth, duplex"]],
+["6. Heat Treatment Process",["6.1 Purpose","6.2 Annealing, normalizing","6.3 Quenching, tempering","6.4 Surface hardening: nitriding, carburizing"]],
+["7. Engineering Materials",["7.1 Ferrous & non-ferrous alloys","7.2 Polymers & rubber","7.3 Ceramics & glass","7.4 Composite materials"]]
+]],
+["EG 2105 ME","Thermal Engineering",5,125,[
+["1. Basic Concept of Thermodynamics",["1.1 Systems (closed, open, isolated)","1.2 Intensive & extensive properties","1.3 State, process, cycle","1.4 Forms of energy, sensible & latent heat"]],
+["2. Zeroth Law of Thermodynamics",["2.1 Definition & applications","2.2 Types of thermometers"]],
+["3. First Law of Thermodynamics",["3.1 Statement & mathematical form","3.2 Application to closed systems","3.3 Internal energy, enthalpy"]],
+["4. Second Law of Thermodynamics",["4.1 Limitation of first law","4.2 Kelvin–Planck & Clausius statements","4.3 Carnot cycle, heat engine, heat pump, refrigerator, COP","4.4 Reversibility, entropy, T-S diagram"]],
+["5. Basic Thermodynamic Processes",["5.1 Constant volume, pressure, temperature","5.2 Adiabatic & polytropic"]],
+["6. Heat Transfer",["6.1 Conduction, convection, radiation","6.2 Fourier’s law","6.3 Newton’s law, free & forced convection","6.4 Stefan–Boltzmann law"]],
+["7. Air Compressors",["7.1 Classification & uses of compressed air","7.2 Single-stage reciprocating compressor","7.3 Centrifugal compressor"]],
+["8. Boilers",["8.1 Water tube vs fire tube","8.2 Requirements of an ideal boiler","8.3 Mountings & accessories","8.4 Water conditioning, scale & deposits"]]
+]],
+["EG 2106 ME","Engineering Dynamics",3,50,[
+["1. Kinematics of Particles",["1.1 Displacement, velocity, acceleration","1.2 Equations of motion","1.3 Rectilinear & curvilinear motion","1.4 Projectile motion, motion under gravity","1.5 Relative & dependent motion"]],
+["2. Kinetics",["2.1 Newton’s laws","2.2 Conservation of momentum","2.3 Impulse & impulsive force","2.4 D’Alembert’s principle","2.5 Motion of connected bodies"]],
+["3. Work, Power and Energy",["3.1 Definition, units, types","3.2 Potential & kinetic energy","3.3 Conservation of energy"]],
+["4. Circular and Curvilinear Motion",["4.1 Angular motion equations","4.2 Relation between linear & angular motion"]],
+["5. Simple Machine",["5.1 Mechanical advantage, velocity ratio, efficiency","5.2 Reversibility & self-locking","5.3 Maximum mechanical advantage & efficiency"]]
+]],
+["EG 2107 ME","Workshop Practice II",11,300,[
+["1. Introduction to Metrology",["1.1 Units, dimensions, standards","1.2 Metrological terminology & errors","1.3 Mechanical measuring instruments"]],
+["2. Plumbing Works",["2.1 Plumbing tools","2.2 Pipes (polythene, GI, CI) & operations","2.3 Pipe fittings","2.4 Water supply & sewerage basics"]],
+["3. Foundry",["3.1 Casting processes & materials","3.2 Melting furnaces (cupola, induction, crucible)","3.3 Pattern making","3.4 Sand moulding & core making"]],
+["4. Forging",["4.1 Hand forging tools & operations","4.2 Power forging & defects","4.3 Heat treatment of forged parts"]],
+["5. Arc Welding",["5.1 Arc column theory, power sources","5.2 SMAW, GMAW, GTAW","5.3 Machines, accessories, electrodes","5.4 Techniques, joints, defects & remedies"]],
+["6. Gas Welding",["6.1 Oxy-acetylene principle & safety","6.2 Equipment, filler rod & flux, flame types","6.3 Techniques, joints, positions","6.4 Distortion & testing of joints","6.5 Oxygen gas cutting"]],
+["7. Soldering and Brazing",["7.1 Principle & application","7.2 Equipment & materials","7.3 Welding vs soldering vs brazing"]]
+]],
+["EG 2108 ME","Industrial Engineering",3,100,[
+["1. Industrial Engineering",["1.1 Definition & evolution","1.2 Functions & functional areas"]],
+["2. Organization and Management",["2.1 Types of organization (single ownership to public)","2.2 Structures: line, line & staff, functional","2.3 Functions & levels of management, skills","2.4 Management theories"]],
+["3. Leadership and Motivation",["3.1 Qualities of leaders, manager vs leader","3.2 Leadership styles","3.3 Theory X/Y, Maslow’s hierarchy"]],
+["4. Introduction to Production System",["4.1 Plant location & layout","4.2 Material handling","4.3 Store management"]],
+["5. Production Planning and Control",["5.1 PPC objectives & production systems","5.2 Forecasting","5.3 Inventory control (EOQ, ABC)","5.4 CPM & PERT","5.5 Quality & productivity"]],
+["6. Marketing of Product or Services",["6.1 Marketing mix","6.2 Consumer behaviour & functions of marketing"]],
+["7. Maintenance Engineering",["7.1 Objectives & types of maintenance","7.2 Maintenance activities"]],
+["8. Engineering Economics",["8.1 Time value of money, interest","8.2 Depreciation methods","8.3 Payback, NPV, IRR, MARR"]]
+]]
+]},
+{n:"Semester 4",s:[
+["EG 2201 ME","Manufacturing Technology I",14,350,[
+["1. General safety in machining workshop"],
+["2. Metal Cutting",["2.1 Orthogonal & oblique cutting","2.2 Cutting tool classification & geometry","2.3 Chip types, heat sources","2.4 Tool failure, life, wear","2.5 Machinability & tool materials"]],
+["3. Cutting Fluids",["3.1 Functions & qualities","3.2 Classification & application","3.3 Safety"]],
+["4. Lathe Machine",["4.1 Classification, construction of engine lathe","4.2 Accessories","4.3 Operations (turning, facing, taper, threading, boring, knurling)","4.4 Cutting variables & machining time","4.5 Repair & maintenance"]],
+["5. Shaping Machines",["5.1 Classification, quick return mechanism","5.2 Tools & work holding","5.3 Operations, cutting variables, machining time"]],
+["6. Drilling Machines",["6.1 Classification of drill presses","6.2 Tools & work holding","6.3 Drilling, counter-boring, counter-sinking, reaming"]],
+["7. Milling Machines",["7.1 Classification & parts of column & knee type","7.2 Milling cutters","7.3 Operations & methods (up, down, face, end)","7.4 Indexing heads & methods","7.5 Cutting variables & machining time"]],
+["8. Grinding Machines",["8.1 Abrasives, bonds, wheel specification","8.2 Mounting, loading, glazing, trueing, dressing","8.3 Grinding operations & machine types"]],
+["9. Planer Machines",["9.1 Classification & mechanism","9.2 Planing operations","9.3 Cutting variables"]],
+["10. Boring Machines",["10.1 Classification","10.2 Boring operations, jig boring"]],
+["11. Capstan and Turret Lathes",["11.1 Capstan vs turret vs engine lathe","11.2 Work & tool holding","11.3 Thread cutting operations"]],
+["12. Broaching Machines",["12.1 Classification","12.2 Methods (internal, external, pull, push, continuous)"]]
+]],
+["EG 2202 ME","Computer Aided Drawing",4,100,[
+["1. Introduction",["1.1 AutoCAD screen & command input","1.2 Units, drawing limits","1.3 Coordinate system"]],
+["2. Basic Drawing Commands",["2.1 Line, point, xline, arc, circle","2.2 Polygon, pline, mline, spline"]],
+["3. Modifying Commands",["3.1 Selection, erase, undo/redo","3.2 Offset, copy, move, rotate, mirror, array","3.3 Scale, stretch, chamfer, fillet","3.4 Trim, extend, explode, break, pedit","3.5 Linetype, lineweight, colour, grips"]],
+["4. Drawing Aids",["4.1 Ortho, grid, snap, osnap","4.2 Layers & properties","4.3 Point filter, calculator"]],
+["5. Display Commands",["5.1 Zoom, pan, view, regen","5.2 Viewports"]],
+["6. Inquiry Commands",["6.1 ID, DIST, AREA","6.2 MASSPROP, LIST, STATUS"]],
+["7. Fine Tuning Drawings",["7.1 Hatch & bhatch","7.2 Isometric drawing"]],
+["8. Grouping in AutoCAD",["8.1 Block, wblock","8.2 Insert, minsert, base"]],
+["9. Working with Text",["9.1 Text, mtext, dtext","9.2 Justification, fonts, style"]],
+["10. Dimensioning",["10.1 Dimensioning commands","10.2 Dimension styles & scale"]],
+["11. 3-D Solid Modeling",["11.1 Box, cylinder, cone, sphere","11.2 Union, subtraction, intersection","11.3 Extrude"]],
+["12. Plotting Drawings",["12.1 Title block & layout","12.2 Paper size, scale, rotation, origin","12.3 MVIEW, MVSETUP"]]
+]],
+["EG 2203 ME","Internal Combustion Engine",6,150,[
+["1. Internal Combustion Engine",["1.1 Classification of I.C. engines","1.2 Engine components & functions","1.3 Two-stroke & four-stroke petrol and diesel engines","1.4 DI and IDI combustion chambers"]],
+["2. Fuels and Combustion of Fuels",["2.1 Classification, merits & demerits of fuels","2.2 Combustion equation & characteristics","2.3 Higher & lower heating value","2.4 Air–fuel ratio: lean, stoichiometric, rich"]],
+["3. Petrol Fuel System",["3.1 Layout, fuel pump, fuel filter","3.2 Carburetor & its systems (idle, main metering, accelerating pump, power, choke)","3.3 Drawbacks of carburetor","3.4 Electronic fuel injection: SPI & MPFI"]],
+["4. Diesel Fuel System",["4.1 Layout, feed pump, filters","4.2 Injection pumps: inline & distributor","4.3 Injectors","4.4 Common rail direct injection"]],
+["5. Ignition Systems",["5.1 Ignition timing","5.2 Battery, magneto, CDI, electronic, distributor-less","5.3 Ignition advance mechanism"]],
+["6. Cooling System",["6.1 Overheating & over-cooling","6.2 Air & water cooling","6.3 Engine coolant"]],
+["7. Lubrication System",["7.1 Functions of lubricating oil","7.2 Viscosity numbers & grades","7.3 Splash & pressurized systems"]],
+["8. Basic Parameters of Engine Performance",["8.1 Indicated, brake & friction power","8.2 Specific fuel consumption","8.3 Indicated thermal, brake thermal & mechanical efficiency"]],
+["9. Engine Emission Control",["9.1 Exhaust constituents & legal requirements","9.2 EGR","9.3 Evaporative emission control, PCV","9.4 Catalytic converter"]]
+]],
+["EG 2204 ME","Machine Element & Mechanism",3,100,[
+["1. Machine Elements",["1.1 Shafts & axles","1.2 Bearings","1.3 Belts & pulleys","1.4 Gears, chains, ropes","1.5 Power transmission: speed calculations","1.6 Couplings & clutches","1.7 Springs & seals"]],
+["2. Joints/Connection",["2.1 Detachable: threads, screws, nuts & bolts, pins & keys, tapers, splines","2.2 Permanent: rivets, shrink connection, soldering, welded joints"]],
+["3. Working of Mechanisms",["3.1 Mechanical advantage, velocity ratio, efficiency","3.2 Crank, cam, wedge & screw","3.3 Gear, friction, belt mechanisms","3.4 Electro-mechanical mechanisms","3.5 Watt governor"]],
+["4. Introduction to Balancing",["4.1 Static balancing","4.2 Dynamic balancing"]]
+]],
+["EG 2205 ME","Strength of Materials",5,125,[
+["1. Introduction to Strength of Materials and its scope"],
+["2. Concept of Stress and Strain",["2.1 Direct stress & strain (uniform, stepped sections)","2.2 Hooke’s law, Young’s modulus","2.3 Stress–strain diagram of mild steel, factor of safety","2.4 Composite sections & temperature stresses","2.5 Shear stress, strain, modulus of rigidity","2.6 Poisson’s ratio, volumetric strain, bulk modulus","2.7 Relationship between elastic constants"]],
+["3. Simple Bending",["3.1 Theory & assumptions","3.2 Moment of resistance, neutral axis, section modulus","3.3 Bending equation"]],
+["4. Shear Stress in Beam",["4.1 Shear stress formula","4.2 Distribution: rectangular, I and T sections"]],
+["5. Torsion",["5.1 Torque & angle of twist","5.2 Power transmitted by shaft","5.3 Torsional equation"]],
+["6. Columns",["6.1 Column & strut, support conditions","6.2 Euler’s formula","6.3 Effective length, critical load, slenderness ratio"]]
+]],
+["EG 2206 ME","Fluid Mechanics and Machines",5,125,[
+["1. Properties of Fluid",["1.1 Density, specific weight, specific gravity","1.2 Viscosity","1.3 Surface tension & capillarity","1.4 Compressibility & bulk modulus"]],
+["2. Fluid Static",["2.1 Pressure, pressure head","2.2 Absolute, gauge, atmospheric pressure","2.3 Manometers","2.4 Force on submerged plane surfaces","2.5 Buoyancy, flotation, stability"]],
+["3. Kinematics of Fluid",["3.1 Reynolds number","3.2 Path line, stream line","3.3 Types of flow"]],
+["4. Basic Equations of Fluid Flow",["4.1 Continuity","4.2 Bernoulli’s equation","4.3 Momentum equation"]],
+["5. Losses on Pipe Flow",["5.1 Major loss: Darcy–Weisbach, Moody diagram","5.2 Minor losses"]],
+["6. Flow Measurement",["6.1 Velocity, contraction, discharge coefficients","6.2 Orifice, venturimeter, notches"]],
+["7. Dynamic Action of Fluid",["7.1 Dynamic force & power","7.2 Jet on stationary & moving flat plates"]],
+["8. Water Turbines",["8.1 Basics of hydropower plants","8.2 Classification","8.3 Pelton, Francis, Propeller, Cross flow","8.4 Characteristic curves, specific speed","8.5 Turbine governor"]],
+["9. Pumps",["9.1 Positive displacement & roto-dynamic pumps","9.2 Centrifugal & piston pumps","9.3 Characteristics & selection","9.4 Hydraulic ram pump"]]
+]],
+["EG 2207 ME","Project I",3,100,[
+["1. Team formation & selection of a simple fabrication project"],
+["2. Fabrication of the functional product (20 marks attendance & job performance)"],
+["3. Part & assembly drawings, list of materials"],
+["4. Product demonstration (20) & report (10)"],
+["5. Presentation (10) & final group report with viva (40)"]
+]]
+]},
+{n:"Semester 5",s:[
+["EG 3101 ME","Manufacturing Technology II",14,350,[
+["1. Jigs and Fixtures",["1.1 Jig vs fixture, uses","1.2 Design principles & materials","1.3 Drilling, turning, milling, grinding, welding, boring fixtures"]],
+["2. Special Casting Processes",["2.1 Permanent mould, slush, die","2.2 Centrifugal, investment, mercast","2.3 Continuous & precision casting","2.4 Casting defects & remedies"]],
+["3. Metal Forming",["3.1 Hot & cold working","3.2 Forging (open, impression, closed die), dies & presses","3.3 Rolling, extrusion, drawing","3.4 Sheet metal: bending, deep drawing, spinning"]],
+["4. Advanced Welding Techniques",["4.1 Atomic hydrogen, plasma arc","4.2 Electro-slag, ultrasonic, explosive","4.3 Electron beam, laser beam","4.4 Welding defects & remedies"]],
+["5. Surface Finishing Processes",["5.1 Lapping, honing, super finishing","5.2 Buffing, polishing, tumbling, burnishing"]],
+["6. Gear Cutting Processes",["6.1 Gear classification & spur gear terminology","6.2 Gear shaping & rack cutters","6.3 Gear hobbing","6.4 Formed disc cutter milling"]],
+["7. Thread Cutting Processes",["7.1 Thread types & terminology","7.2 Thread cutting, milling, grinding, rolling"]],
+["8. Powder Metallurgy",["8.1 Metal powder characteristics & production","8.2 Process, advantages & disadvantages","8.3 Applications"]]
+]],
+["EG 3102 ME","Automobile Technology",7,200,[
+["1. Introduction to Automobile",["1.1 Classification","1.2 Chassis layout"]],
+["2. Automobile Transmission System",["2.1 Clutch","2.2 Gear box & transfer case","2.3 Propeller shaft & universal joints","2.4 Differential, LSD","2.5 Live rear axle"]],
+["3. Front Axle and Steering System",["3.1 Front axle","3.2 Steering system & gearbox","3.3 Steering geometry & wheel alignment (camber, caster, toe, SAI)"]],
+["4. Brakes",["4.1 Mechanical, hydraulic, pneumatic","4.2 Disc & drum brakes","4.3 ABS concept"]],
+["5. Tires and Wheels",["5.1 Tire types, construction, size, pressure","5.2 Spoke, steel, alloy wheels"]],
+["6. Suspension System",["6.1 Components","6.2 Leaf, coil, torsion springs","6.3 Dampers","6.4 Dependent & independent; hydraulic & pneumatic"]],
+["7. Electrical and Electronics",["7.1 Lead-acid battery","7.2 Starting & charging systems","7.3 Wiring diagrams, colour codes","7.4 ABS, airbags, power window, power steering, central locking, immobilizer, cruise control"]]
+]],
+["EG 3103 ME","Fundamentals of Hydraulics and Pneumatics",5,125,[
+["1. Fundamentals of Hydraulics and Pneumatics",["1.1 Hydrostatics & hydrodynamics","1.2 Basic principles, advantages, applications"]],
+["2. Industrial Hydraulics",["2.1 Open & closed center systems","2.2 Hydraulic fluids","2.3 Pumps: gear, vane, piston","2.4 Cylinders, valves, motors","2.5 Accumulators, filters, reservoir, oil cooler"]],
+["3. Industrial Pneumatics",["3.1 Compressed air preparation","3.2 Compressors: piston, vane, helical, centrifugal","3.3 Air cylinders & motors","3.4 Pressure, flow & direction control valves","3.5 After coolers, dryers, receiver, filters"]],
+["4. Hydraulic and Pneumatic Circuits",["4.1 Symbols","4.2 Drawing circuits","4.3 Pipeline & layout requirements"]],
+["5. General Maintenance",["5.1 Preventive maintenance","5.2 Diagnosis & testing"]]
+]],
+["EG 3104 ME","Machine Design, Estimating & Costing",4,100],
+["EG 3105 ME","Project II",4,100],
+["EG 3106 ME","Industrial Attachment",6,150]
+]},
+{n:"Semester 6",s:[
+["EG 3201 ME","Advanced Manufacturing Technology",7,200],
+["EG 3202 ME","Basic Refrigeration and Air-conditioning",6,125],
+["EG 3203 ME","Occupational Hygiene and Safety",3,100],
+["EG 3201 MG","Entrepreneurship Development",5,150,ENT?ENT[4]:null],
+["EG 3204 ME","Project III",12,300],
+["EG 3205 ME","Elective (one of four)",7,150,[
+["Product Design"],
+["Hydropower Engineering"],
+["Renewable Energy Technology"],
+["Planning of Mechanical Job Shop"]
+]]
+]}
+];
+var ELEC=[
+CIVIL[0],
+MECH[1],
+{n:"Semester 3",s:[
+["EG 2101 EE","Fundamental of Electrical Engineering",6,150,[
+["1. Basic Concept of Electricity",["1.1 Electric charge & current","1.2 Conventional vs electron flow","1.3 Potential difference & emf","1.4 Conductors & insulators","1.5 Resistance & its variation with temperature","1.6 Direct & alternating current"]],
+["2. Electric Circuit Fundamentals",["2.1 Resistor, inductor, capacitor","2.2 Independent & dependent sources","2.3 Series & parallel circuits","2.4 Ohm’s law & limitations","2.5 Kirchhoff’s laws","2.6 Electric power & energy"]],
+["3. Electrostatics",["3.1 Laws of electric forces, field & flux","3.2 Dielectrics, permittivity","3.3 Electric potential & gradient","3.4 Capacitors: series/parallel, factors, stored energy","3.5 Charging & discharging, time constant"]],
+["4. Magnetism and Electromagnetism",["4.1 Magnetic field, flux, permeability, domain theory","4.2 Permanent magnets & electromagnets","4.3 Dia-, para-, ferro-magnetic materials","4.4 Force on a current carrying conductor","4.5 Hysteresis loop, hard & soft materials"]],
+["5. Electro Magnetic Induction",["5.1 Faraday’s & Lenz’s laws","5.2 Dynamically & statically induced emf","5.3 Self & mutual inductance","5.4 Energy stored in an inductor","5.5 Magnetic circuit"]],
+["6. Electrolysis and its Application",["6.1 Faraday’s law of electrolysis","6.2 Primary & secondary cells, internal resistance","6.3 Lead acid cell & charging methods","6.4 Dry, mercury, Ni-Cd, Li-ion cells","6.5 Series & parallel batteries"]]
+]],
+["EG 2102 EE","Computer Programming",4,100,[
+["1. Programming Language Fundamentals",["1.1 Types of languages","1.2 Assembler, compiler, interpreter","1.3 Algorithm & flowchart"]],
+["2. Introduction to C",["2.1 Features of C, program structure","2.2 Data types, keywords, variables","2.3 Preprocessor directives, escape sequences"]],
+["3. Operators",["3.1 Unary, binary, ternary","3.2 Arithmetic, relational, logical, assignment, increment/decrement"]],
+["4. Control Structure",["4.1 Sequential statements","4.2 if, if…else, else if, switch","4.3 for, while, do-while loops"]],
+["5. Array",["5.1 1-D arrays","5.2 2-D arrays"]],
+["6. Function",["6.1 Declaration, call, definition","6.2 Library & user-defined functions"]],
+["7. Pointer and Data files",["7.1 Pointers","7.2 File handling","7.3 fputs, fgets, fprintf"]]
+]],
+["EG 2103 EE","Basic Electronics and Logic Circuits",8,150,[
+["1. Introduction of Electronics"],
+["2. Electronic Passive Components",["2.1 Resistors, potentiometers, thermistor, LDR","2.2 Inductors","2.3 Capacitors"]],
+["3. Semiconductor Diode",["3.1 PN junction diode","3.2 Zener diode & voltage regulation"]],
+["4. Bipolar Junction Transistor",["4.1 PNP & NPN structure, biasing","4.2 Characteristics, cutoff, saturation, DC load line","4.3 Data sheet & testing"]],
+["5. Transistor Amplifier Circuits",["5.1 CE, CC, CB amplifiers","5.2 Leakage current, temperature stability, heat sink"]],
+["6. Special Semiconductor Devices",["6.1 SCR, UJT, JFET, MOSFET","6.2 Photodiode, optocoupler, varactor"]],
+["7. Digital Electronics and Number System",["7.1 Analogue vs digital signals","7.2 Binary, octal, hexadecimal & conversion","7.3 Binary arithmetic, signed numbers","7.4 BCD & ASCII"]],
+["8. Fundamentals of Digital Electronics",["8.1 Logic gates & truth tables","8.2 Boolean algebra, De Morgan’s theorem","8.3 Universal gates","8.4 K-map minimization"]],
+["9. Combinational Logic Devices",["9.1 Encoder / decoder, 7-segment decoder","9.2 Multiplexer / de-multiplexer","9.3 Parity generator, adders & subtractors"]],
+["10. Analog and Digital Conversion",["10.1 A/D conversion","10.2 D/A conversion"]],
+["11. Sequential Logic Devices",["11.1 Mono-, bi-, astable devices","11.2 Latches & flip-flops (SR, D, JK, T)","11.3 Clocked flip-flops & triggering"]]
+]],
+["EG 2104 EE","Civil Construction and Survey",6,150,[
+["A1. Introduction to Civil Construction",["A1.1 Construction materials","A1.2 Walls, roofs, floors","A1.3 Cable trench through floor"]],
+["A2. Foundations",["A2.1 Basic soil mechanics & bearing capacity","A2.2 Types of foundations (poles, towers, machines)","A2.3 Foundation plans & sections","A2.4 Concrete mixes & mortar"]],
+["A3. Walls and Supports",["A3.1 Brick, block, stone masonry","A3.2 Openings, lintels, doors & windows"]],
+["A4. Drainage",["A4.1 Need for drainage","A4.2 Surface water & sewage drains"]],
+["B1. Introduction to Surveying",["B1.1 Surveying & levelling for lines, switchyards, towers","B1.2 Survey equipment (tape, chain, level, theodolite, total station)"]],
+["B2. Distance Measurement",["B2.1 Chain & tape, errors","B2.2 Theodolite for distance"]],
+["B3. Angle Measurement",["B3.1 Horizontal angles (compass, level, theodolite)","B3.2 Vertical angles, heights"]],
+["B4. Leveling for Building Sites"],
+["B5. Survey and Leveling of Power Lines",["B5.1 Routing, levelling, pegging","B5.2 Traversing (closed & open)"]]
+]],
+["EG 2105 EE","Electrical Engineering Material",4,100,[
+["1. Conducting Material",["1.1 Resistor alloys of Ni, Fe, Cr, Al","1.2 Band structure, energy gap","1.3 Resistivity, conductivity, drift & mobility"]],
+["2. Magnetic Material",["2.1 B-H characteristics, hysteresis, eddy current loss","2.2 Permeability & susceptibility, domain structure","2.3 Ferrous materials & corrosion","2.4 Non-ferrous materials & alloys","2.5 Carbon as electrical material"]],
+["3. Dielectric Materials",["3.1 Dielectric constant, dipole moment","3.2 Polarization mechanisms","3.3 Dielectric losses & breakdown (gas, liquid, solid)","3.4 Ferro- & piezo-electricity","3.5 Insulating materials"]],
+["4. Semiconductor Materials",["4.1 Band structure, silicon & germanium","4.2 Intrinsic & extrinsic, N and P type","4.3 Fermi level, Seebeck effect","4.4 Schottky junction & ohmic contact"]]
+]],
+["EG 2106 EE","Principles of Management and Costing",4,100,[
+["1. Organization and Management",["1.1 Principles & functions of management","1.2 Traditional & modern organizations","1.3 Ownership of organization"]],
+["2. Human Resource Management",["2.1 Job analysis, selection process","2.2 Labour welfare, accidents & safety"]],
+["3. Motivation and Leadership",["3.1 Functions of a leader","3.2 Maslow, Herzberg, Theory X/Y","3.3 Managing conflict"]],
+["4. Strategy and Environmental Scanning",["4.1 Strategic planning, SWOT","4.2 Project analysis & appraisal"]],
+["5. Marketing",["5.1 Marketing mix","5.2 Distribution channels, sales promotion"]],
+["6. Basic Accounting",["6.1 Sources of finance, assets & liabilities","6.2 Debit/credit, profit & loss, balance sheet","6.3 Interest, depreciation, cash flow"]],
+["7. Financial Analysis",["7.1 Benefit/cost ratio","7.2 NPV, payback period"]],
+["8. Project Risk",["8.1 Types of project risk","8.2 Sensitivity & breakeven analysis"]]
+]],
+["EG 2107 EE","Electrical Installation I",5,100,[
+["1. Wiring rules, regulations & code of practice"],
+["2. Electrical hazards, shock effects & rescue"],
+["3. Wiring systems, accessories, cables & current carrying capacity"],
+["4. Protective devices: fuse, MCB, MCCB, ELCB, thermal relays"],
+["5. Motor direction change & wiring tests (continuity, insulation, polarity, earth fault)"],
+["6. Earthing & earth testing"],
+["7. Practical: DB wiring, lamp control circuits, bell circuits, 1-φ & 3-φ motor starters, traffic lights, earthing, field visit"]
+]],
+["EG 2108 EE","Electrical Engineering Drawing I",3,50,[
+["1. Symbols & alarm circuits"],["2. Building & street lighting switch connections"],["3. Ammeter / voltmeter connections (DOL, shunt & multiplier, CT/PT)"],["4. Single-phase consumer layout & bill of quantities"],["5. DC generator connection diagrams"],["6. Armature winding & control circuit diagrams"],["7. AC to DC adaptor with rectifier & filter"],["8. Refrigerator compressor motor circuit"],["9. Capacitor start / run motor diagrams"],["10. Change-over switch & standby supply"],["11. Armature winding diagram (4-pole wave)"],["12. Earthing installation & bill of quantity"],["13. 3-φ 4-wire distribution line with street light"],["14. Panel board fabrication diagram"],["15. Indoor / outdoor substation layout"]
+]]
+]},
+{n:"Semester 4",s:[
+["EG 2201 EE","Microprocessor",6,150,[
+["1. Introduction to Microprocessor and Microcontroller",["1.1 Evolution, RISC & CISC","1.2 Microprocessor vs microcontroller","1.3 Bus organization, stored program concept"]],
+["2. Basics of 8085 Microprocessor",["2.1 Architecture, pins, registers, ALU","2.2 Addressing modes, instruction set, interrupts, 8259","2.3 Programming: data transfer, arithmetic, logic"]],
+["3. Memory & I/O Interfacing",["3.1 Memory hierarchy, mapping, I/O mapped vs memory mapped","3.2 Parallel interface & PPI","3.3 Serial interface: RS232, USART, USB","3.4 DMA & DMA controller"]],
+["4. Microcontrollers",["4.1 Block diagram & comparison","4.2 8051, AVR, PIC families","4.3 Interfacing keyboards, LEDs, LCDs","4.4 Arduino & Raspberry Pi"]]
+]],
+["EG 2202 EE","Computer Aided Design",5,100,[
+["1. AutoCAD",["1.1 Introduction & application","1.2 Basic tools & menus"]],
+["2. Basic Commands and Drawing Aids",["2.1 Draw commands","2.2 Modify commands","2.3 Ortho, grid, snap, osnap","2.4 Display, hatch","2.5 Layers"]],
+["3. Grouping in AutoCAD",["3.1 Block, wblock","3.2 Insert, minsert, explode"]],
+["4. Working with Text",["4.1 Text, mtext, dtext","4.2 Style & justification"]],
+["5. Dimensioning",["5.1 Commands","5.2 Styles & scale"]],
+["6. AutoCAD in Electrical Field",["6.1 Need & current scenario","6.2 Building electrification"]],
+["7. Layout Drawing",["7.1 Design center","7.2 Standard symbols & layout management"]],
+["8. Plotting Drawings",["8.1 Layout setup","8.2 Paper size, scale, printing"]]
+]],
+["EG 2203 EE","Electric Circuit Analysis",6,150,[
+["1. DC Network Theorems and Circuit Analysis",["1.1 Thevenin’s theorem","1.2 Norton’s theorem","1.3 Superposition theorem","1.4 Maximum power transfer","1.5 Mesh current method","1.6 Node voltage method"]],
+["2. AC Fundamentals",["2.1 Generation & equations of alternating quantities","2.2 Average & r.m.s values","2.3 Phasor representation, j operator","2.4 AC through R, L, C","2.5 Series R-L, R-C, R-L-C","2.6 Parallel R-L, R-C, R-L-C","2.7 Series & parallel resonance"]],
+["3. Three Phase System",["3.1 Generation, phase sequence","3.2 Star & delta connection","3.3 Line & phase quantities","3.4 Power in 3-phase circuit","3.5 Balanced & unbalanced loads"]]
+]],
+["EG 2204 EE","Electrical Installation II",4,100,[
+["1. DOL starter & start/stop control of 3-φ induction motor"],
+["2. Multi-station control & forward/reverse control"],
+["3. Star-delta starting (manual & automatic with timer)"],
+["4. Slip-ring motor with rotor resistance starter"],
+["5. Two-speed motor & sequence control of three motors"],
+["6. Automatic generator back-up changeover"],
+["7. Single-phase pump motor with float switch level control"],
+["8. Overhead line works: pole erection, staying, stringing, transformer, DO-fuse, LT panel"]
+]],
+["EG 2205 EE","Electrical Engineering Drawing II",3,50,[
+["1. 3-φ motor control diagrams (manual FWD/REV, star/delta rotary switch)"],["2. Water pump installation layout with float switches"],["3. Contactor-based start/stop & forward/reverse diagrams"],["4. DOL with automatic reversing & automatic star/delta with limit switch"],["5. 11 kV/380 V distribution transformer winding & KWH meter with CT/PT"],["6. 3-φ brushless alternator with excitation system"],["7. Heating rods with digital temperature controller"],["8. Auto/manual changeover panel for generator & NEA supply"],["9. Induction motor stator winding diagrams (24 slot, 2 & 4 pole)"],["10. Section view of three-phase transformer"]
+]],
+["EG 2206 EE","Electrical Machines I",6,150,[
+["1. Single Phase Transformer",["1.1 Principle, emf equation, construction","1.2 No-load & load operation","1.3 Equivalent circuit, voltage regulation","1.4 Losses & efficiency","1.5 Polarity, no-load, short-circuit tests","1.6 Autotransformer, parallel operation"]],
+["2. Three Phase Transformer",["2.1 Connections: Y/Y, Δ/Δ, Y/Δ, Δ/Y, open delta","2.2 Parallel operation","2.3 Parts of power transformer","2.4 Name plate, power vs distribution transformer"]],
+["3. DC Generator",["3.1 Construction & emf equation","3.2 Types & characteristics","3.3 Losses & efficiency","3.4 Armature reaction & commutation"]],
+["4. DC Motor",["4.1 Torque equation, back emf","4.2 Shunt, series, compound characteristics","4.3 Starters","4.4 Speed control"]]
+]],
+["EG 2207 EE","Electrical Instruments and Measurement",6,150,[
+["1. Electrical Measuring Instruments",["1.1 Indicating, recording, integrating types","1.2 Moving coil, moving iron, electrodynamometer"]],
+["2. Measurement of Resistance, Inductance and Capacitance",["2.1 Kelvin double bridge, Wheatstone bridge, Megger","2.2 Maxwell, De Sauty, Schering bridges"]],
+["3. Extension of Measuring Range",["3.1 Shunts & multipliers","3.2 Multi-range meters"]],
+["4. Potentiometer",["4.1 DC potentiometer","4.2 Inductive potentiometer"]],
+["5. Measurement of Power, Energy and Frequency",["5.1 Wattmeter methods (1-φ, 3-φ)","5.2 VAR meter, energy meters","5.3 Frequency, maximum demand, TOD meter"]],
+["6. Non-electrical Quantities",["6.1 Thermocouple","6.2 Lux-meter, piezometer","6.3 Transducers"]],
+["7. Electronic Instruments",["7.1 CRO","7.2 Digital multimeter"]],
+["8. Instrument Transformers",["8.1 Current transformer","8.2 Potential transformer"]],
+["9. Smart Metering System",["9.1 AMR, MRI","9.2 AMI & cyber security"]]
+]],
+["EG 2208 EE","Power Stations",4,100,[
+["1. Introduction to Power System",["1.1 History: international & Nepal","1.2 Generation, transmission, distribution layout","1.3 Voltage transformation, standard frequency"]],
+["2. Generation of Electrical Energy",["2.1 Base load, peak load, renewable plants","2.2 Energy sources","2.3 Load factor, capacity factor, utilization factor"]],
+["3. Power Plants",["3.1 Diesel power plant","3.2 Hydro power plant","3.3 Thermal power plant"]],
+["4. Transmission and Distribution System",["4.1 Transmission: layout, AC vs DC, Nepal context","4.2 Distribution: layout, voltage levels"]],
+["5. Major Accessories in Power Plants",["5.1 Excitation systems (DC, AC, brushless)","5.2 Automatic voltage regulator","5.3 Switchyard, bus bars, circuit breakers, lightning arrestors"]],
+["6. Substations",["6.1 Layouts & types","6.2 Major equipment","6.3 Bus bar arrangements","6.4 PLCC & SCADA basics"]]
+]]
+]},
+{n:"Semester 5",s:[
+["EG 3101 EE","Switchgear and Protection",6,150,[
+["1. General Concept of Protection System",["1.1 Abnormal conditions, need of protection","1.2 Short circuit & open circuit effects","1.3 Zones & types of protection"]],
+["2. Short Circuit Faults",["2.1 Fault current & fault MVA","2.2 Per unit system, reactance diagram","2.3 Faults in generator, bus bar, lines"]],
+["3. Protection System Components",["3.1 Fuses & ratings","3.2 MCB","3.3 Contactors","3.4 Isolators"]],
+["4. Relays and Instrument Transformers",["4.1 Instantaneous, inverse, IDMT relays","4.2 Plug & time setting","4.3 Electromagnetic induction & directional relays","4.4 Static & digital relays, Buchholz relay","4.5 CT & PT"]],
+["5. Protection Schemes",["5.1 Time & current graded protection","5.2 Earth fault schemes","5.3 Directional & distance protection","5.4 Differential protection"]],
+["6. Circuit Breakers",["6.1 Arc formation & extinction, duties","6.2 Air brake, oil, air blast, vacuum, SF6","6.3 Comparison & HVDC breaker principle"]]
+]],
+["EG 3102 EE","Power Electronics",5,150,[
+["1. Power Electronics Devices",["1.1 Thyristor & firing circuits","1.2 Commutation","1.3 GTO, TRIAC","1.4 MOSFET, IGBT"]],
+["2. Power Rectifier",["2.1 Single-phase half & full wave","2.2 Controlled rectifier","2.3 Three-phase rectifiers"]],
+["3. DC Chopper",["3.1 Step-down & step-up chopper","3.2 Constant & variable frequency operation","3.3 DC motor speed control"]],
+["4. Inverter",["4.1 Single-phase half & full bridge","4.2 Three-phase bridge inverter","4.3 Induction & synchronous motor speed control"]],
+["5. AC Voltage Controller",["5.1 Single-phase controller","5.2 Three-phase controller","5.3 Electronic load controller for MHP"]]
+]],
+["EG 3103 EE","Electrical Machines II",7,150,[
+["1. Three Phase Induction Motor",["1.1 Construction & rotating field","1.2 Equivalent circuit, torque-speed characteristic","1.3 Power stages, losses & efficiency","1.4 Starting methods","1.5 Speed control","1.6 Induction generator"]],
+["2. Single Phase AC Motors",["2.1 Split-phase motor","2.2 Capacitor start & run motors","2.3 Shaded pole motor","2.4 AC series motor"]],
+["3. Three-phase Synchronous Generator",["3.1 Construction & emf equation","3.2 Loaded operation, synchronous impedance","3.3 Voltage regulation","3.4 Synchronizing & parallel operation"]],
+["4. Synchronous Motor",["4.1 Operating principle & starting","4.2 V and inverted V curves","4.3 Power-angle characteristic","4.4 Hunting & prevention"]]
+]],
+["EG 3104 EE","Electrical Design and Estimation",5,150],
+["EG 3105 EE","Utilization of Electrical Energy",4,100],
+["EG 3106 EE","Fundamentals of Control System",5,150],
+["EG 3107 EE","Electrical Repair and Maintenance I",4,100],
+["EG 3108 EE","Project I",4,100]
+]},
+{n:"Semester 6",s:[
+["EG 3201 EE","Electrical Energy Audit",4,125],
+["EG 3202 EE","Project II",6,150],
+["EG 3203 EE","Power System Operation and Maintenance",6,200],
+["EG 3204 EE","Electrical Repair and Maintenance II",4,100],
+["EG 3205 EE","Industrial Attachment",6,150],
+["EG 3201 MG","Entrepreneurship Development",5,100,ENT?ENT[4]:null],
+["EG 3206 EE","Transmission and Distribution of Electrical Power",4,100],
+["EG 3207 EE","Elective (one of three)",5,150,[
+["Micro Hydro Power"],
+["Instrumentation System"],
+["Renewable Energy Technology"]
+]]
+]}
+];
+var M3=CIVIL[2].s.filter(function(x){return x[0]==="EG 2101 SH"})[0];
+var COMP=[
+CIVIL[0],
+MECH[1],
+{n:"Semester 3",s:[
+M3,
+["EG 2101 CT","C Programming",7,150,[
+["1. Programming Language Fundamentals",["1.1 Low & high level languages","1.2 Assembler, compiler, interpreter","1.3 Syntax, semantic, runtime errors","1.4 Algorithm & flowchart"]],
+["2. Introduction to C",["2.1 History, features, program structure","2.2 Character set, data types, variables, tokens","2.3 Preprocessor directives, escape sequences","2.4 Formatted & unformatted input/output"]],
+["3. Operators and Expressions",["3.1 Arithmetic, relational, logical, assignment","3.2 Increment/decrement, conditional, bitwise, sizeof"]],
+["4. Control Structure",["4.1 if, if…else, nested if, switch","4.2 for, while, do-while","4.3 break, continue, goto"]],
+["5. Array and String",["5.1 1-D & multi-dimensional arrays","5.2 Strings, array of strings","5.3 strlen, strrev, strcpy, strcat, strcmp"]],
+["6. Function",["6.1 Declaration, call, definition","6.2 Call by value & reference","6.3 Recursion","6.4 Passing arrays & strings"]],
+["7. Structure and Union",["7.1 Structure, array of structure, nested structure","7.2 Union, structure vs union"]],
+["8. Pointer",["8.1 Address & indirection operators","8.2 Pointer arithmetic, pointer to pointer","8.3 malloc, calloc, realloc, free"]],
+["9. Data Files",["9.1 Text & binary files","9.2 Open, close, create","9.3 fputs, fgets, fputc, fgetc, fprintf, fscanf"]]
+]],
+["EG 2102 CT","Web Technology I",7,150,[
+["1. Internet & Web",["1.1 History & services","1.2 WWW components","1.3 Protocols: TCP/IP, HTTP, FTP, SMTP, POP"]],
+["2. HTML",["2.1 Structure, body attributes","2.2 Text formatting, fonts, lists","2.3 Images, objects, marquee","2.4 Hyperlinks & anchors","2.5 Tables","2.6 Frames & framesets","2.7 Forms & input elements"]],
+["3. HTML 5 and Features",["3.1 Semantic elements","3.2 Canvas, forms, graphics, multimedia"]],
+["4. HTML Editors and Tools",["4.1 HTML editors","4.2 Graphics & animation tools"]],
+["5. Cascading Style Sheet (CSS)",["5.1 Inline, internal, external","5.2 Background, font, text, margin, padding, border","5.3 Classes, span, div","5.4 Responsive web design"]],
+["6. Server Side and Client-Side Scripting"],
+["7. JavaScript",["7.1 Variables, data types, functions","7.2 Events & objects","7.3 DOM: browser, document, form objects","7.4 Dialog boxes, form validation"]]
+]],
+["EG 2103 CT","Digital Logic",5,150,[
+["1. Introduction to Digital Signal"],
+["2. Number Systems and Codes",["2.1 Binary, octal, hexadecimal & conversions","2.2 BCD, Gray, ASCII, EBCDIC"]],
+["3. Arithmetic Logic Operations",["3.1 Binary addition & subtraction","3.2 r’s & (r-1)’s complement"]],
+["4. Logic Gates and Boolean Function",["4.1 Basic, universal, exclusive gates","4.2 De Morgan’s theorems","4.3 Boolean algebra & simplification"]],
+["5. Logic Simplification",["5.1 K-map (2, 3, 4 variables)","5.2 SOP, POS, don’t care"]],
+["6. Combinational Logic Circuits",["6.1 Adders & subtractors","6.2 Encoders & decoders, 7-segment decoder","6.3 Multiplexer & demultiplexer"]],
+["7. Sequential Logic Circuits",["7.1 RS, D, JK, T, master-slave flip-flops","7.2 Shift registers (SISO, SIPO, PISO, PIPO)","7.3 Synchronous, ripple, modulus, decade, ring counters"]],
+["8. Digital Displays",["8.1 LED display","8.2 7-segment display"]]
+]],
+["EG 2104 CT","Discrete Structure",4,100,[
+["1. Set, Relations and Functions",["1.1 Sets, operations, fuzzy sets","1.2 Functions: injective, bijective, inverse, composite","1.3 Relations: properties, equivalence, partial ordering"]],
+["2. Logical Reasoning and Proof Techniques",["2.1 Propositional & predicate logic, rules of inference","2.2 Direct, indirect proof, induction"]],
+["3. Automata Theory",["3.1 DFA, NFA, regular expressions","3.2 Chomsky hierarchy, context free grammar"]],
+["4. Recurrence Relation",["4.1 Counting: pigeonhole, permutation, combination, binomial","4.2 Linear recurrence relations"]],
+["5. Graph Theory",["5.1 Graph types & representation","5.2 Euler & Hamilton graphs","5.3 Planar graphs, coloring","5.4 BFS & DFS","5.5 Trees & traversals"]]
+]],
+["EG 2105 CT","Software Engineering",5,150,[
+["1. Introduction",["1.1 Program vs software, characteristics","1.2 Types of software"]],
+["2. Software Development Life Cycle Models",["2.1 Build & fix, waterfall, prototyping","2.2 Iterative, spiral, RAD","2.3 Model selection"]],
+["3. Software Project Management",["3.1 Planning & scheduling","3.2 LOC, FP, COCOMO estimation","3.3 Risk management","3.4 Configuration management"]],
+["4. Requirement Analysis & Specification",["4.1 Elicitation: interviews, brainstorming, use cases","4.2 DFD, data dictionary, ER diagram","4.3 SRS"]],
+["5. Software Design",["5.1 Design models & process","5.2 Architecture & low level design","5.3 Function vs object oriented design"]],
+["6. Software Metrics"],
+["7. Software Reliability"],
+["8. Quality Management and Testing",["8.1 Quality attributes, QC & QA","8.2 Verification & validation","8.3 Unit, integration, system, regression testing","8.4 White box & black box"]],
+["9. Software Maintenance"]
+]],
+["EG 2106 CT","Basic Electrical and Electronics Engineering",7,150,[
+["1. Basic Electric System",["1.1 Passive components","1.2 Voltage & current sources","1.3 Ohm’s law, temperature coefficient"]],
+["2. DC Circuits and Network Theorems",["2.1 Kirchhoff’s law, nodal & mesh analysis","2.2 Star–delta transformation","2.3 Superposition, Thevenin, Norton, maximum power, reciprocity"]],
+["3. Alternating Quantities",["3.1 Waveform terms","3.2 Average & rms values, phasors"]],
+["4. Single-Phase AC Circuits",["4.1 R, L, C circuits","4.2 Impedance & admittance","4.3 RL, RC, RLC analysis"]],
+["5. Power in AC Circuits",["5.1 Active & reactive power","5.2 Power factor"]],
+["6. Diode",["6.1 Intrinsic & extrinsic semiconductors","6.2 Clipper & clamper","6.3 Zener, LED, photodiode, varactor, tunnel","6.4 Rectifiers & regulated supply"]],
+["7. Transistor",["7.1 BJT configurations & biasing","7.2 BJT as amplifier & switch","7.3 Small & large signal models","7.4 Differential amplifier"]],
+["8. MOSFET",["8.1 Types, construction, biasing","8.2 CMOS & logic gates"]],
+["9. Operational Amplifier",["9.1 Ideal & real characteristics","9.2 Inverting & non-inverting","9.3 Summing, differentiator, integrator, comparator"]]
+]]
+]},
+{n:"Semester 4",s:[
+["EG 2201 CT","Database Management System",6,150,[
+["1. Introduction",["1.1 Characteristics & architecture","1.2 Data abstraction, schemas & instances","1.3 DDL, DML, DCL"]],
+["2. Data Models",["2.1 Entity relationship model","2.2 Entities, attributes, keys","2.3 Relationship types, E-R diagrams"]],
+["3. Normalization",["3.1 Functional dependencies","3.2 Integrity & domain constraints","3.3 1NF, 2NF, 3NF, BCNF"]],
+["4. Relational Language",["4.1 SQL retrieval, INSERT, UPDATE, DELETE","4.2 Join, subqueries, views","4.3 Relational algebra"]],
+["5. Query Processing",["5.1 Cost estimation, operator tree","5.2 Query optimization & tuning"]],
+["6. Transaction and Concurrency Control",["6.1 Serializability","6.2 Lock based control, 2PL","6.3 Timestamps"]],
+["7. Recovery",["7.1 Failure classification, atomicity","7.2 Log based recovery, shadow paging","7.3 UNDO & REDO"]]
+]],
+["EG 2202 CT","Data Structure and Algorithm",7,150,[
+["1. Introduction",["1.1 Algorithms & data structures","1.2 Big O, Big Ω, Big θ"]],
+["2. Stack and Queue",["2.1 Stack operations, infix to postfix","2.2 Linear, circular, priority queue"]],
+["3. List",["3.1 Singly linked list operations","3.2 Doubly linked list"]],
+["4. Recursion",["4.1 Recursion vs iteration","4.2 Tower of Hanoi, Fibonacci, factorial"]],
+["5. Trees",["5.1 Binary tree operations & traversals","5.2 Height, level, depth","5.3 AVL tree & rotations"]],
+["6. Sorting",["6.1 Bubble, insertion, selection","6.2 Quick, merge, heap"]],
+["7. Search",["7.1 Sequential & binary search","7.2 Hashing & collision resolution"]],
+["8. Graph",["8.1 Representation","8.2 Kruskal & Prim","8.3 DFS & BFS, shortest path"]]
+]],
+["EG 2203 CT","Object Oriented Programming in Java",8,150,[
+["1. Object-Oriented Programming",["1.1 POP vs OOP","1.2 OOP principles"]],
+["2. Introduction to Java",["2.1 History, buzzwords","2.2 JVM"]],
+["3. Fundamental Programming Structures",["3.1 Data types, variables, constants, operators","3.2 Strings, control structures, loops","3.3 Methods & arrays"]],
+["4. Classes and Objects",["4.1 Defining class, static members, access control","4.2 Constructors, overloading, this, final","4.3 Nested & wrapper classes, garbage collection"]],
+["5. Inheritance",["5.1 Types of inheritance","5.2 Method overriding, super","5.3 Abstract classes"]],
+["6. Interface and Package",["6.1 Defining, extending, implementing interfaces","6.2 Creating & using packages"]],
+["7. Exception Handling",["7.1 try, catch, throw, throws, finally"]],
+["8. Multithreading",["8.1 Creating a thread, priorities","8.2 Thread life cycle"]],
+["9. I/O",["9.1 Byte & character streams","9.2 FileInputStream, FileOutputStream, FileReader, FileWriter"]]
+]],
+["EG 2204 CT","Microprocessor and Computer Architecture",7,150,[
+["1. Introduction of Microprocessor",["1.1 Evolution, bus organization","1.2 8085 pin diagram & architecture","1.3 Internal registers"]],
+["2. Instruction Cycle and Timing Diagram",["2.1 Machine cycles","2.2 Memory & I/O read/write timing"]],
+["3. 8085 Instruction Set",["3.1 Instruction formats & addressing modes","3.2 Data transfer, arithmetic, logical, branch","3.3 Stack, I/O & machine control","3.4 Simple programs"]],
+["4. Basic Computer Architecture",["4.1 Memory hierarchy & cache","4.2 Instruction codes, registers, common bus"]],
+["5. Microprogrammed Control Unit",["5.1 Control memory, address sequencing","5.2 CPU: register & stack organization","5.3 Instruction formats, addressing modes","5.4 RISC vs CISC","5.5 Pipeline & vector processing"]],
+["6. Computer Arithmetic",["6.1 Fixed & floating point","6.2 Signed magnitude & 2’s complement","6.3 Booth multiplication"]],
+["7. Input Output Organization",["7.1 I/O interface, isolated vs memory-mapped","7.2 Strobe & handshaking","7.3 Programmed, interrupt, DMA"]]
+]],
+["EG 2205 CT","Web Technology II",7,150,[
+["1. Web Server Concept",["1.1 Web server architecture","1.2 Dynamic content"]],
+["2. Review of Database: MySQL",["2.1 CREATE, INSERT, SELECT, UPDATE, DELETE, ALTER","2.2 Normalization"]],
+["3. Server-Side Script: PHP",["3.1 Syntax, variables, operators","3.2 Conditions, loops, arrays, functions","3.3 GET & POST, cookies, sessions","3.4 File upload, form validation","3.5 Error handling"]],
+["4. Object Oriented Concept and Database Connectivity",["4.1 Classes, objects, inheritance","4.2 Connecting & querying database","4.3 Fetching & displaying data"]],
+["5. AJAX and XML",["5.1 AJAX concept","5.2 XML structure, elements, attributes","5.3 DTD, XSD, XSLT"]],
+["6. PHP Framework",["6.1 Features","6.2 Validation, session & email system"]]
+]],
+["EG 2206 CT","Statistics and Probability",4,100,[
+["1. Introduction of Statistics"],
+["2. Collection of Data"],
+["3. Classification and Tabulation"],
+["4. Diagrammatic and Graphic Representation",["4.1 Bar diagram, histogram, pie diagram"]],
+["5. Summarizing a Data Set",["5.1 Mean, median, mode, GM, HM","5.2 Quartiles, deciles, percentiles","5.3 Range, QD, MD, SD"]],
+["6. Bivariate Data Analysis",["6.1 Karl Pearson’s correlation","6.2 Lines of regression"]],
+["7. Concept of Probability",["7.1 Counting rule","7.2 Addition & multiplication theorems"]],
+["8. Theoretical Probability Distribution",["8.1 Random variables","8.2 Binomial, Poisson, Normal distributions"]]
+]]
+]},
+{n:"Semester 5",s:[
+["EG 3101 CT","Computer Graphics",6,150,[
+["1. Introduction",["1.1 History & applications","1.2 CAD and CAM"]],
+["2. Graphics Hardware",["2.1 Input devices","2.2 Monitors: CRT, flat panel","2.3 Plotters & printers","2.4 Raster & vector display"]],
+["3. Two Dimensional Algorithms and Transformations",["3.1 DDA & Bresenham line algorithms","3.2 Mid-point circle & ellipse","3.3 Translation, scaling, rotation, reflection, shearing","3.4 2D viewing pipeline"]],
+["4. Three-Dimensional Graphics",["4.1 3D transformations & viewing pipeline","4.2 Parallel & perspective projection","4.3 Polygon surfaces","4.4 Hidden surface removal","4.5 Illumination models","4.6 Gouraud & Phong shading"]],
+["5. Web Graphics Designs and Graphics Packages",["5.1 Graphics file formats","5.2 Web graphics principles"]],
+["6. Virtual Reality",["6.1 Types of virtual reality","6.2 Applications"]]
+]],
+["EG 3102 CT","Data Communication and Computer Network",7,150,[
+["1. Introduction",["1.1 Communication system","1.2 Analog & digital transmission, impairments"]],
+["2. Network Architecture and Hardware/Software",["2.1 Topologies & network types","2.2 OSI & TCP/IP models","2.3 Client-server & peer-to-peer","2.4 Repeater, hub, bridge, switch, router, gateway"]],
+["3. Physical Layer",["3.1 Bandwidth, throughput","3.2 Guided & unguided media","3.3 Frame relay, ATM, ISDN, PSTN, X.25"]],
+["4. Data Link Layer",["4.1 Framing, flow control","4.2 Sliding window","4.3 Error detection & correction","4.4 HDLC, PPP"]],
+["5. LAN Architectures/Standards",["5.1 MAC address","5.2 ALOHA, CSMA/CD, token ring, VLAN","5.3 IEEE 802 standards"]],
+["6. Network Layer",["6.1 Circuit & packet switching","6.2 IP addressing, subnetting, NAT","6.3 Static & dynamic routing","6.4 IPv6"]],
+["7. Transport Layer",["7.1 Congestion & flow control, QoS","7.2 Sockets & ports","7.3 TCP & UDP"]],
+["8. Application Layer",["8.1 SMTP, POP3, IMAP","8.2 FTP, HTTP, HTTPS","8.3 DHCP, DNS"]],
+["9. Network Security",["9.1 Active & passive attacks","9.2 Cryptography, firewalls, VPN"]]
+]],
+["EG 3103 CT","Operating System",5,150,[
+["1. Introduction",["1.1 Functions & evolution","1.2 Types & components","1.3 System calls, shell","1.4 Unix, Linux, Windows"]],
+["2. Process Management",["2.1 Process states, PCB","2.2 Process vs thread","2.3 Scheduling: FIFO, SJF, SRTN, RR, HRRN","2.4 Critical section, mutual exclusion","2.5 Producer–consumer problem"]],
+["3. Memory Management",["3.1 Fixed & variable partitioning","3.2 Fragmentation","3.3 First, worst, best fit","3.4 Paging & page fault"]],
+["4. Deadlock Management",["4.1 Deadlock conditions","4.2 Prevention, detection, avoidance, recovery","4.3 Banker’s algorithm"]],
+["5. File and Input/Output Management",["5.1 File structure & directory systems","5.2 File allocation methods","5.3 Disk scheduling & I/O"]],
+["6. Security",["6.1 Security goals & attacks","6.2 Cryptography basics","6.3 Access control & protection"]]
+]],
+["EG 3104 CT","Computer Repair and Maintenance",5,100,[
+["1. Introduction"],
+["2. System Case"],
+["3. Power Supply",["3.1 Ratings & working principle","3.2 SMPS"]],
+["4. Mother Board and System Devices",["4.1 Form factor, chipset, buses","4.2 BIOS"]],
+["5. Processor",["5.1 ALU, control unit, registers","5.2 Data, address, control buses"]],
+["6. UPS"],
+["7. Input Devices",["7.1 Scanner operation & repair"]],
+["8. Storage Devices",["8.1 Hard disk: geometry, partitioning, formatting","8.2 CD/DVD","8.3 HDD vs SSD"]],
+["9. Output Devices",["9.1 CRT & LED monitors","9.2 Printers & repair"]],
+["10. System Care",["10.1 Preventive maintenance","10.2 Virus protection","10.3 Backup & disaster recovery"]]
+]],
+["EG 3105 CT","Data Mining and Data Warehousing",6,150,[
+["1. Introduction to Data Mining",["1.1 Applications","1.2 KDD process","1.3 Functionalities & architecture"]],
+["2. Data Preprocessing",["2.1 Attribute types, statistical description","2.2 Cleaning, integration, reduction, transformation"]],
+["3. Data Warehousing and OLAP",["3.1 Characteristics & architecture","3.2 Data cube","3.3 Star, snowflake, fact constellation","3.4 Roll-up, drill-down, slice, dice, pivot","3.5 ROLAP, MOLAP, HOLAP"]],
+["4. Mining Frequent Patterns and Associations",["4.1 Market basket analysis, support, confidence","4.2 Apriori algorithm"]],
+["5. Classification",["5.1 Decision tree induction","5.2 Bayesian & rule based classification","5.3 Linear regression"]],
+["6. Clustering",["6.1 k-Means, k-Medoids","6.2 Agglomerative & divisive"]],
+["7. Data Mining Trends and Applications",["7.1 Text, multimedia & web mining","7.2 Security & privacy"]]
+]],
+["EG 3106 CT","Elective I (one of three)",7,150,[
+["Geographical Information System"],
+["E-commerce"],
+["Management Information System"]
+]],
+["EG 3107 CT","Minor Project",3,100]
+]},
+{n:"Semester 6",s:[
+["EG 3201 CT","Multimedia System",6,150],
+["EG 3202 CT","Internet of Things",7,150],
+["EG 3203 CT","Information Security",5,150],
+["EG 3201 MG","Entrepreneurship Development",5,100,ENT?ENT[4]:null],
+["EG 3204 CT","Elective II (one of three)",7,150,[
+["E-Governance"],
+["Computer Simulation and Modeling"],
+["Artificial Intelligence"]
+]],
+["EG 3205 CT","Major Project",8,200]
+]}
+];
+var PROGS={civil:{full:"Diploma in Civil Engineering",d:CIVIL,key:"syllabuslaya:done",q:"Civil"},mech:{full:"Diploma in Mechanical Engineering",d:MECH,key:"syllabuslaya:done:mech",q:"Mechanical"},
+elec:{full:"Diploma in Electrical Engineering",d:ELEC,key:"syllabuslaya:done:elec",q:"Electrical"},
+comp:{full:"Diploma in Computer Engineering",d:COMP,key:"syllabuslaya:done:comp",q:"Computer"}};
+function comingSoon(name){return Array.from({length:6},function(_,i){return {n:"Semester "+(i+1),s:[]}})}
+[
+['it','Diploma in Information Technology','Information Technology'],['electronics','Diploma in Electronics Engineering','Electronics'],
+['electrical_electronics','Diploma in Electrical and Electronics Engineering','Electrical & Electronics'],['automobile','Diploma in Automobile Engineering','Automobile'],
+['architecture','Diploma in Architecture Engineering','Architecture'],['geomatics','Diploma in Geomatics Engineering','Geomatics'],
+['hydropower','Diploma in Hydropower Engineering','Hydropower'],['agriculture','Diploma in Agricultural Engineering','Agricultural'],
+['mechatronics','Diploma in Mechatronics Engineering','Mechatronics'],['rac','Diploma in Refrigeration and Air Conditioning Engineering','Refrigeration & AC'],
+['biomedical','Diploma in Biomedical Engineering','Biomedical'],['biomedical_equipment','Diploma in Biomedical Equipment Engineering','Biomedical Equipment']
+].forEach(function(x){PROGS[x[0]]={full:x[1],d:comingSoon(x[1]),key:'syllabuslaya:done:'+x[0],q:x[2],level:'CTEVT'}});
+// Additional CTEVT faculty groups. All entries are placeholders pending verification of current official programme availability.
+[
+['health_ha','Diploma in General Medicine (Health Assistant)','General Medicine (HA)','CTEVT Health Sciences'],
+['health_nursing','Diploma in Nursing','Nursing','CTEVT Health Sciences'],
+['health_pharmacy','Diploma in Pharmacy','Pharmacy','CTEVT Health Sciences'],
+['health_lab','Diploma in Medical Laboratory Technology','Medical Laboratory Technology','CTEVT Health Sciences'],
+['health_radiography','Diploma in Diagnostic Radiography','Diagnostic Radiography','CTEVT Health Sciences'],
+['health_ophthalmic','Diploma in Ophthalmic Science','Ophthalmic Science','CTEVT Health Sciences'],
+['health_dental','Diploma in Dental Science','Dental Science','CTEVT Health Sciences'],
+['health_physio','Diploma in Physiotherapy','Physiotherapy','CTEVT Health Sciences'],
+['health_ayurveda','Diploma in Ayurveda','Ayurveda','CTEVT Health Sciences'],
+['health_acupuncture','Diploma in Acupuncture and Acupressure','Acupuncture and Acupressure','CTEVT Health Sciences'],
+['health_midwifery','Diploma in Midwifery','Midwifery','CTEVT Health Sciences'],
+['agri_plant','Diploma in Plant Science','Plant Science','CTEVT Agriculture'],
+['agri_animal','Diploma in Animal Science','Animal Science','CTEVT Agriculture'],
+['agri_food','Diploma in Food and Dairy Technology','Food and Dairy Technology','CTEVT Agriculture'],
+['agri_engineering','Diploma in Agricultural Engineering','Agricultural Engineering','CTEVT Agriculture'],
+['forestry','Diploma in Forestry','Forestry','CTEVT Forestry'],
+['hospitality_hotel','Diploma in Hotel Management','Hotel Management','CTEVT Hospitality and Tourism'],
+['hospitality_tourism','Diploma in Hospitality Management','Hospitality Management','CTEVT Hospitality and Tourism'],
+['management_entrepreneurship','Diploma in Entrepreneurship Development','Entrepreneurship Development','CTEVT Management and Humanities'],
+['management_socialwork','Diploma in Social Work','Social Work','CTEVT Management and Humanities'],
+['management_journalism','Diploma in Journalism and Mass Communication','Journalism and Mass Communication','CTEVT Management and Humanities'],
+['design_fashion','Diploma in Fashion Design','Fashion Design','CTEVT Fashion and Design'],
+['design_interior','Diploma in Interior Design','Interior Design','CTEVT Fashion and Design'],
+['design_beauty','Diploma in Beauty and Cosmetology','Beauty and Cosmetology','CTEVT Fashion and Design']
+].forEach(function(x){PROGS[x[0]]={full:x[1],d:comingSoon(x[1]),key:'syllabuslaya:done:'+x[0],q:x[2],level:x[3]}});
+[
+['tu_science','TU · Science','Science / BSc'],['tu_engineering','TU · Engineering','Engineering / BE'],
+['tu_management','TU · Management','Management / BBS, BBA'],['tu_humanities','TU · Humanities and Social Sciences','Humanities and Social Sciences'],
+['tu_education','TU · Education','Education / BEd'],['tu_law','TU · Law','Law / BA LL.B, LL.B'],
+['tu_medicine','TU · Medicine and Health Sciences','Medicine and Health Sciences'],['tu_forestry','TU · Forestry','Forestry'],
+['tu_agriculture','TU · Agriculture and Animal Science','Agriculture and Animal Science']
+] .forEach(function(x){PROGS[x[0]]={full:x[1],d:comingSoon(x[1]),key:'syllabuslaya:done:'+x[0],q:x[2],level:'Bachelor'};});
+for(var cls=1;cls<=12;cls++){var ck='class'+cls;PROGS[ck]={full:'School Education · Class '+cls,d:[{n:'Class '+cls,s:[]}],key:'syllabuslaya:done:'+ck,q:'Class '+cls,level:cls<=10?'School Education':'Higher Secondary'};}
+[['playgroup','Playgroup'],['nursery','Nursery'],['lkg','LKG'],['ukg','UKG']].forEach(function(x){PROGS[x[0]]={full:'Pre-School · '+x[1],d:[{n:x[1],s:[]}],key:'syllabuslaya:done:'+x[0],q:x[1],level:'Pre-School'};});
+PROGS.alevel={full:'Cambridge A Level',d:[{n:'A Level',s:[]}],key:'syllabuslaya:done:alevel',q:'A Level',level:'A Level'};
+
+// Bachelor-level university directory (Nepal). University entries without detailed programmes remain Coming Soon.
+[
+['ku','Kathmandu University'],['pu','Pokhara University'],['purbanchal','Purbanchal University'],['nsu','Nepal Sanskrit University'],['lbu','Lumbini Buddhist University'],['afu','Agriculture and Forestry University'],['fwu','Far Western University'],['mwu','Mid-West University'],['nou','Nepal Open University'],['rju','Rajarshi Janak University'],['mbust','Madan Bhandari University of Science and Technology'],['vyhau','Vidushi Yogmaya Himalayan Ayurveda University'],['university_nepal','University of Nepal'],['mdcu','Martyr Dashrath Chand University of Health Science'],['mtu','Manmohan Technical University'],['gu','Gandaki University'],['mau','Madhesh Agricultural University'],['madhesh','Madhesh University'],['ltu','Lumbini Technical University'],['bagmati','Bagmati University']
+].forEach(function(x){PROGS['uni_'+x[0]]={full:x[1]+' · Bachelor Programmes',d:[{n:x[1],s:[]}],key:'syllabuslaya:done:uni_'+x[0],q:x[1],level:'Bachelor University'};});
+
+PROGS.masters={full:'Master’s Degree Programmes',d:[{n:'Master’s Degree',s:[]}],key:'syllabuslaya:done:masters',q:'Master’s',level:'Masters'};
+PROGS.phd={full:'Doctoral / PhD Programmes',d:[{n:'PhD / Doctoral',s:[]}],key:'syllabuslaya:done:phd',q:'PhD',level:'PhD'};
+var prog="civil",D=CIVIL,PQ="Civil",key=PROGS.civil.key,done={},cur=0,$=function(i){return document.getElementById(i)};
+function save(){try{localStorage.setItem(key,JSON.stringify(done))}catch(e){}}
+function stats(){var a=0,d=0;D.forEach(function(x){x.s.forEach(function(s){a++;if(done[s[0]])d++})});
+var el;if(el=$("sDone"))el.textContent=d;if(el=$("sAll"))el.textContent=a;var p=a?Math.round(d/a*100):0;if(el=$("sPct"))el.textContent=p+"%";if(el=$("bar"))el.style.width=p+"%"}
+function tabs(){$("tabs").innerHTML="";var box=document.createElement("details");box.className="semester-selector";box.open=false;var title=document.createElement("summary");title.textContent="Choose Semester · "+(D[cur]?D[cur].n:"");box.appendChild(title);var row=document.createElement("div");row.className="prog-row tabs";D.forEach(function(x,i){var b=document.createElement("button");b.textContent=x.n;if(i===cur&&!$("q").value)b.className="on";b.onclick=function(){cur=i;$("q").value="";render()};row.appendChild(b)});box.appendChild(row);$("tabs").appendChild(box)}
+function render(){tabs();var q=$("q").value.trim().toLowerCase(),L=$("list");L.innerHTML="";var tot=0,n=0;
+D.forEach(function(x,i){if(!q&&i!==cur)return;if(!x.s.length){return;}x.s.forEach(function(s){
+var hay=(s[0]+" "+s[1]+" "+(s[4]||[]).join(" ")).toLowerCase();if(q&&hay.indexOf(q)<0)return;
+n++;tot+=s[3];var el=document.createElement("div");el.className="sub"+(done[s[0]]?" done":"");
+var h='<div class="row"><input type="checkbox" '+(done[s[0]]?"checked":"")+' aria-label="Mark done"><div class="t"><strong>'+s[1]+'</strong><small>'+s[0]+(q?'<span class="tag">'+x.n+'</span>':'')+(s[2]?' · '+s[2]+' hrs/week':'')+'</small></div><div class="mk">'+s[3]+' marks</div></div>';
+
+if(s[4]){function topicLinks(label){
+  var base=s[1]+" "+label;
+  var pdf="https://www.google.com/search?q="+encodeURIComponent('CTEVT Diploma '+PQ+' "'+base+'" (pdf OR notes OR "question paper" OR handout)');
+  var yt="https://www.youtube.com/results?search_query="+encodeURIComponent("CTEVT "+base+" (tutorial OR lecture OR solution OR important)");
+  return ' <span class="tlinks"><a href="'+pdf+'" target="_blank" rel="noopener" title="PDF / notes">📄</a><a href="'+yt+'" target="_blank" rel="noopener" title="YouTube">▶</a></span>';
+}
+function topicHtml(t){if(typeof t==="string")return"<li>"+t+topicLinks(t)+"</li>";var title=t[0],subs=t[1]||[];return"<li><details><summary>"+title+topicLinks(title)+"</summary><ul>"+subs.map(function(u){return"<li>"+u+topicLinks(u)+"</li>"}).join("")+"</ul></details></li>"}
+h+='<details><summary>Topics ('+s[4].length+')</summary><ul class="topics">'+s[4].map(topicHtml).join("")+'</ul></details>';}
+if(!s[4])h+='<div class="papers" style="color:var(--mute)">Topic breakdown not added yet.</div>';
+h+='<div class="papers">📄 <a href="https://www.google.com/search?q=CTEVT+Diploma+'+encodeURIComponent(PQ)+'+%22'+encodeURIComponent(s[1])+'%22+(question+paper+OR+%22old+question%22+OR+model)+ (2079+OR+2080+OR+2081+OR+2082)" target="_blank" rel="noopener">PDF search</a> · <a href="https://www.youtube.com/results?search_query=CTEVT+'+encodeURIComponent(s[1])+'+ (question+OR+%22old+question%22+OR+solution+OR+important)+ (2080+OR+2081+OR+Diploma)" target="_blank" rel="noopener">▶ YouTube</a></div>';
+el.innerHTML='<details class="subject-open"><summary><strong>'+s[1]+'</strong><small> · '+s[0]+' · '+s[3]+' marks</small></summary><div class="subject-content">'+h+'</div></details>';el.querySelector("input").onchange=function(e){if(e.target.checked)done[s[0]]=1;else delete done[s[0]];save();stats();el.className="sub"+(done[s[0]]?" done":"")};L.appendChild(el)})});
+if(!n){var active=D[cur];if(!q&&active&&active.s.length===0){var entrance=PROGS[prog].level==="Entrance Exams";var official=PROGS[prog].official;L.innerHTML='<div class="info"><strong>'+(entrance?'Entrance Exam Syllabus Coming Soon':'Curriculum Coming Soon')+'</strong><br>Verified, current official syllabus details will be added here. No topics or exam patterns have been invented.'+(official?'<br><br><a href="'+official+'" target="_blank" rel="noopener">View official syllabus / downloads ↗</a>':'')+'</div>';}else{L.innerHTML='<div class="info">No subjects match your search.</div>';}}
+$("tot").textContent=n+" subject"+(n===1?"":"s")+" · "+tot+" total marks"}
+$("q").oninput=render;
+$("th").onclick=function(){var r=document.documentElement,dk=getComputedStyle(r).getPropertyValue("--bg").trim()==="#0b1226";r.setAttribute("data-theme",dk?"light":"dark")};
+try{if(window.self!==window.top){document.body.classList.add('emb');document.documentElement.setAttribute('data-theme','dark')}}catch(e){document.body.classList.add('emb')}
+// Additional learning pathways: placeholders remain clearly marked until official syllabuses are verified.
+[
+ ['lok-kharidar','खरिदार','Competitive Exams'],['lok-naasu','नायब सुब्बा (नासु)','Competitive Exams'],['lok-section-officer','शाखा अधिकृत','Competitive Exams'],['lok-technical','Technical Services','Competitive Exams'],['lok-health','Health Services','Competitive Exams'],['lok-province','Provincial Public Service','Competitive Exams'],['lok-local','Local Level Positions','Competitive Exams'],['lok-organised','Organised Institutions','Competitive Exams'],
+ ['lang-english','English','Foreign Language'],['lang-japanese','Japanese · JLPT N5–N1','Foreign Language'],['lang-korean','Korean · TOPIK I–II','Foreign Language'],['lang-chinese','Chinese · HSK','Foreign Language'],['lang-german','German · A1–C2','Foreign Language'],['lang-french','French · A1–C2','Foreign Language'],['lang-spanish','Spanish · A1–C2','Foreign Language'],['lang-arabic','Arabic','Foreign Language'],['lang-other','Other Languages','Foreign Language'],
+ ['entrance-ctevt','CTEVT Diploma / Pre-Diploma Entrance','Entrance Exams'],
+ ['entrance-ioe','IOE · BE / B.Arch Entrance','Entrance Exams'],
+ ['entrance-mecee-bl','MECEE-BL · Medical Bachelor Entrance','Entrance Exams'],
+ ['entrance-mecee-pg','MECEE-PG · Medical Postgraduate Entrance','Entrance Exams'],
+ ['entrance-csit','TU · BSc CSIT Entrance','Entrance Exams'],
+ ['entrance-cmat','TU · CMAT (Management)','Entrance Exams'],
+ ['entrance-ballb','TU · BALLB Entrance','Entrance Exams'],
+ ['entrance-ku','Kathmandu University · Undergraduate Admission','Entrance Exams'],
+ ['entrance-afu','Agriculture & Forestry University · Undergraduate Entrance','Entrance Exams'],
+ ['entrance-masters','University Master’s Programme Entrance','Entrance Exams'],
+ ['entrance-ku-cbt','KU · KUCAT-CBT / Undergraduate Entrance','Entrance Exams'],
+ ['entrance-ku-management','KU · Management / Business Admission','Entrance Exams'],
+ ['entrance-pokhara','Pokhara University · Undergraduate Entrance','Entrance Exams'],
+ ['entrance-purbanchal','Purbanchal University · Undergraduate Entrance','Entrance Exams'],
+ ['entrance-nursing','Medical Entrance · Nursing & Allied Health','Entrance Exams'],
+ ['entrance-ayurveda','Medical Entrance · Ayurveda','Entrance Exams'],
+ ['entrance-law','Law · Undergraduate Entrance','Entrance Exams'],
+ ['entrance-education','Education · University Admission','Entrance Exams'],
+ ['entrance-hospitality','Hospitality / Hotel Management Admission','Entrance Exams'],
+ ['entrance-forestry','Agriculture / Forestry / Veterinary Entrance','Entrance Exams'],
+ ['entrance-scholarship','Scholarship & Fellowship Selection','Entrance Exams'],
+ ['ctevt-health-ha','CTEVT · Health Assistant / General Medicine','CTEVT Health Sciences'],
+ ['ctevt-health-nursing','CTEVT · Proficiency Certificate Nursing','CTEVT Health Sciences'],
+ ['ctevt-health-lab','CTEVT · Medical Laboratory Technology','CTEVT Health Sciences'],
+ ['ctevt-health-radio','CTEVT · Diagnostic Radiography','CTEVT Health Sciences'],
+ ['ctevt-health-pharmacy','CTEVT · Pharmacy','CTEVT Health Sciences'],
+ ['ctevt-health-oph','CTEVT · Ophthalmic Science','CTEVT Health Sciences'],
+ ['ctevt-agri-jta','CTEVT · Agriculture (JTA / JT)','CTEVT Agriculture'],
+ ['ctevt-agri-vet','CTEVT · Animal Science / Veterinary','CTEVT Agriculture'],
+ ['ctevt-forestry','CTEVT · Forestry','CTEVT Forestry'],
+ ['ctevt-hospitality','CTEVT · Hotel Management / Hospitality','CTEVT Hospitality and Tourism'],
+ ['ctevt-tourism','CTEVT · Travel & Tourism','CTEVT Hospitality and Tourism'],
+ ['ctevt-management','CTEVT · Management / Office Administration','CTEVT Management and Humanities'],
+ ['ctevt-fashion','CTEVT · Fashion Design / Garment','CTEVT Fashion and Design'],
+ ['pathway-prediploma','Pre-Diploma / TSLC','Pre-Diploma & Skill Training'],
+ ['pathway-shortcourse','Short-Term Vocational Training','Pre-Diploma & Skill Training'],
+ ['pathway-apprentice','Apprenticeship / Work-Based Learning','Pre-Diploma & Skill Training'],
+ ['pathway-nstb','National Skill Testing Board (NSTB) Certification','Pre-Diploma & Skill Training'],
+ ['pathway-rpl','Recognition of Prior Learning (RPL)','Pre-Diploma & Skill Training'],
+ ['pathway-health','Health & Medical Education','Health & Medical Education'],
+ ['pathway-medicine','Medicine · MBBS / BDS / BAMS','Health & Medical Education'],
+ ['pathway-nursing','Nursing · BSc / BN / Post-Basic','Health & Medical Education'],
+ ['pathway-pharmacy','Pharmacy · Diploma / Bachelor / Master','Health & Medical Education'],
+ ['pathway-allied','Allied Health · Lab / Imaging / Optometry / Rehab','Health & Medical Education'],
+ ['pathway-publichealth','Public Health · BPH / MPH','Health & Medical Education'],
+ ['pathway-agriculture','Agriculture & Forestry Education','Agriculture & Forestry Education'],
+ ['pathway-agronomy','Agriculture · Agronomy / Horticulture / Plant Science','Agriculture & Forestry Education'],
+ ['pathway-veterinary','Veterinary / Animal Science / Fisheries','Agriculture & Forestry Education'],
+ ['pathway-forestry','Forestry / Natural Resources / Wildlife','Agriculture & Forestry Education'],
+ ['pathway-open','Open & Distance Learning','Open & Distance Learning'],
+ ['pathway-nou','Nepal Open University Programmes','Open & Distance Learning'],
+ ['pathway-online','Online / Blended / Continuing University Study','Open & Distance Learning'],
+ ['pathway-adult','Adult Literacy & Continuing Education','Adult & Non-Formal Education'],
+ ['pathway-community','Community Learning / Life Skills','Adult & Non-Formal Education'],
+ ['pathway-inclusive','Special & Inclusive Education','Special & Inclusive Education'],
+ ['pathway-accessible','Accessible Learning / Disability Support','Special & Inclusive Education'],
+ ['pathway-teacher','Teacher Education · B.Ed. / M.Ed. / PGDE','Teacher Education & Licensing'],
+ ['pathway-license','Teacher Licensing · Teachers Service Commission','Teacher Education & Licensing'],
+ ['pathway-training','Teacher Professional Development & Training','Teacher Education & Licensing'],
+ ['pathway-postgrad','Postgraduate Diploma / PG Certificate','Postgraduate & Research'],
+ ['pathway-mphil','MPhil / Research Degree','Postgraduate & Research'],
+ ['pathway-phd','PhD / Doctoral Research / Thesis','Postgraduate & Research'],
+ ['pathway-postdoc','Postdoctoral Research / Fellowship','Postgraduate & Research'],
+ ['pathway-law','Law · LLB / BA LLB / LLM','Academic Disciplines'],
+ ['pathway-engineering','Engineering · BE / B.Arch / ME / M.Arch','Academic Disciplines'],
+ ['pathway-it','Computing · BCA / BIT / BSc CSIT / BSc IT / MIT','Academic Disciplines'],
+ ['pathway-management','Management · BBA / BBS / BBM / MBA / MBS','Academic Disciplines'],
+ ['pathway-education','Education · B.Ed. / M.Ed. / MPhil','Academic Disciplines'],
+ ['pathway-humanities','Humanities / Languages / Social Sciences','Academic Disciplines'],
+ ['pathway-socialwork','Social Work / Development Studies','Academic Disciplines'],
+ ['pathway-journalism','Journalism / Mass Communication','Academic Disciplines'],
+ ['pathway-finearts','Fine Arts / Music / Theatre / Film','Academic Disciplines'],
+ ['pathway-architecture','Architecture / Planning / Design','Academic Disciplines'],
+ ['pathway-hospitality','Hospitality / Hotel Management / Tourism','Academic Disciplines'],
+ ['pathway-aviation','Aviation / Aeronautics','Academic Disciplines'],
+ ['pathway-environment','Environmental Science / Climate Studies','Academic Disciplines'],
+ ['pathway-food','Food Technology / Nutrition','Academic Disciplines'],
+ ['pathway-sports','Sports Science / Physical Education','Academic Disciplines'],
+ ['pathway-buddhist','Sanskrit / Buddhist / Philosophy Studies','Academic Disciplines'],
+ ['pathway-professional','Professional Licensing & Certification','Professional Certification'],
+ ['pathway-nec','Nepal Engineering Council · Registration / Licensing','Professional Certification'],
+ ['pathway-nmc','Nepal Medical Council · Licensing','Professional Certification'],
+ ['pathway-nhpc','Nepal Health Professional Council · Registration','Professional Certification'],
+ ['pathway-nvc','Nepal Veterinary Council · Registration','Professional Certification'],
+ ['pathway-bar','Nepal Bar Council · Advocate Licensing','Professional Certification'],
+ ['pathway-cpa','Accounting / Audit / Finance Certifications','Professional Certification'],
+ ['pathway-foreignstudy','Foreign Study · NOC / Equivalence / Recognition','International & Equivalence'],
+ ['pathway-equivalence','Certificate Equivalence / Recognition','International & Equivalence'],
+ ['pathway-scholarship','Scholarships / Fellowships / Research Grants','International & Equivalence']
+].forEach(function(x){PROGS[x[0]]={full:x[1],d:[{n:x[1],s:[]}],key:'syllabuslaya:done:'+x[0],q:x[1],level:x[2]};});
+PROGS['entrance-mecee-bl'].official='https://mec.gov.np/en/detail/syllabus-for-bachelor-level-common-entrance-examination-2020-revised-2026';
+PROGS['entrance-ioe'].official='https://ioe.tu.edu.np/downloads?category=445';
+
+function progs(){
+var c=$("progs");c.innerHTML="";
+var whole=document.createElement("details");whole.className="education-toggle";whole.open=false;
+var wholeTitle=document.createElement("summary");var wholeLabel=document.createElement("span");wholeLabel.textContent="Pre-School - PhD";wholeTitle.appendChild(wholeLabel);
+var searchBar=document.querySelector("header .top-search");
+if(searchBar){var searchInput=searchBar.querySelector("input");var searchUI=document.createElement("span");searchUI.className="education-search";
+var searchButton=document.createElement("button");searchButton.type="button";searchButton.className="search-icon";searchButton.setAttribute("aria-label","Close search");searchButton.setAttribute("aria-expanded","true");searchButton.textContent="⌕";
+var inputWrap=document.createElement("span");inputWrap.className="search-input-wrap";inputWrap.hidden=false;inputWrap.appendChild(searchInput);
+searchButton.addEventListener("click",function(e){e.preventDefault();e.stopPropagation();var opening=inputWrap.hidden;inputWrap.hidden=!opening;searchButton.setAttribute("aria-expanded",String(opening));searchButton.setAttribute("aria-label",opening?"Close search":"Open search");if(opening)searchInput.focus();else{searchInput.value="";render();}});
+searchInput.addEventListener("click",function(e){e.stopPropagation()});searchInput.addEventListener("keydown",function(e){e.stopPropagation();if(e.key==="Escape"){inputWrap.hidden=true;searchButton.setAttribute("aria-expanded","false");searchButton.focus()}});
+searchInput.addEventListener("input",function(){if(searchInput.value.trim()){whole.open=true;if(extra)extra.open=true;document.body.classList.remove("intro-only")}});
+searchUI.appendChild(searchButton);searchUI.appendChild(inputWrap);wholeTitle.appendChild(searchUI);
+}
+whole.appendChild(wholeTitle);
+var content=document.createElement("div");content.className="education-toggle-content";whole.appendChild(content);c.appendChild(whole);
+var extra=document.createElement("details");extra.className="education-toggle additional-pathways";extra.open=false;
+var extraTitle=document.createElement("summary");var extraLabel=document.createElement("span");extraLabel.textContent="Additional Education & Professional Pathways";extraTitle.appendChild(extraLabel);extra.appendChild(extraTitle);
+var extraContent=document.createElement("div");extraContent.className="education-toggle-content";extra.appendChild(extraContent);
+var groupIndex=0;
+[{label:"1. Pre-School",level:"Pre-School"},{label:"2. School Level · Class 1–10",level:"School Education"},{label:"3. Higher Secondary · Class 11–12",level:"Higher Secondary"},{label:"4. Cambridge A Level",level:"A Level"},{label:"5. Technical Education · CTEVT Diploma",level:"CTEVT"},{label:"6. Bachelor’s Degree",level:"Bachelor"},{label:"7. Master’s Degree",level:"Masters"},{label:"8. PhD / Doctoral Studies",level:"PhD"},{label:"9. लोक सेवा",level:"Competitive Exams"},{label:"10. Foreign Languages · भाषा शिक्षा",level:"Foreign Language"},{label:"11. Entrance Exam Syllabuses · प्रवेश परीक्षा",level:"Entrance Exams"},{label:"12. Pre-Diploma & Skill Training",level:"Pre-Diploma & Skill Training"},{label:"13. Health & Medical Education",level:"Health & Medical Education"},{label:"14. Agriculture & Forestry Education",level:"Agriculture & Forestry Education"},{label:"15. Open & Distance Learning",level:"Open & Distance Learning"},{label:"16. Adult & Non-Formal Education",level:"Adult & Non-Formal Education"},{label:"17. Special & Inclusive Education",level:"Special & Inclusive Education"},{label:"18. Teacher Education & Licensing",level:"Teacher Education & Licensing"},{label:"19. Postgraduate & Research Pathways",level:"Postgraduate & Research"},{label:"20. Academic Disciplines & Professional Degrees",level:"Academic Disciplines"},{label:"21. Professional Licensing & Certification",level:"Professional Certification"},{label:"22. International Study & Equivalence",level:"International & Equivalence"}].forEach(function(group){
+var box=document.createElement("details");box.className="prog-group";box.open=false;
+var title=document.createElement("summary");title.className="prog-label";
+var groupName=document.createElement("span");groupName.textContent=group.label;title.appendChild(groupName);
+var placesBtn=document.createElement("button");placesBtn.type="button";placesBtn.className="study-places-btn";placesBtn.textContent="🏫";placesBtn.setAttribute("aria-label","Show schools, colleges and universities for "+group.label);placesBtn.setAttribute("title","Schools, colleges and universities");placesBtn.setAttribute("aria-expanded","false");var placesPanelId="study-places-"+groupIndex;placesBtn.setAttribute("aria-controls",placesPanelId);box.appendChild(title);box.appendChild(placesBtn);
+var placesPanel=document.createElement("div");placesPanel.className="study-places-panel";placesPanel.id=placesPanelId;placesPanel.hidden=true;
+var placesTitle=document.createElement("h4");placesTitle.textContent="Schools, Colleges & Universities";placesPanel.appendChild(placesTitle);
+var placesText=document.createElement("p");placesText.textContent="Institutions offering this level or pathway in Nepal. Check the institution’s current programmes, affiliation and admission notice before applying.";placesPanel.appendChild(placesText);
+var institutionGroups={
+"Pre-School":[["Schools & early learning centres",["Budhanilkantha School","Rato Bangala School","The British School Kathmandu","Kathmandu International Study Centre"]]],
+"School Education":[["Schools · Basic and Secondary",["Budhanilkantha School","St. Xavier’s School, Jawalakhel","Rato Bangala School","Little Angels’ School","Kathmandu Model Secondary School","SOS Hermann Gmeiner School"]]],
+"Higher Secondary":[["+2 / Grade 11–12 colleges",["St. Xavier’s College, Maitighar","Kathmandu Model Secondary School","Prasadi Academy","Trinity International College","Global College of Management","National School of Sciences (NIST)"]]],
+"A Level":[["Cambridge A Level schools & colleges",["The British School Kathmandu","Rato Bangala School","Budhanilkantha School","St. Xavier’s College, Maitighar"]]],
+"CTEVT":[["Technical schools & polytechnic institutes",["Council for Technical Education and Vocational Training (CTEVT)","Aandhikhola Polytechnic Institute","Annapurna Polytechnic Institute","Butwal Technical Institute","Training Institute for Technical Instruction"]]],
+"Bachelor":[["Universities",["Tribhuvan University","Kathmandu University","Pokhara University","Purbanchal University","Mid-West University","Far-Western University","Agriculture and Forestry University","Nepal Open University"]],["Colleges & campuses",["St. Xavier’s College","Little Angels’ College of Management","Nepal College of Management","Kantipur City College","Himalaya College of Engineering","National College"]]],
+"Masters":[["Universities & graduate schools",["Tribhuvan University","Kathmandu University","Pokhara University","Purbanchal University","Mid-West University","Far-Western University","Agriculture and Forestry University","Nepal Open University"]],["Colleges & campuses",["Central Department of Education, TU","School of Management, Mid-West University","St. Xavier’s College","Global College International"]]],
+"PhD":[["Universities & research institutions",["Tribhuvan University","Kathmandu University","Pokhara University","Agriculture and Forestry University","Mid-West University","Far-Western University","Nepal Open University","Nepal Academy of Science and Technology"]]],
+"Health & Medical Education":[["Medical universities, academies & colleges",["Institute of Medicine, Tribhuvan University","B.P. Koirala Institute of Health Sciences","Patan Academy of Health Sciences","Karnali Academy of Health Sciences","Kathmandu Medical College","Manipal College of Medical Sciences","College of Medical Sciences, Bharatpur"]]],
+"Agriculture & Forestry Education":[["Universities, campuses & colleges",["Agriculture and Forestry University","Institute of Agriculture and Animal Science, TU","Institute of Forestry, TU","Mid-West University","Far-Western University"]]],
+"Open & Distance Learning":[["Open and distance-learning institutions",["Nepal Open University","Tribhuvan University · Open and Distance Education Centre"]]],
+"Postgraduate & Research":[["Universities & research institutions",["Tribhuvan University","Kathmandu University","Pokhara University","Agriculture and Forestry University","Nepal Open University","Nepal Academy of Science and Technology"]]],
+"Academic Disciplines":[["Universities & affiliated colleges",["Tribhuvan University","Kathmandu University","Pokhara University","Purbanchal University","Mid-West University","Far-Western University","Agriculture and Forestry University","Nepal Sanskrit University"]]],
+"Pre-Diploma & Skill Training":[["Technical schools & training centres",["CTEVT constituent and affiliated technical schools","Butwal Technical Institute","Training Institute for Technical Instruction","Annapurna Polytechnic Institute"]]],
+"Teacher Education & Licensing":[["Teacher education institutions",["Tribhuvan University · Faculty of Education","Kathmandu University · School of Education","Mid-West University · Graduate School of Education","Nepal Open University"]]],
+"Competitive Exams":[["Preparation providers",["Lok Sewa preparation institutes and colleges (varies by location)"]]],
+"Foreign Language":[["Language schools & institutes",["Confucius Institute at Kathmandu University","Bishwa Bhasa Campus, Tribhuvan University","The British Council Nepal · English learning and tests","Alliance Française Kathmandu"]]],
+"Entrance Exams":[["Universities & entrance bodies",["Institute of Engineering, TU","Medical Education Commission","Kathmandu University","Agriculture and Forestry University","Tribhuvan University"]]],
+"Professional Certification":[["Professional councils & institutions",["Nepal Engineering Council","Nepal Medical Council","Nepal Health Professional Council","Nepal Bar Council","Nepal Veterinary Council"]]],
+"International & Equivalence":[["Relevant institutions",["Ministry of Education, Science and Technology","Curriculum Development Centre","Tribhuvan University","University Grants Commission Nepal"]]]
+};
+var entries=institutionGroups[group.level]||[["Relevant institutions",["Check the official university, council or training-provider directory for this pathway."]]];
+entries.forEach(function(entry){var h=document.createElement("h5");h.textContent=entry[0];placesPanel.appendChild(h);var ul=document.createElement("ul");ul.className="study-institution-list";entry[1].forEach(function(name){var li=document.createElement("li");li.textContent=name;ul.appendChild(li)});placesPanel.appendChild(ul)});
+var sourceLinks=[{label:"UGC Nepal · Recognised universities & higher education institutions",url:"https://www.ugcnepal.edu.np/pages/university-7/"},{label:"UGC Nepal · Quality-assured colleges and campuses",url:"https://www.ugcnepal.edu.np/pages/qaa-receiving-heis-8/"},{label:"Kathmandu University · Affiliated colleges and programmes",url:"https://ku.edu.np/affiliated-colleges"},{label:"CTEVT · Technical institutes and programmes",url:"https://ctevt.org.np/"},{label:"CEHRD · School education information",url:"https://cehrd.gov.np/"}];
+var sourceBox=document.createElement("div");sourceBox.className="study-place-links";sourceLinks.forEach(function(item){var a=document.createElement("a");a.href=item.url;a.target="_blank";a.rel="noopener noreferrer";a.textContent=item.label;sourceBox.appendChild(a)});placesPanel.appendChild(sourceBox);box.appendChild(placesPanel);
+placesBtn.addEventListener("click",function(e){e.preventDefault();e.stopPropagation();placesPanel.hidden=!placesPanel.hidden;placesBtn.setAttribute("aria-expanded",String(!placesPanel.hidden));placesBtn.setAttribute("aria-label",(placesPanel.hidden?"Show":"Hide")+" schools, colleges and universities for "+group.label);},true);
+if(group.level==="Bachelor"){
+ var wrap=document.createElement("details");wrap.className="university-toggle";
+ var summary=document.createElement("summary");summary.textContent="Choose a university · Nepal";wrap.appendChild(summary);
+ var list=document.createElement("div");list.className="university-list";
+ var tu=document.createElement("details");tu.className="university-item";
+ var tus=document.createElement("summary");tus.textContent="Tribhuvan University (TU)";tu.appendChild(tus);
+ var tur=document.createElement("div");tur.className="prog-row tabs";
+ Object.keys(PROGS).forEach(function(k){if(PROGS[k].level!=="Bachelor")return;var b=document.createElement("button");b.textContent=PROGS[k].q;if(k===prog)b.className="on";b.onclick=function(){if(k!==prog)activateProg(k)};tur.appendChild(b)});
+ tu.appendChild(tur);list.appendChild(tu);
+ Object.keys(PROGS).forEach(function(k){if(PROGS[k].level!=="Bachelor University")return;var item=document.createElement("details");item.className="university-item";var label=document.createElement("summary");label.textContent=PROGS[k].q;item.appendChild(label);var row=document.createElement("div");row.className="prog-row tabs";var b=document.createElement("button");b.textContent="Bachelor’s Programmes";if(k===prog)b.className="on";b.onclick=function(){if(k!==prog)activateProg(k)};row.appendChild(b);item.appendChild(row);list.appendChild(item)});
+ wrap.appendChild(list);box.appendChild(wrap);
+}else if(group.level==="Competitive Exams"||group.level==="Foreign Language"){
+ var row=document.createElement("div");row.className="prog-row tabs";
+ Object.keys(PROGS).forEach(function(k){if(PROGS[k].level!==group.level)return;var b=document.createElement("button");b.textContent=PROGS[k].q;if(k===prog)b.className="on";b.onclick=function(){if(k!==prog)activateProg(k)};row.appendChild(b)});
+ box.appendChild(row);
+ var note=document.createElement("p");note.className="papers";note.textContent=group.level==="Competitive Exams"?"Exam syllabuses will be added by post, service, group and level. Verify each syllabus against the relevant commission or recruiting body's current official notice.":"Language-learning courses and proficiency-exam preparation are separate. Official exam frameworks and level descriptors will be added after verification.";box.appendChild(note);
+}else if(group.level==="CTEVT"){
+ var facultyGroups=[
+ {label:"Engineering",levels:["CTEVT"]},
+ {label:"Health Sciences",levels:["CTEVT Health Sciences"]},
+ {label:"Agriculture",levels:["CTEVT Agriculture"]},
+ {label:"Forestry",levels:["CTEVT Forestry"]},
+ {label:"Hospitality and Tourism",levels:["CTEVT Hospitality and Tourism"]},
+ {label:"Management and Humanities",levels:["CTEVT Management and Humanities"]},
+ {label:"Fashion and Design",levels:["CTEVT Fashion and Design"]}
+ ];
+ facultyGroups.forEach(function(faculty){var sub=document.createElement("details");sub.className="ctevt-faculty-toggle";sub.open=false;var subTitle=document.createElement("summary");subTitle.textContent=faculty.label;sub.appendChild(subTitle);var row=document.createElement("div");row.className="prog-row tabs";Object.keys(PROGS).forEach(function(k){if(faculty.levels.indexOf(PROGS[k].level||"CTEVT")<0)return;var b=document.createElement("button");b.textContent=PROGS[k].q;if(k===prog)b.className="on";b.onclick=function(){if(k!==prog)activateProg(k)};row.appendChild(b)});sub.appendChild(row);box.appendChild(sub)});
+ var note=document.createElement("p");note.className="papers";note.textContent="Programme availability and exact titles vary by current CTEVT curriculum. Entries marked Coming Soon are placeholders until verified against official curriculum documents.";box.appendChild(note);
+}else{
+ var row=document.createElement("div");row.className="prog-row tabs";
+ Object.keys(PROGS).forEach(function(k){if((PROGS[k].level||"CTEVT")!==group.level)return;var b=document.createElement("button");b.textContent=PROGS[k].q;if(k===prog)b.className="on";b.onclick=function(){if(k!==prog)activateProg(k)};row.appendChild(b)});
+ box.appendChild(row);
+ var note=document.createElement("p");note.className="papers";note.textContent="Programme listings are a national pathway directory, not a claim that every programme is offered by every institution. Syllabus and eligibility details will be added only after checking the relevant official university, council or government source.";box.appendChild(note);
+}
+if(groupIndex<8){content.appendChild(box);if(groupIndex===7)content.appendChild(extra)}else{extraContent.appendChild(box)}
+groupIndex++;
+});
+}
+function activateProg(p){document.body.classList.remove("intro-only");setProg(p)}
+function setProg(p){prog=p;D=PROGS[p].d;key=PROGS[p].key;PQ=PROGS[p].q;cur=0;done={};try{done=JSON.parse(localStorage.getItem(key)||"{}")}catch(e){done={}}
+$("sub").textContent=(PROGS[p].level==="School Education"||PROGS[p].level==="Higher Secondary"||PROGS[p].level==="Pre-School"||PROGS[p].level==="A Level"||PROGS[p].level==="Bachelor"||PROGS[p].level==="Masters"||PROGS[p].level==="PhD"||PROGS[p].level==="Bachelor University"||PROGS[p].level==="Competitive Exams"||PROGS[p].level==="Foreign Language"||PROGS[p].level==="Entrance Exams")?PROGS[p].level+" · "+PROGS[p].q+(PROGS[p].level==="Entrance Exams"?" · Entrance Syllabus Coming Soon":" · Curriculum Coming Soon"):(PROGS[p].level||"CTEVT Diploma")+" · "+PROGS[p].full+" · 6 semesters / programme structure to be confirmed";try{localStorage.setItem("syllabuslaya:prog",p)}catch(e){}
+$("q").value="";progs();stats();render()}
+document.addEventListener("toggle",function(e){var d=e.target;if(!(d instanceof HTMLDetailsElement)||!d.open)return;var parent=d.parentElement;if(!parent)return;Array.prototype.forEach.call(parent.children,function(sibling){if(sibling!==d&&sibling instanceof HTMLDetailsElement)sibling.open=false})},true);
+var sp="civil";try{sp=localStorage.getItem("syllabuslaya:prog")||"civil"}catch(e){}
+setProg(PROGS[sp]?sp:"civil");
+</script></body></html>
