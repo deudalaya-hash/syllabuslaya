@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="site-icon.png?v=2" type="image/png">
 <title>Syllabusलय – CTEVT Diploma in Engineering</title>
 <style>
 :root{--bg:#f5f8ff;--card:#fff;--ink:#0f1b3d;--mute:#5b6784;--pri:#0a3fc4;--pri2:#0a84ff;--line:#dbe4f7;--ok:#0b8a4b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -9,30 +10,57 @@
 *{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 .wrap{max-width:860px;margin:0 auto;padding:20px 16px 60px}
-header{display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+header{display:flex;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
 header img{width:52px;height:52px;border-radius:12px;object-fit:cover;flex:none}
 header .home-brand{display:flex;align-items:center;gap:12px;flex:1;min-width:120px;color:inherit;text-decoration:none;border-radius:10px;cursor:pointer}
 header .home-brand:hover h1{text-decoration:underline;text-decoration-color:var(--pri);text-underline-offset:4px}
 header .home-brand:focus-visible{outline:2px solid var(--pri);outline-offset:4px}
 header .brand{flex:1;min-width:120px}
-h1{font-size:1.35rem;margin:0;line-height:1.2}
+h1{font-size:clamp(1.35rem,2vw,1.65rem);margin:0;line-height:1.2;letter-spacing:-.02em}
 header p{margin:2px 0 0;color:var(--mute);font-size:.85rem}
-header .top-search{flex:1;min-width:140px;max-width:280px;margin-left:auto}
-header .top-search input{width:100%;padding:9px 12px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:.9rem;font-family:inherit}
-header .top-search input:focus{outline:none;border-color:var(--pri)}
-button.th{flex:none;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:8px 10px;cursor:pointer}
+header .top-search{position:relative;flex:1;min-width:140px;max-width:560px;margin-left:auto}
+header .top-search input[hidden]{display:none}
+button.th{flex:none;min-width:44px;min-height:44px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:8px 10px;cursor:pointer}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}
 .stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px}
 .stat b{display:block;font-size:1.4rem;color:var(--pri)}.stat span{font-size:.8rem;color:var(--mute)}
 .bar{height:8px;background:var(--line);border-radius:8px;overflow:hidden;margin-bottom:16px}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--pri),var(--pri2));transition:width .3s}
 /* search in header .top-search */
 .tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:10px}
-.tabs button{flex:none;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;font-size:.9rem}
+.tabs button{flex:none;min-height:44px;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;font-size:.9rem}
 .progs button{font-weight:600}
 .prog-group{margin:10px 0 12px}
 .education-toggle{border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:var(--card);margin:10px 0 14px}
 .education-toggle>summary{cursor:pointer;list-style:none;font-weight:800;font-size:1.02rem;padding:4px 2px;display:flex;align-items:center;justify-content:flex-start;gap:12px;flex-wrap:wrap}.education-toggle>summary::-webkit-details-marker{display:none}.education-toggle>summary::before{content:"▶";display:inline-block;font-size:.78em;color:var(--pri);transition:transform .18s ease;flex:0 0 auto}.education-toggle[open]>summary::before{transform:rotate(90deg)}.education-toggle>summary .education-search{display:flex;align-items:center;gap:10px;margin-left:auto;padding-left:12px}.education-toggle>summary .search-icon{width:32px;height:32px;border:1px solid var(--line);border-radius:50%;background:var(--bg);color:var(--pri);font-size:1.1rem;cursor:pointer;display:grid;place-items:center}.education-toggle>summary .search-input-wrap{width:min(170px,38vw)}.education-toggle>summary .search-input-wrap[hidden]{display:none}.education-toggle>summary .search-input-wrap input{width:100%;min-width:0;padding:7px 10px;border-radius:18px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;font-size:.84rem}.education-toggle>summary .search-input-wrap input:focus{outline:2px solid var(--pri);outline-offset:1px}
 .education-toggle-content{padding-top:8px}
+.search-category-toggle{position:static;flex:none;min-width:0;margin:0!important;padding:0!important;border:0!important;border-radius:0!important;background:transparent!important}
+.search-category-toggle>summary{min-height:42px;max-width:220px;padding:0 12px 0 10px;font-size:.84rem;white-space:nowrap;cursor:pointer;border:1px solid var(--line);border-radius:999px;background:var(--bg)}
+.search-category-toggle>summary::before{content:none}
+.search-category-toggle>summary::after{content:"▾";color:var(--pri);font-size:1rem}
+.search-category-toggle[open]>summary::after{content:"▴"}
+.search-category-toggle[open]>.education-toggle-content{position:absolute;z-index:30;top:calc(100% + 12px);left:0;right:0;width:auto;max-width:calc(100vw - 24px);max-height:72vh;overflow:auto;padding:12px;border:1px solid var(--line);border-radius:14px;background:var(--card);box-shadow:0 12px 34px rgba(15,27,61,.18)}
+.search-category-toggle .education-toggle-content{padding-top:0}
+.inline-civil-toggle{position:relative;flex:1 1 100%;min-width:0;margin:5px 0 2px!important;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+.inline-civil-toggle>summary{min-height:38px;padding:7px 34px 7px 2px;list-style:none;color:var(--pri);font-weight:700;cursor:pointer}
+.inline-civil-toggle>summary::-webkit-details-marker{display:none}
+.inline-civil-toggle>summary::after{content:"▾";position:absolute;right:11px;top:16px;color:var(--pri)}
+.inline-civil-toggle[open]>summary::after{content:"▴"}
+.inline-civil-pin{position:absolute;right:34px;top:8px;z-index:1}
+.inline-civil-content{padding-top:8px;border-top:1px solid var(--line)}
+.inline-civil-content #tabs{display:block!important}
+.inline-civil-content #list{display:block!important}
+.inline-civil-content #tot{display:block!important}
+body.intro-only .inline-civil-content #tabs,body.intro-only .inline-civil-content #list,body.intro-only .inline-civil-content #tot{display:block!important}
+.inline-civil-content{width:100%;min-width:0;box-sizing:border-box;overflow-wrap:anywhere}
+.inline-civil-content #tabs,.inline-civil-content #list,.inline-civil-content #tot{width:100%;min-width:0;box-sizing:border-box}
+.inline-civil-content .sub{width:100%;min-width:0;box-sizing:border-box}
+.inline-civil-content .sub>details,.inline-civil-content .subject-content>details,.inline-civil-content .topics details{margin-left:0}
+.inline-civil-content .subject-open>summary{flex-wrap:wrap;gap:4px}
+.inline-civil-content .subject-open>summary:after{margin-left:auto}
+.inline-civil-content .row{flex-wrap:wrap}
+.inline-civil-content .row .t{flex:1 1 10rem;min-width:0;overflow-wrap:anywhere}
+.inline-civil-content .mk{margin-left:auto}
+.progs:empty{display:none}
 .prog-label{font-size:.78rem;font-weight:700;letter-spacing:.06em;color:var(--mute);margin:0 0 6px 2px;text-transform:uppercase}
 .prog-row{display:flex;gap:8px;overflow-x:auto;padding:0 0 6px}
 .tabs button.on{background:var(--pri);border-color:var(--pri);color:#fff}
@@ -56,7 +84,14 @@ body.emb{--bg:#101014;--card:#19191f;--line:#292930;--ink:#f7f7fa;--mute:#92929c
 .topics details{margin:2px 0 2px 8px}
 .prog-group{margin:10px 0;padding:8px 10px;border:1px solid var(--line);border-radius:10px}
 .prog-group>summary,.ctevt-faculty-toggle>summary{cursor:pointer;color:var(--pri);font-weight:650;padding:5px 0;display:flex;align-items:center;gap:10px;flex-wrap:wrap}.prog-group>summary{list-style:none}.prog-group>summary::-webkit-details-marker{display:none}.prog-group>summary::before{content:"▶";display:inline-block;flex:0 0 14px;width:14px;font-size:.72em;line-height:1;color:var(--pri);transition:transform .18s ease}.prog-group[open]>summary::before{transform:rotate(90deg)}.prog-group{position:relative;padding-right:42px}.prog-group>.prog-label{display:block;padding-right:4px}.study-places-btn{position:absolute;top:2px;right:2px;margin:0;border:0;border-radius:8px;padding:4px 7px;background:transparent;color:var(--pri);font:inherit;font-size:1.15rem;line-height:1;cursor:pointer;white-space:nowrap;display:inline-flex;align-items:center;justify-content:center}.study-places-btn:hover,.study-places-btn:focus-visible{background:var(--bg);outline:2px solid var(--pri);outline-offset:2px}.study-places-panel{margin:8px 0 12px;padding:12px;border:1px dashed var(--line);border-radius:12px;background:var(--card)}.study-places-panel[hidden]{display:none}.study-places-panel h4{margin:0 0 7px;font-size:.9rem}.study-places-panel p{margin:5px 0;font-size:.82rem;color:var(--mute)}.study-place-links{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}.study-place-links a{display:inline-block;padding:6px 10px;border:1px solid var(--line);border-radius:18px;color:var(--pri);text-decoration:none;font-size:.78rem}.study-place-links a:hover{border-color:var(--pri)}
-.ctevt-faculty-toggle{margin:6px 0 6px 14px;padding:5px 10px;border-left:2px solid var(--line)}
+.ctevt-faculty-toggle{margin:8px 0 10px!important;padding:9px 12px;border:1px solid var(--line);border-radius:12px;background:var(--bg)}
+.ctevt-faculty-toggle>summary{display:flex;align-items:center;gap:9px;min-height:36px;list-style:none;font-weight:700;cursor:pointer}
+.ctevt-faculty-toggle>summary::-webkit-details-marker{display:none}
+.ctevt-faculty-toggle>summary::before{content:none}
+.ctevt-faculty-toggle>summary::after{content:"▾";margin-left:auto;color:var(--pri);font-size:1.1rem;line-height:1}
+.ctevt-faculty-toggle[open]>summary::after{content:"▴"}
+.ctevt-programme-list{display:flex;flex-wrap:wrap;overflow:visible;padding:8px 0 2px}
+@media(max-width:600px){.ctevt-faculty-toggle{padding:8px 10px}.ctevt-programme-list{gap:7px}.ctevt-programme-list button{max-width:100%;white-space:normal;text-align:left}}
 .topics summary{font-weight:500;color:var(--pri)}
 .topics ul{margin:4px 0 6px 12px;padding-left:14px;color:var(--mute);font-size:.88rem}
 
@@ -76,25 +111,126 @@ body.emb{--bg:#101014;--card:#19191f;--line:#292930;--ink:#f7f7fa;--mute:#92929c
 .university-list{display:grid;gap:10px;margin-top:10px}
 .university-item{border:1px solid var(--line);border-radius:10px;padding:9px;background:var(--bg)}
 .university-item .prog-row,.university-list>.prog-row{margin-top:8px}
-body.intro-only #tabs,body.intro-only #list,body.intro-only #tot{display:none!important}
+.pinned-programmes,.civil-learning-dashboard{margin:0 0 14px;padding:13px 15px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.pinned-programmes[hidden],.civil-learning-dashboard[hidden]{display:none}
+.pinned-programmes>summary,.civil-learning-dashboard>summary{cursor:pointer;font-weight:700;font-size:1rem}
+.pinned-programme-list,.learning-actions,.chapter-actions,.course-resources{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.pinned-programme,.programme-choice{display:inline-flex;align-items:center;gap:3px;flex:none}
+.programme-pin,.pinned-programme-open,.chapter-bookmark,.continue-learning{min-height:40px;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--pri);font:inherit;cursor:pointer}
+.programme-pin{padding-inline:9px}.pinned-programme-open{color:var(--ink)}
+.programme-pin:hover,.pinned-programme-open:hover,.chapter-bookmark:hover,.continue-learning:hover{border-color:var(--pri)}
+.learning-overview{display:grid;gap:6px;margin:8px 0;color:var(--mute);font-size:.86rem}
+.chapter-actions{margin:8px 0}.chapter-actions label{display:inline-flex;align-items:center;gap:6px;color:var(--mute);font-size:.82rem}
+.chapter-complete,.chapter-bookmark{min-width:36px;min-height:36px}.chapter-resource-note{margin:7px 0;color:var(--mute);font-size:.83rem}
+.topic-bookmark,.resource-save{min-height:34px;padding:4px 9px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--pri);font:inherit;font-size:.8rem;cursor:pointer;margin:4px 4px 4px 0}.topic-resources{margin:4px 0}.topic-resources>summary{font-size:.8rem;color:var(--mute)}
+.course-resources a,.chapter-resources a{color:var(--pri);text-decoration:none;font-size:.82rem}
+.curriculum-unit[open]>summary{font-weight:650}.curriculum-unit{margin:6px 0}
 body.intro-only header{display:flex!important;align-items:center;margin-bottom:18px}
-body.intro-only header .top-search,body.intro-only header .th,body.intro-only header #sub{display:none!important}
+body.intro-only header .th,body.intro-only header #sub{display:none!important}
 body.intro-only .wrap{padding-top:20px}
 
 .subject-open{border:1px solid var(--line);border-radius:12px;padding:12px;background:var(--card)}.subject-open>summary{cursor:pointer;list-style:none;font-weight:650}.subject-open>summary::-webkit-details-marker{display:none}.subject-open>summary:after{content:"＋";float:right;color:var(--pri)}.subject-open[open]>summary:after{content:"−"}.subject-content{padding-top:10px}.subject-content .row{margin-top:4px}
+:focus-visible{outline:2px solid var(--pri);outline-offset:3px}
+button,summary,a,input{touch-action:manipulation}
+.tabs,.prog-row{scrollbar-width:thin;overscroll-behavior-inline:contain}
+.prog-group{scroll-margin-block:12px}
+.education-toggle>summary,.prog-group>summary,.subject-open>summary,.university-toggle>summary,.university-item>summary{min-height:44px;display:flex;align-items:center}
+.semester-selector-title{display:block;margin:0 0 8px;font-weight:700}
+.study-places-btn{min-width:44px;min-height:44px;top:0;right:0}
+.study-place-links a{min-height:44px;display:inline-flex;align-items:center}
+@media (max-width:640px){
+ .wrap{padding:16px 12px 44px}
+ header{gap:10px;margin-bottom:16px}
+ header .home-brand{flex-basis:100%;min-width:0}
+ header .top-search{flex:1 1 180px;max-width:none;margin-left:0}
+ header .th{margin-left:auto}
+ .education-toggle{padding:10px 12px}
+ .education-toggle>summary{font-size:.98rem}
+ .prog-group{padding-right:48px}
+ .sub{padding:11px 12px}
+ .row{gap:9px}
+ .row .t{overflow-wrap:anywhere}
+ .mk{font-size:.88rem}
+ details{margin-left:20px}
+ .papers{margin-left:20px}
+ .study-places-panel{padding:10px}
+}
+@media (max-width:380px){
+ .wrap{padding-inline:10px}
+ .row{gap:7px}
+ .row input{width:18px;height:18px}
+ .mk{font-size:.82rem}
+ .prog-group{padding-right:44px}
+}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+.top-search{display:block;width:100%;}
+.search-control{position:relative;display:flex;align-items:center;gap:12px;min-height:64px;padding:7px 9px 7px 18px;border:1px solid var(--line);border-radius:999px;background:var(--card);transition:border-color .18s ease,outline-color .18s ease}
+.search-control:focus-within{border-color:var(--pri);outline:2px solid var(--pri);outline-offset:3px}
+.search-mark{width:22px;height:22px;flex:none;color:var(--mute)}
+.search-submit{display:grid;place-items:center;flex:none;width:46px;height:46px;border:0;border-radius:50%;background:var(--pri);color:#fff;cursor:pointer}
+.search-submit:hover{filter:brightness(.92)}
+.search-submit:focus-visible,.search-category-toggle>summary:focus-visible{outline:2px solid var(--pri);outline-offset:2px}
+.search-control input{flex:1;min-width:0;min-height:48px;padding:0 4px;border:0;border-radius:0;outline:none;background:transparent;color:var(--ink);font:inherit;font-size:1rem}
+.search-control input:focus-visible{outline:none;border-color:transparent}
+.search-control input::-webkit-search-cancel-button{-webkit-appearance:none;appearance:none}
+.clear-search{display:grid;place-items:center;flex:none;width:44px;height:44px;border:0;border-radius:50%;background:transparent;color:var(--mute);font:inherit;font-size:1.6rem;line-height:1;cursor:pointer}
+.clear-search:hover{background:var(--bg);color:var(--ink)}
+.clear-search[hidden]{display:none}
+.search-results{position:absolute;z-index:20;top:calc(100% + 10px);left:0;right:0;max-height:min(60vh,480px);overflow:auto;padding:8px;border:1px solid var(--line);border-radius:18px;background:var(--card);box-shadow:0 12px 34px rgba(15,27,61,.16)}
+.search-results[hidden]{display:none}
+.search-suggestion{display:flex;align-items:center;gap:14px;width:100%;min-height:60px;padding:9px 12px;border:0;border-radius:12px;background:transparent;color:var(--ink);text-align:left;font:inherit;cursor:pointer}
+.search-suggestion:hover,.search-suggestion.active,.search-suggestion:focus-visible{background:var(--bg);outline:none}
+.suggestion-mark{display:grid;place-items:center;flex:none;width:36px;height:36px;border-radius:50%;background:var(--bg);color:var(--pri);font-size:.85rem;font-weight:750}
+.suggestion-copy{display:grid;gap:1px;min-width:0}
+.suggestion-copy strong{font-size:.94rem;font-weight:650;overflow-wrap:anywhere}
+.suggestion-copy small{color:var(--mute);font-size:.8rem;overflow-wrap:anywhere}
+.suggestion-kind{margin-left:auto;flex:none;color:var(--mute);font-size:.75rem}
+.search-empty{padding:15px 14px;color:var(--mute);font-size:.9rem}
+body.search-active #progs,body.search-active #tabs,body.search-active #list,body.search-active #tot{display:none!important}
+body.intro-only #tabs,body.intro-only #list,body.intro-only #tot,body.intro-only #civil-learning-dashboard{display:none!important}
+body.intro-only #sub{display:none}
+body.intro-only .wrap{max-width:960px;padding:clamp(56px,12vh,140px) 16px 60px}
+body.intro-only header{width:100%;flex-direction:column;align-items:center;gap:25px;margin-bottom:28px}
+body.intro-only header .home-brand{flex:none;min-width:0;flex-direction:column;gap:12px;text-align:center}
+body.intro-only header img{width:64px;height:64px;border-radius:16px}
+body.intro-only header .brand{flex:none;min-width:0}
+body.intro-only h1{font-size:clamp(2rem,4.5vw,2.8rem)}
+body.intro-only header .top-search{width:min(100%,680px);max-width:680px;flex:none;margin:0 auto}
+body.intro-only .progs{margin-top:40px}
+@media (max-width:640px){
+ header .top-search{flex:1 1 100%;max-width:none;margin:0}
+ .search-control{min-height:58px;gap:9px;padding-left:15px}
+ .search-submit{width:40px;height:40px}
+ .search-category-toggle>summary{max-width:132px;min-height:40px;padding:0 5px 0 0;font-size:.72rem}
+ .search-results{max-height:56svh;padding:6px}
+ .search-suggestion{gap:10px;padding:8px 9px}
+ .suggestion-mark{width:32px;height:32px}
+ .suggestion-kind{font-size:.68rem}
+ body.intro-only .wrap{padding:clamp(44px,10vh,88px) 12px 44px}
+ body.intro-only header{gap:22px;margin-bottom:24px}
+ body.intro-only header .top-search{width:100%}
+ body.intro-only .progs{margin-top:28px}
+}
 </style></head><body class="intro-only"><div class="wrap">
 <header id="home">
 <a class="home-brand" href="#home" aria-label="Syllabusलय home" title="Back to top">
-<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCACgAKADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD7Kooryn42/FaLwiraJopjn1uRMux5S1U9CR3Y9h+J9D14HA18dWVGgryf4eb8jmxeLpYSk6tV2SO38YeMfDvhO2E2t6jHA7DMcK/NLJ9FHP49K8g8QftCSmRo/D+hIqDgTXsmSffYvT/vqvC9S1G91O+lvtQupbq6mO6SWVizMfrVcNX6dl/BmCw8U8R78vuX3f5n5/juKMXWbVD3I/e/v/yPVJ/jf46kbKXVjCPRLVSP1zUY+NXj7/oJWv8A4CJ/hXmIfFKZPSvaWQ5cv+XEfuR4zzXMH/y+l97PTv8AhdPj3/oJWv8A4CJ/hSj40+Pf+gla/wDgIn+FeYeZ7ik833FH9g5f/wA+I/chf2pmH/P6X3s9QPxp8e/9BK1/8BI/8KT/AIXT4+/6CVr/AOAkf+FeYxu8kiRoNzuwVQO5PSvT4vgZ4/dQWTTI89mu+n5Ka48VgclwdvbwhG+10jqw1fOMTf2M5yt2bE/4XT49/wCgla/+Akf+FKPjR49P/MStf/ARP8KWT4F+PkGVXS5PZbv/ABUV5jP5lvcSW8y7JInKOvoQcEfnRhcDkuMv7CEJW3skGJr5xhre1nON+7Z6afjR4+/6CVr/AOAif4UD40+Pv+gla/8AgJH/AIV5gZvegS12f2Dl/wDz4j9yOT+1Mw/5/S+9np5+NHj0f8xK1/8AASP/AAp8Pxu8dRuC93YzD0e1XH6Yry4y0hkpf2Dlz/5cR+5DWa5h/wA/pfez3jw/+0HcLIqa/oUbp3lsnKkf8AbOfzFeveDvGnhzxbbmTRNSjmkUZkt3+SVPqp5/EZHvXxM0nFPsNQvNOvYr6wupbW5hbdHLExVlPsRXj5hwXgsRFvD+5L7181/ke1gOJ8ZRaVf34/j9/wDmfe9JXknwP+LUfizZoOutHDrarmKQfKl2B1wOz9yO/UeleuV+Y4/AV8BWdGurNfj5ryP0DCYuli6Sq0ndP+tTkvix4vi8E+C7vWDta6P7mzjb+OZs4/AcsfYV8W3l9c397Ne3k7z3M8hklkc5Z2JySa9b/a88QPc+MdO8PI58mwtvOdc9ZJD/AEVV/M14qj8V+o8IZfHC4FVmveqa/Lov1+Z8LxJipYjE+zXwx0+fX/IuBjTt9VPM/wA5pDL719Xc+b9nctNL71t+DvC3iHxdf/Y9B06W5KkeZKfljiHqzHgfz9q5dpPevpz9kbxNDe+GL7wxJsW50+UzxgDBeKQ8k+pDZ/AivHz3Ma2X4OVejHmatv0v18z1Mpy+li8QqVR2T/HyLPgr4AaJZwCbxTeSancsvMMDGKFD9R8zH34HtXhXxQ8KXngjxbc6PcFntz+9tJiOJYieD9R0PuK+365nx3p/gqeG2v8AxnDpRis2ZoJL9lCqT1xk4PQcc9K/Psq4sxlLFOeIbqKXRfhZH2GO4ews6ChRSi11/O7Pjr4f2k2qeNtEtYoZJVfUIA+xCwC+YMk46DFfddeRah8cfhjoEZtdJ867VOAmn2YSP822j8qwJf2ltKeZYrLwlqM7OwVA1wisxJwAAAea6c6pZnnk4VI4ZxUU9339bGWVvBZXGUHWUm+3/Aue+V8O/FGyn0z4g6/DJBJHH/aM5jZkIDKXJBGeo5r2g/tJ6dBdSW2oeENStpYnKSJ9oUujA4IIIGCDW5pvx3+GuuRi11UXNkr8FL+zDx/iV3D86WS0szySpKrLDOSkuj/HS48zlgs0hGmqyi0+q/zsfPXw28L3vjTxZa6LabljY+ZczAcQxD7zfXsPcivevGX7P+g3tt5nhi7l0q6RcCOZjLDIQO+fmUn1GR7V6D4EsfA6Lc6n4Mi0jbebTPJYMpDYzgED7vU8cV1FYZrxZjKuKU8O3TUej79br8i8v4ew1Og41kpt9fysfDHjTwn4j8H332XXtOktwxxFMvzRS/7rjg/Tr7VhLLnqa+l/2t/E8GneDLXw2mx7rVJg7AgEpFGQS3sS20f99V8tLL719/kOZVswwar1oqLd9utuvlqfJZtl1LCYh06Tuvy8i+XHrTGbiqwlFL5nGa9rmPL9nYs215cWV3Fd2szwzwuHikQ4ZGByCDX2n8HvGUfjfwTbaq21b2M+ReoP4ZVAyQPRgQw+uO1fD7vXs37IviCSz8eXmgu58jU7Uuq5482LkH/vkv8AkK+V4vy6OLwLrJe9T1+XVfr8j6Ph3FSw+JVP7MtPn0OU/aRmaT4069uP3DCg+ghSuAV67f8AaOOPjX4i/wCukX/olK4Hd716uUu2Ao/4Y/kjkzCN8VU/xP8AMmaXivU/g18Hb/x9pd1q97fSaXpwBjtJRFuaeQdSASPkHQnueB0NcT8MPD1t4t8eaXoF5fR2Vvcy/vJHYKWUDJRf9psYHua+8dLsLPS9Ot9O0+3S3tLaMRQxIMBFAwBXgcUZ/UwEY0KGk5a37L/NnqZJlMMS3Uq/CundnxZ4s+EPjvQNeg0v+yZNRS6lEdtc2gLRSE+p/gPc7sd+a+h/g38LNK+HGnya5q14kusNAftNy0myG3j4LKueMcDLH07V6hdTwWttLdXMyQwQoXkkdsKigZJJ7ACvjj48/F288calJpGjyyW/hyB8Ko+Vrsg/ff8A2fRfxPPTw6GPzLiKKwukYL45Lr/XZb+h6lTCYPKW628vsr+vzPQPin+0OI5ZtL8CIj7SVfU5kyP+2SHr/vN+Xevn/W9Z1XXL5r7WNRub+5Y8yTyFiPYZ6D2FZSnB5p+8Yr7jLcpwmXQ5aEder6v5/psfNYzHV8XK9R6duhLmvdf2ZvAtu3nfEXxGEh0zTgz2fm8KzKPmmP8Aspg49/pXmfwk8F3nj3xjb6PDvjtE/e3s4H+qiB5/4Eeg9z7GvUP2mvHFnp9lb/DHwvst7GzjRb7yTgAKBsg/Dgt74HrXn5ziamJqRy3Du0p/E/5Y9fm9v+HOrLsPGjF4uqtI7Lu/+ATftJ+C7LVtLg+J/hUpc2V1Gj3xhHDKcBZsfkrfgfWvn/Ne3fsxeP4LW4k+H3iMrJpWp7ltPO5VJHHzRHP8L549/wDerhvjd4DuPAHjGS0jV20q6zNYTHnKZ5Qn+8vT3GD3qcoxE8HWeW13dx1g/wCaPb1X9bFZhQjiILGUlv8AEuz/AOCcto2ranot8l9pF/c2NynSWCQo36dR7GvfvhZ+0Q3mxaX48jXaxCrqcKYx/wBdUH/oS/l3r5wD01jXpZjlWFzGHLXjr36r5/0jjweNr4SV6b07dD7Q+L/wx0f4m6VDrGm30cWqpABZ3aSb4Zo+SFbHG3JOGHIz36V84+GvhD4+1rxJcaL/AGO9j9kk8u5urn5YY/cN/HkcjbnqKu/An4uXvgTU003U5Jbnw5O/72L7zWxP/LSP+q9/rX2XY3VtfWUN5ZzpPbToJIpUbKupGQQfSviK+NzLhxPDXUoP4W+n9dvmfS08NhM2arNWkviXf+u58h/GL4M6h4D0W21qxvpNVsQAl7J5WwwSHo2AT8h6Z7Hr1rypZMiv0Q1CztdQsZ7G9gS4triMxyxOMq6kYINfCfxZ8NWvg7x/qWhWN9Hd2sLhoir7mjVuRG/+0vQ/ge9e1wvn9THqVDEO81rfuv8ANHm53lMMNarS+F6W7M5tm4ruP2epni+NHhwqcbp3Q/QxOK4Fm4rt/wBn9v8Ai83hkf8AT03/AKLevoc0d8FWX92X5M8nARtiafqvzJf2kG/4vZ4iH/TSL/0THXn24V3v7SZ/4vd4j/66Rf8AomOuJ0HTbrW9csdHsgDc3twlvFu6bmYAE+3NY5bNRwFGT2UI/kjoxlNyxU0v5n+ZWLlXV0YqykFSDggjuK+wv2WvGPirxZ4Vu18QRi4t7B1gt9QY/vJzjJVh/EVG35u+ecnmvJNU/Zo8e26lrLUdDvcfwiZ4yf8AvpMfrX0Bo1vY/CX4LL9oCH+yLAzXGP8AltOeSM/7TnA/CvlOJczweOw0aVBqc20l3X/D7HuZRg8RhqrnUvGKWvmee/tH+Itd8Uayvwq8ExfarxoftOqKkyIWUYKxAsRnghmHpj3rxpfgl8Ugf+RUm/8AAmH/AOLrjrXxVrdv4yHi6O8YauLs3ZmPdyckH/ZOSMenFfXGv+MPEfjH4MxeM/hvqX2PUrZTJd2fkpKWKj97FhgfmH3lx1H1FbzeKyKlRoYdR5ZaOUr/ABPu09n006EJUcxnOpVvdbJW28j57/4Up8Uv+hUm/wDAmH/4uk/4Up8Uj/zKk3/gTD/8XS/8L8+Kn/QyJ/4Awf8AxFKPj58U+/iRP/AKD/4ivU5s87Uv/Jjh9nlv9/8AA9klay+APwbCKYZfFerfjmbHX/cjB/E/71eIfC/wB4g+JOvyz75ItPWUyajqc/3VydzYJ+855OPxOBXN+M/F3iDxlqkepeI9Sa8uEjESMUVFRM5wFUADk56c19L+PYhav8P/AITeGpBY6HrMfmXtxCdrXECAM6hh/fG4se+R2zXnS9tlcLNp16vM5S6JRV3bvZbLudcfZ4yW1qcLJLq2/wDN7s4L9qPw1puj6p4Xl8NQN5Q0gjMHJ8qArslJH+y33vYV23hC/sPjx8Ibjw5q80cfiXS1BWZvvbwMJN9G+6w9c+1ddaeIPA/ibWvEs2m25vrXS9GezvNTYYtoYsEmCInrkbmYjj5V5PFfHfhDxNrfhPWU1jw/fPZ3iIyBwoYFW6ggggj6jqBXNgKVXMMIqWsatGzjJ73d3Z+Vrfg7GuJlDC1+feE7ppeWh2jfBH4pqxX/AIRaRsHGRdQ4P/j9N/4Un8Uj/wAypN/4Ew//ABdSf8L6+Kf/AEMif+AUH/xFI3x7+KY/5mRP/AKD/wCIr2ubPe1L/wAmODly3+/+BEfgh8U/+hUm/wDAmH/4uvYP2ctf1/wdr3/CrPG8X2OeaL7TpavOjlM5LREqTgHBYA+h9RXUeD/F3iTwt8Hbjxz8StUa6uZ0EtpZ+SkTKGH7uPCgZZzyc9B9DXyPqvirWtR8Zy+Lprtl1Z7oXSyr/A4IKgewwAB6CvLpvFZ5Cth8Qo8sdFKN/i8m3suuh2yVHL5QqU27vo7bef6H1z+0/wCMPFPhHwfbS+HYlhivZTb3F+DmS2JGVCjoC3zfN2x6kGvjgyvLI0srs8jkszMcliepJ7mvueQWPxa+C2QqKus6flc/8sbgf/EyL+lfP+mfs0+PJ1DXmoaHZexmeQ/+Opj9a5+GcyweBw86WIahOLs+7/4bYvN8HXxNSM6V5Ra08jxkmu5/Z9P/ABenwz/19N/6LeuR8TaVd+H/ABDqGh3+37TY3DwSFfukqcZHseo+tdX+z0f+L0+GP+vpv/Rb19bmFRTwNWUXo4P8jwsJBxxME97r8yT9pQ/8Xw8R/wDXSH/0THV79ljSRqnxm0yR13JYRS3bfULtX/x5xWf+0scfHDxH/wBdIf8A0THWB8OfHOueAddfWNCNt50kRhlSeLejoSDjqCOQOQRXBGlUrZPGlS+J00l84o7ZThTx7nPZSf5n6FV4P+2lrbWPw907RY32tqd8DIM9Y4huI/76KflV/wCBHxtufiHr8mgX+gRWV1Fatcm4gnLRsFZRjaRkfe9TXAftzzP/AGx4VgJOwW9y4HuWQf0r4PKMuq4fN6dGurNa99k2j6TG4qFXBSnTej0PnTNerfs2fEc+B/GS2OoTbdD1Vliudx+WGTokv4ZwfY+wrybPFIzDHJ4r9JxeGp4ujKjU2f8AX4HylCrKjUVSO6PZ/wBp/wCHI8I+K/7e0qHGh6u5dAg+WCc8snsD95fxHavH+K+tNMO/9k1j8T8iEWZ+xn/l42f8ux5/5aZxj/ZxnvXzL4R8K614nNy+m26i0s1El7eStsgtUwTvkbsMA8AEnHAry8kx7eHnCvL+G+Xm6O23z/4Hc68wwq9qpU18avbqjGya+kfhdaeDvF3grSbRdV8eXV5oyK0kVqgkFlK6kERv5ZIRgGwucY+leU3PwzmjgEkfirRcnp9piurVD9JJYVT8yK7T9mrTtc8I/G2w0/V7SW1TU7KeONw4eGcBd4ZHUlXHydQT1pZxWpYjCynSnaULtdL2Wu67dh4ClOlWUZx0lodV8RbPwV4R+Gc+gS6h470+zmjkFlYywLBFczAZAciMFhnBOT0H0r5mU+te8ftTWOteKvjOmj6PZz3jWGmRbwpxHCGLMWdiQqDBHJI6CuDtPhlcSxky+J9F8wfeW1S5vAp9C8MTJ+RNTktalh8IqlWfvT95rff0V9e73HmFKdWs4wjpHQ4U16z+zR8Ov+E08XDVNSg3aJpTrJOGHyzy9Ui9x3PsMd64TxZ4O1vw5Z2+pXMSXOlXTbbTUbclrec4PAJAIIwQQwBBU8cV9J2TFP2Tmb4Y/NN9kP2wn/X7v+Xk8f8ALTGcf7OMdq0zrMXHDRjQlrUfLzdI33v2f9dCMvwl6zdVfCr27nkv7TnxH/4TPxd/ZGmT7tE0h2jiKn5Z5ujye4/hX2ye9eRZqMMMcdO1KWx0r08HhqeDoxo09l/V/mcuIqyr1HUluz63/Yo1t7vwVrGhyPk6feiWME9ElXp/30jH8a9/r5R/Ybmf/hKPEsIPyNZQsR7hyB/M16T8evjVcfDjWrfRLHQY7+7uLUXImmnKxqCzLjaBkn5fUV+b5zl9TEZvUo0Fduz7dE2fVYHExpYKM6j0Wn4niH7WWlDTPjFd3CrtTUbWG6HucbG/VP1rD/Z5OfjV4Y/6+m/9FvWN8SfHuvfEHWotV177KskMXkwx28WxETJOOSSeT1JrW/Z2P/F6/DH/AF9N/wCi3r7v2VWhk7pVfijBr7kz5xyhUxynDZyX5k/7S/8AyXHxJ/10h/8ARMdedRxyTSrFDG8kjnCoiklj6ADrXoX7TJ/4vl4kH/TSH/0THUv7MWswaP8AGjRjcBPLvd9nuYfdaRflI9DuCj8avDVpUMrhViruME7d7RCrSVTGSi3a8n+Z6H+yf4D8aaJ46PiLVdAudP0uSxkgMlziN2LFSuEPzfw9cVe/bp09zaeFtWUfIklxbOfQsEZf/QWr6ZrzL9pzww/if4P6rFbxmS60/F/AAMkmPO4D6oXr4DD5zLEZtTxVVJdNOzuv1PpamBjSwcqMNep8I7uK9T/Zr+HTePPGy3F/AW0PS2Wa8JHyyt1SL8SMn2B9RXmeg6Zf67rNno+lwNcXt5KsMMa/xMT+g7k9hX154003VvhT8ErXwd4E0fUtT1rUFZLi8srV5CjMB5sxKg4J+6g7DH92vs86x0qUI4ek7VKmi8l1Z4eBwqnJ1Jr3Y/j5Hkv7U/xHHizxUvhrR5t2i6PIYx5f3bi46Mwx1C/dX8T3rpb3TLbwX8PdC+HU1zaWuo6qF1nxE011DDiMEeXATI6g5YKCAc4Rj3rzDwD4V8WaB4x03WtW+G/iTVLWymExtRZSJ5jKCVySh4DYPTnFev8Aif4z+I7F5tb1T4HC0j+VZbzUIXBx0UFzEPoBXn4ik6UaWFwkVKMdfiiry6de+vrbsdVJ87nVrOzfk9F/Wg3THku3Y6TNJcEZ3NpmoR3DdO629zvP4xv9DVDSrtbD4k+DZ7cqsH9urFMIsogkkRkO+NVVFkwxySkTnurfeqvF8bvhj4iK2/jD4W29upP/AB82Qjd0PqCAjj8DXQt4a0TxxdaPrfgLxHH4qtdKu47iTSb+5MOoxov8CXJxIEBIID5GRwwrjaqUbrEwcU010a1TW6bX32RsuWdvZSTt9/3f5XM3xhfR3vxc8aPOUaBL+3gVZjuiLpCFHyMCjP1xlZWHO2PuLWoGe2RW1WWeA4yh1K9W2GP9lbi4QgfSFB7Crs/hnS/Cms614o8c+II/BtpqtwZYrC1uvtGpSLtAZftGC4ViCSI+ecFuK5u4+NHwp8OSPH4R+GUd/Jnm8v8AYJJD6lmDufxIpQU6yisNBySSWm2iSeraX3NoJcsG3Vkldv137f52NTwfBpniWx174WXd9YSW+sxvqOiyRXkM4t7tOXUeW74B4fnGcyVxn7Ofjy5+HXxBufDHiEm30y9uDa3iSHi1uFO0OfQZ+VvbB7V2Ph/4z+INVMOsaV8DYr+KOQiK6soWYow4O1xEcEZ7V5z8YdK8V+OfGk3iPTvhh4k0g3MSfaYmtJJA8oGC4IQYyNv5Z7114elOo6uGxUVGE1r70XaS679dPmvMyqNR5KtJ3lHye39fgWf2nvh0fBHjH+09Ng26Fq7tJb7R8sEvV4vp3X2OO1eR7hX2D8N7DVviZ8GL3wH4+0XVNN1GxjWO1vLy0eMuAP3Uqlhyy42sO4+pr5I8S6PqPh3Xr3RNVgMF7ZStFMh6ZHceoIwQe4Ir0slx0qkZYaq7zp6X7ro/8zlx2GUWqsFaMvwfY+kP2FtPczeKdWI+QLb2yn1Pzsf/AGWj9rXwH4017xnb+INH0K41DTYNPSAvbYkcMHdmyg+bHzDkA16X+yt4Yfw38H9Pe4jKXWqu2oSgjBAfAQf98Kp/GvVq+MxWcSw+b1MTSSdtNey0/Q9ulgVUwcaU9Ov6n5nyxSwSvDPE8UqHDo6lWU+hB6V3n7O//Ja/C/8A19N/6LetP9qrWYdW+M2pRwBNmnxRWZZQBuZRubPqQzEfhWX+zqf+L2eGP+vpv/Rb1+gVq8sRlcqslZyg3b1R8zCkqWMUE72kvzH/ALTh/wCL6eJP+ukP/oiOvPbC7nsL+3vrVylxbSrNEw/hZSCD+Yrvv2nTj47eJf8ArpD/AOiI685zxWmWpPA0U/5Y/kisXpiJvzf5n1zqP7U/hO30+FrPQdWvLxolMqNsijV8cjdkkjPfFeifBP4j2PxO8K3GoraJZ3UE7QXVn5nmbAeVOcDIZfbqCO1fn+54r6e/Y28B+LNPv5fGd3M+naNeW5iS1dPnvRnKvg/dVTyG6nJxwc18nnWQ4DB4OU4e7Lo23r5HsYHH4itWUZar+tTg/GMWrfAL4y315o2mafcQ3UbyaVLeRM6xwueQuGHzLyh9vrV4ftSfET/oH+Hv/AaT/wCOV9JfHD4c2XxI8HSaZIUg1K3Jl0+6Yf6uTH3T/st0P4HtXwNr+kaloGs3Wj6xaSWl9aSGOaJxyD/UHqCOCK6cong83pJ4iCdWKs79V0f+fmRjI1sHL927RZ7Sn7UXxFdgiaboDMxwALWUkn/v5WP8S/jd488U+F7nwx4j0bTrO2vNjEizlik+VgwK7m9QO1dV+zXaad4Z+FHi/wCKTadDqOr6bvhs0lXIiCorZHpkuMkc4WuV8XfHbVvGPgK98O+KvD2lahdTShra+VTGbbvlV5+YHocjjIINa0sPh/rTWHwyag0m72ae90vL19CJVKnsk6lV3ktrHln2C/wD9guuf+mLf4VLpx1ixvvO07+0LW8iH37fekiA+68jNfWXwp+LHivX/gx4z8T3/wDZ/wBv0OJvsfl25VPli3DcM88/Ssz9lzxXrXjHxN4/8SajNZQ6pcWdqPMEeyFCiyKrEZ6DAJ59a1qZzXhTrSqUlanZP3r3bt/d2syI4Gm5QUZv3vL18z5i1N9b1C8+06odRu7mT5RJc73dsdstyfpVKSKWOXypI3SQHGxlIP5V9C/G7xj450O98J6hq/izwrrpstR+2wroy4ZHjABD8n5WVyPzrt/FXgW28U/tFeCvGVjGJdJ1KxXUp2xlS0CqUJ+u+Efga0WdeyhGVSCUWpNWfWPTVLdEvA88moyu01+PXc8Z+Hfxm8d+BPDUXhrRtGsHt4XeUG4s5WkJdiSThhxnjp2ropP2mPifGheTRNHRB1ZrGYAfjvqPV/jV4gtPjxrd/wCH5LR7S+u4NNUzxGQCCJyoK8jGSzt/wKuo/bE+IXiHS9Yl8B2v2P8AsfUdMjln3w5lyZG6Nnj7i9vWuGdGnVxMI1MLG9Rczd9el+m6v8zojOUKUnGq7R02+7qcmf2pPiH/ANA/w/8A+A0n/wAcrN8PNrX7QPxe0xtX03T7ZLeJW1KeyiZA1ujZw2WOWOdgPv7V5Poml6hrerWuk6VaS3d9dSCOGGMZZmP8h3J7Dmvvb4EfDa0+G/g9bEmOfVrvEuo3Kj7z44Rf9hc4Hrye9PN54LJ6XNQglVkrK3Tu/wCuosGq+Mlao24rcm+MvxAsPhh4Lj1P7HHczPKltZWQfyw5784OAqg9vQd6840j9qnwlcWrtqWgavZXIQlUjKTRs2OBuyp6+1Zn7ZPgTxXrD23i3T5mv9I063KS2SJ89tzlpQP4geMnqMDt0+V06ZrkyTIsBjcGpzfNK+tm9PL+ka4/H4ihWcY6Iv6tqFxqmq3mp3blri7neeVvVnYsf1Ndt+zm3/F7/C//AF9N/wCi3rz3Negfs5f8lv8AC3/X03/op6+vzBKOCqpfyv8AJniYbWvBvuvzJP2ogV+O/iQHjLwH/wAgR15wpyK9f/bL0ySw+NE14y4j1GxgnQ9iVBjP/oA/OvHEascoqKeBotfyr8jfGwarz9WWLaUwXMVwqRu0Tq4WRdykg5wR3HtX6AfBX4h6V8Q/CMV/ZiO3vrZVivrJT/qHx2H9w4yp/DqDX59jpXQeAfGOveBvEUeueH7oQ3CqUkjcbo5kPVXXIyO/seRXLnuTrMqK5Xacdv8AJ+ppl+MeFnrs9z9A/GXivw/4P0g6r4j1OGwtc7VL5LO3oqjlj7AVxHxZ+GPhX4veHbfVbK7gi1Aw7rDVbfDq6dQr4++n6jt3B+LPHHizxD4z1p9W8R6jLeXByEB4jiX+6i9FH0/HNev/ALGOp+L5PHUmi6dfuPDsUL3OoW8o3xqeilP7rliOnUA5BxXzNXh2rluG+twq2qR1fb0X/B0fY9SGYwxNT2TheLM3wnrXi/4A65qOgeL/AA1/aGg6qNs0JbMM/BG+JyCpypwVI5GM4xUHjn4r+DJ/A174T8B/D620W31Bw91PdBJHB9UHOGxwGzwCcCvtHXNH0rXdNl03WdPtr+zlGHhnjDqffB7+9eA+Pf2WdDvpJLrwfrEukSMci0ugZoPoG++o+u6pwWc4DEVVUxcXGel2m+VtbNpdfkyq+Dr04ctF3X4r5niXw8+JVn4X+FvizwfPpdxcz66jrHcJIoWLMezkHk+tT/AT4m6X8Ol16PVdEuNVh1aGOFkilVAFXfuBz1yHpfEn7P8A8UtGdtmgpqkQPElhOsmf+AnDfpXHXvgXxvZOUuvB+vxMPXT5f/ia+nUcuxUJxU01Npu0uqt56bHl3xNKUW4tcu2h0fxO8VfDnXdFt7Xwf4BPhy8juA8lx5+/fHtYbMZ9SD+Fdh4I/aAk8N/CP/hDzpNxPqcFtNbWV+JgFiV87CQRn5c/oK8rs/A3jW8cJbeENflY+mnS/wDxNdh4d+AXxS1mRc+Hv7NiPWW/nWID/gIJb9KnE0ctVFU6804p31ld3+bv8h054pzcoR1emiPN9KuVs9UtLx1Z1gnSVgDywVgcfpXrHj281r9oD4lW134Q8N3cPlWcdtMZpAY4sO7b3cDCj5unU44zXqXgP9lfSLOSO68Za1Lqjqcm0swYofoXPzMPptr6A8P6JpHh7S49M0PTbbT7OP7sMEYVfqfU+55rxMz4kwsaiqYZc00mk9UlffTr/Wp3YXLari41HaL6dTzv4P8Awq8NfCbRJtWv7q3n1XySb3U58IkSdSqZ+4nqep79gO48F+LvDnjLTG1Lw3qsGoW6uUcpkMjejKcFfbI5FfMP7aup+L4PFlrpF1fuPDVzAs9nBENqO68P5n99gcEZ4AYYFeI+DPFGv+ENaj1fw9qMtjdLwxU5WRf7rqeGX2Nc9Lh+rmmH+t1Kt6ktV29H/wADbzLnmEMLU9jGFoo+9vjB4/0n4eeEZtW1DZNcygx2Vpn5riTHT/dHVj2HuRX5+ahdPfX9xeyRxRvcStKyRIFRSxJIUDoOeBW18QvGviDx54gOteIbpZZggSKKMbYoUH8KLk455Pcmuer6XIcmWW0XzO85b/5I8vMMb9anp8K2DNeg/s3Zb44+FwP+flz/AOQnrztmr1v9kLTH1H422FwqEx6fbT3Ln0+Tyx+riu7Naihgqzf8r/IwwcHKvD1R7R+2n4Lk1zwHbeKLGEyXWhOxmCjk2z4Dn/gJCn6bq+M0ev1EuoIbq2ltrmJJYZUMckbjKupGCCO4Ir4K/aK+Et98N/Ej3djFJN4avZCbOfk+QTz5LnsR2J6j3Br5PhTNY8n1So9V8P6r9T280wjb9rH5nm6N708GqaSVOkgPevuYyPn5QaJmGa93/ZV+J/hDwNHqGj+IYJbKXUbhZP7TA3oFC4WNwOVAJY5GR83OK8HVgaUjNcuPwNPHUHRqXs+xeHryw81OO5+mumX9jqljFfabeW95ayjdHNBIHRh7EcV86/tE/HjV/C3jaDw94MntGbTwTqTyxCRHkPSL22jkkEHJx2NfOPhDxj4q8IXDzeG9dvNOL/fSN8xv7lDlSfcisO5kmubmW5uJXlmlcvJI5yzsTkknuSa+ZwHCcMPiHOs1OPRW/P0PVxGbupTSgrM+pPh1+09e6xr+l6Hrvha2WW+uorb7TaXJVULsF3FGB45/vV9M1+ZWg3R07XtP1DkfZbqKb/vlw39K++4Pi/8ADGdQyeN9HAPOHn2H8jivI4jyaOHqQeFpuzve13/nY7Mtxrqxaqy2O6r5s+Jn7TV14f8AE2reHtF8LQSzafdSWxurq6JR2QkEhFAOMj+9XrU3xe+GMIy/jfRjj+5PuP6Zr4L8XXq6v4s1jVI23JeX086nHUPIzD9DS4cyaOIqzeKpuySte61/AMyxrpQXspas+lPgD8ftZ8SePX0HxnNZpHqQC6e8MQjSGYZ/d+pDDoSTyAO9fSOoXtnp9nJeX91BaW0Q3STTSBEQepJ4FfmREZIZUlido5EYMjKcFSOQQexroPF/jTxZ4ueNvEmvXuorGAEjkfEa47hBhc++M17OYcJwxGIU6LUI9Vb8jiw+bunTamrvoexftV/FLwd400+z8P8Ah+KTUJ7G687+0gNsSjaVZEzywPHPA+UYzXz6BxSgAUu4CvpcBgaeBoKjTvZdzy8RiJYibnLcQDFNZqSRx64qvJLXW5WM4xbHu9fYX7FHgyXSfB974vvoik+ssEtQw5FuhPzf8CbP4KDXgn7Pvwr1H4leJVkuI5YPDtnIDfXWMb+/koe7Hv8A3Rz6Z++bG1t7Gzhs7SFILaCNY4okGFRVGAAPQAV8PxXmsVD6pTer+LyXRHvZXhGpe1l8iWqeuaVpuuaTcaVq9lBe2NyhSaCZdyuP89+oq7RXwSbi7o95q58e/F39l/WNMmm1P4fSnU7E5Y6dM4FxF7Ix4kH1wfrXz5q2n6pot89jq+n3en3SHDQ3MTRuPwIr9RKo61o2j63bfZtY0qx1GH/nndQLKv5MDX1WB4rxFFKNePOu+z/4J5lfLKc3eOh+YaXHrUqzj1r9Abz4HfCe6kMkvgjTlY/88i8Y/JWAqD/hQnwj/wChMtv/AAIm/wDi69qPGOFtrCX4f5nE8mm+qPgcTr607z1r72/4UL8JP+hNtv8AwIm/+Lo/4UL8JP8AoTbb/wACJv8A4uq/1ywn8kvw/wAyP7Fqd0fBPmqaQunrX3v/AMKG+Ev/AEJtt/4ETf8AxdH/AAoX4Sf9Cbbf+BE3/wAXR/rlhP5Jfh/mH9i1P5kfBAdPWl85RX3v/wAKG+Ev/Qm23/gRN/8AF0n/AAob4S/9Cbbf+BE3/wAXR/rlhP5Jfh/mH9i1P5kfBPnr600zr6198f8AChfhJ/0Jtt/4Ezf/ABdH/ChfhJ/0Jtt/4ETf/F0f65YT+SX4f5h/YtT+ZHwKbhfWo3uK+/f+FCfCP/oTLX/wIm/+Lqe0+B3wntZA8fgnTmYf89WkkH5MxFS+MsLbSEvw/wAylk011R+f+mWeo6xepY6VY3V/dOcLDbxNI5P0UE17/wDCT9mHXdWnh1Lx9I2kafw32CJwbmUejEcRj82+nWvrbRND0bQ7b7Nouk2Omw/3LW3WIH/vkCtGvGx3FmIrJxoR5F33f/AO6hllODvLUz/D2jaV4f0e30fRbGGxsbZdsUMS4VR/UnuTya0KKSvlJScndvU9JK2iP//Z" alt="Syllabusलय CTEVT logo">
+<img src="deudalaya-logo.png" alt="Syllabusलय logo">
 <div class="brand">
 <h1>Syllabusलय</h1>
 <p id="sub">CTEVT Diploma in Civil Engineering · 3 years · 6 semesters</p>
 </div>
 </a>
-<div class="top-search"><input type="search" id="q" placeholder="Search subjects or topics…" aria-label="Search"></div>
+<form class="top-search" id="search-form" role="search" autocomplete="off">
+<div class="search-control"><input type="search" id="q" placeholder="Search subject, programme or topic" aria-label="Search education from Pre-School to PhD" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-expanded="false" aria-controls="search-results"><button class="clear-search" id="clear-search" type="button" aria-label="Clear search" title="Clear search" hidden>×</button><button class="search-submit" id="search-submit" type="submit" aria-label="Search" title="Search"><svg class="search-mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8" fill="none" stroke="currentColor" stroke-width="1.8"></circle><path d="m16 16 4.2 4.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></button></div>
+<div class="search-results" id="search-results" role="listbox" aria-label="Search suggestions" hidden></div>
+</form>
 <button class="th" id="th" aria-label="Toggle theme">◐</button>
 </header>
-<div class="progs" id="progs"></div><div class="tabs" id="tabs"></div><div id="list"></div><div class="tot" id="tot"></div>
+<details class="pinned-programmes" id="pinned-programmes" aria-labelledby="pinned-programmes-title" hidden><summary id="pinned-programmes-title">📌 Pinned Programmes</summary><div class="pinned-programme-list" id="pinned-programme-list"></div></details>
+<details class="civil-learning-dashboard" id="civil-learning-dashboard" aria-labelledby="civil-learning-title" hidden><summary id="civil-learning-title">Civil Engineering learning progress</summary><div class="learning-overview" id="learning-overview"></div><div class="learning-actions"><button class="continue-learning" id="continue-learning" type="button" hidden>Continue from last chapter</button></div></details>
+<div class="progs" id="progs"></div><div id="programme-content-home"><div class="tabs" id="tabs"></div><div id="list"></div><div class="tot" id="tot"></div></div>
 
 </div>
 <script>
@@ -182,7 +318,7 @@ var CIVIL=[
 ["5. Development of surfaces"],
 ["6. Intersection of solids"]
 ]],
-["EG 2102 CE","Applied Mechanics",6,100,[
+["EG 1202 CE","Applied Mechanics",6,100,[
 ["1. Forces on particle and rigid body"],
 ["2. Equilibrium of forces"],
 ["3. Friction"],
@@ -1051,32 +1187,120 @@ PROGS.alevel={full:'Cambridge A Level',d:[{n:'A Level',s:[]}],key:'syllabuslaya:
 
 PROGS.masters={full:'Master’s Degree Programmes',d:[{n:'Master’s Degree',s:[]}],key:'syllabuslaya:done:masters',q:'Master’s',level:'Masters'};
 PROGS.phd={full:'Doctoral / PhD Programmes',d:[{n:'PhD / Doctoral',s:[]}],key:'syllabuslaya:done:phd',q:'PhD',level:'PhD'};
+var TU_PSYCHOLOGY_SOURCE="https://portal.tu.edu.np/downloads/Up_PsychologyFirst-FourthYe_2023_09_10_16_29_58.pdf";
+var TU_BASW_SOURCE="https://portal.tu.edu.np/downloads/up_SocialWorkfirst-fourth_2023_09_10_16_26_43.pdf";
+var TU_PSYCHOLOGY=[
+ {n:'First Year',s:[['Psy 421','Introduction to Psychology',null,100,[],{source:TU_PSYCHOLOGY_SOURCE,assessment:'Theory 70 + Practical 30'}],['Psy 422','Social Psychology',null,100,[],{source:TU_PSYCHOLOGY_SOURCE,assessment:'Theory 70 + Practical 30'}]]},
+ {n:'Second Year',s:[['Psy 423','Adolescence and Juvenile Delinquency',null,100,[],{source:TU_PSYCHOLOGY_SOURCE,assessment:'Theory 70 + Practical 30'}],['Psy 424','Abnormal Psychology',null,100,[],{source:TU_PSYCHOLOGY_SOURCE,assessment:'Theory 70 + Practical 30'}]]},
+ {n:'Third Year',s:[['Psy 425','Psychosocial Counseling',null,100,[],{source:TU_PSYCHOLOGY_SOURCE,assessment:'Theory 70 + Practical 30'}],['Psy 410','Elective – General Psychology',null,100,[],{source:TU_PSYCHOLOGY_SOURCE,assessment:'Elective; consult current campus course offering'}]]},
+ {n:'Fourth Year',s:[['Psy 426','Industrial and Organizational Psychology',null,100,[],{source:TU_PSYCHOLOGY_SOURCE,assessment:'Theory 70 + Practical 30'}],['Psy 427','Research Methods and Academic Writing',null,100,[],{source:TU_PSYCHOLOGY_SOURCE,assessment:'Theory 70 + Practical 30'}]]}
+];
+var TU_BASW=[
+ {n:'First Year',s:[['SW 421','Introduction to Social Work',null,100,[],{source:TU_BASW_SOURCE,assessment:'Theory + practical; 70 external + 30 internal'}],['SW 422','Basic Sociology for Social Work',null,100,[],{source:TU_BASW_SOURCE,assessment:'See official course document'}]]},
+ {n:'Second Year',s:[['SW 423','Basic Psychology for Social Work',null,100,[],{source:TU_BASW_SOURCE,assessment:'See official course document'}],['SW 424A','Social Case Work Practice',null,50,[],{source:TU_BASW_SOURCE,assessment:'Practice course; see official course document'}],['SW 424B','Social Work Practice with Groups',null,50,[],{source:TU_BASW_SOURCE,assessment:'Practice course; see official course document'}]]},
+ {n:'Third Year',s:[['SW 425A','Community Organization (Practical)',null,50,[],{source:TU_BASW_SOURCE,assessment:'Practical; field assessment'}],['SW425B','Development and Social Work (Practical)',null,50,[],{source:TU_BASW_SOURCE,assessment:'Practical; field assessment'}],['SW 410','Social Policy and Welfare',null,100,[],{source:TU_BASW_SOURCE,assessment:'Theory 70 + Practical 30; elective'}]]},
+ {n:'Fourth Year',s:[['SW 426','Research Method and Academic Writing',150,100,[],{source:TU_BASW_SOURCE,assessment:'Theory 70 + Practical 30'}],['SW 427','Indigenous Social Work Practice of Nepal (Practical)',null,100,[],{source:TU_BASW_SOURCE,assessment:'Practical field placement and report'}]]}
+];
+PROGS.tu_psychology={full:'TU Four-Year BA · Psychology Major (2076)',d:TU_PSYCHOLOGY,key:'syllabuslaya:done:tu_psychology',q:'BA Psychology · TU',level:'Bachelor',structure:'Four academic years · annual examinations',source:TU_PSYCHOLOGY_SOURCE,notice:'TU BA is interdisciplinary and annual. TU describes two major subjects; a Psychology + Social Work combination depends on the campus offering both and current faculty rules. The Psychology curriculum below is the verified TU Psychology 2076 curriculum. It is not an eight-semester programme.'};
+PROGS.tu_basw={full:'TU Bachelor of Arts in Social Work (BASW)',d:TU_BASW,key:'syllabuslaya:done:tu_basw',q:'BASW · Social Work · TU',level:'Bachelor',structure:'Four academic years · annual examinations',source:TU_BASW_SOURCE,notice:'This is TU’s distinct Bachelor of Arts in Social Work (BASW) Courses of Study 2019. It is not the BA Social Work major syllabus and is not merged into the Psychology major.'};
+PROGS.tu_ba_socialwork={full:'TU Four-Year BA · Social Work Major',d:Array.from({length:4},function(_,i){return{n:['First Year','Second Year','Third Year','Fourth Year'][i],s:[]}}),key:'syllabuslaya:done:tu_ba_socialwork',q:'BA Social Work Major · TU',level:'Bachelor',structure:'Four academic years · annual BA framework',official:'https://fohss.tu.edu.np/downloads?page=7',notice:'TU lists a separate BA_4yr_syllabus_Social_Work document. Its curriculum details are awaiting document-level verification. This pathway is distinct from the verified BASW 2019 course of study.'};
+var CIVIL_CURRICULUM_VERSION="CTEVT Diploma in Civil Engineering · First Revision 2021";
+var CIVIL_COMMON_SOURCE="https://www.ctevt.org.np/uploads/docs/2021-10-31_diploma_in_engineering_first_year_all_2021.pdf";
+var CIVIL_SOURCE="https://seecs.ctevt.org.np/public/uploads/docs/2024-03-25_diploma_in_civil_engineering_revised_2021.pdf";
+var CIVIL_HOURS={
+"EG 1101 SH":[4,0,0,0],"EG 1102 SH":[4,0,0,0],"EG 1103 SH":[4,2,0,0],"EG 1104 SH":[4,2,0,2],"EG 1105 SH":[4,2,0,2],"EG 1101 AR":[1,0,4,0],"EG 1101 CT":[2,0,2,0],
+"EG 1201 SH":[4,2,0,0],"EG 1202 SH":[4,2,0,2],"EG 1203 SH":[4,2,0,2],"EG 1201 CE":[2,0,6,0],"EG 1201 AR":[0,0,4,0],"EG 1202 CE":[3,2,0,"2/2"],
+"EG 2101 SH":[3,1,0,0],"EG 2101 CE":[3,0,4,0],"EG 2102 CE":[3,0,9,0],"EG 2103 CE":[3,1,0,"2/2"],"EG 2104 CE":[6,0,0,"2/2"],"EG 2105 CE":[4,0,0,"2/2"],
+"EG 2201 SH":[2,0,0,0],"EG 2201 AR":[1,0,4,0],"EG 2201 CE":[3,0,4,0],"EG 2202 CE":[3,3,1,0],"EG 2203 CE":[4,1,0,"2/2"],"EG 2204 CE":[4,2,0,"2/2"],"EG 2205 CE":[4,1,0,"2/2"],
+"EG 3101 CE":[3,0,4,0],"EG 3102 CE":[3,3,0,0],"EG 3103 CE":[4,2,2,0],"EG 3104 CE":[3,1,0,"2/2"],"EG 3105 CE":[3,1,0,0],"EG 3106 CE":[5,1,0,0],"EG 3107 CE":[2,1,1,0],
+"EG 3201 CE":[0,0,80,0],"EG 3202 CE":[3,0,0,0],"EG 3203 CE":[3,3,0,0],"EG 3204 CE":[4,2,2,0],"EG 3201 MG":[3,0,2,0],"EG 3205 CE":[0,0,10,0],"EG 3206 CE":[3,0,3,0]
+};
+var CIVIL_MARKS={
+"EG 1101 SH":[20,80,0,0],"EG 1102 SH":[20,80,0,0],"EG 1103 SH":[20,80,0,0],"EG 1104 SH":[20,60,10,10],"EG 1105 SH":[20,60,10,10],"EG 1101 AR":[0,0,60,40],"EG 1101 CT":[10,40,30,20],
+"EG 1201 SH":[20,80,0,0],"EG 1202 SH":[20,60,10,10],"EG 1203 SH":[20,60,10,10],"EG 1201 CE":[0,0,60,40],"EG 1201 AR":[0,0,60,40],"EG 1202 CE":[20,60,20,0],
+"EG 2101 SH":[20,80,0,0],"EG 2101 CE":[20,80,60,40],"EG 2102 CE":[0,0,120,80],"EG 2103 CE":[20,80,25,0],"EG 2104 CE":[20,80,25,0],"EG 2105 CE":[20,80,25,0],
+"EG 2201 SH":[10,40,0,0],"EG 2201 AR":[0,0,60,40],"EG 2201 CE":[20,80,60,40],"EG 2202 CE":[20,80,25,0],"EG 2203 CE":[20,80,25,0],"EG 2204 CE":[20,80,25,0],"EG 2205 CE":[20,80,25,0],
+"EG 3101 CE":[20,80,60,40],"EG 3102 CE":[20,80,0,0],"EG 3103 CE":[20,80,30,20],"EG 3104 CE":[20,80,25,0],"EG 3105 CE":[20,80,0,0],"EG 3106 CE":[20,80,0,0],"EG 3107 CE":[10,40,25,0],
+"EG 3201 CE":[0,0,60,40],"EG 3202 CE":[20,80,0,0],"EG 3203 CE":[20,80,0,0],"EG 3204 CE":[20,80,30,20],"EG 3201 MG":[20,60,10,10],"EG 3205 CE":[0,0,60,40],"EG 3206 CE":[20,80,30,20]
+};
+CIVIL.forEach(function(semester,semesterIndex){semester.s.forEach(function(subject){var hours=CIVIL_HOURS[subject[0]]||[null,null,null,null],marks=CIVIL_MARKS[subject[0]]||[null,null,null,null];subject[5]={version:CIVIL_CURRICULUM_VERSION,hours:{lecture:hours[0],tutorial:hours[1],practical:hours[2],lab:hours[3]},assessment:{theoryInternal:marks[0],theoryFinal:marks[1],practicalInternal:marks[2],practicalFinal:marks[3]},source:semesterIndex<2?CIVIL_COMMON_SOURCE:CIVIL_SOURCE,passRule:"Minimum 40% in theory and 50% in practical; students must also pass internal assessment and the semester final examination in each subject."}})});
 var prog="civil",D=CIVIL,PQ="Civil",key=PROGS.civil.key,done={},cur=0,$=function(i){return document.getElementById(i)};
+var SEMESTER_STORAGE_PREFIX="syllabuslaya:last-semester:";
+var PINNED_PROGRAMS_KEY="syllabuslaya:pinned-programmes:v1";
+function readStoredJSON(storageKey,fallback){try{var value=localStorage.getItem(storageKey);return value===null?fallback:JSON.parse(value)}catch(e){return fallback}}
+function writeStoredJSON(storageKey,value){try{localStorage.setItem(storageKey,JSON.stringify(value));return true}catch(e){return false}}
+function semesterStorageKey(programKey){return SEMESTER_STORAGE_PREFIX+programKey}
+function saveSemesterIndex(programKey,index){return writeStoredJSON(semesterStorageKey(programKey),index)}
+function getSavedSemesterIndex(programKey,count){var index=readStoredJSON(semesterStorageKey(programKey),0);return Number.isInteger(index)&&index>=0&&index<count?index:0}
+function getPinnedPrograms(){var list=readStoredJSON(PINNED_PROGRAMS_KEY,[]);if(!Array.isArray(list))return[];return list.filter(function(p,i){return Object.prototype.hasOwnProperty.call(PROGS,p)&&list.indexOf(p)===i})}
+var pinnedProgramKeys=getPinnedPrograms();
+function renderPinnedPrograms(){var section=$("pinned-programmes"),list=$("pinned-programme-list");if(!section||!list)return;list.innerHTML="";section.hidden=!pinnedProgramKeys.length;pinnedProgramKeys.forEach(function(p){var item=document.createElement("span");item.className="pinned-programme";var open=document.createElement("button");open.type="button";open.className="pinned-programme-open";open.textContent="📌 "+PROGS[p].full;open.onclick=function(){activateProg(p)};var remove=createProgrammePinButton(p);item.appendChild(open);item.appendChild(remove);list.appendChild(item)})}
+function togglePinnedProgram(programKey){var i=pinnedProgramKeys.indexOf(programKey);if(i>=0)pinnedProgramKeys.splice(i,1);else if(Object.prototype.hasOwnProperty.call(PROGS,programKey))pinnedProgramKeys.push(programKey);writeStoredJSON(PINNED_PROGRAMS_KEY,pinnedProgramKeys);renderPinnedPrograms();updateProgrammePinButtons()}
+function createProgrammePinButton(programKey){var button=document.createElement("button"),pinned=pinnedProgramKeys.indexOf(programKey)>=0,name=PROGS[programKey].full;button.type="button";button.className="programme-pin";button.dataset.programKey=programKey;button.textContent=pinned?"📌":"📍";button.setAttribute("aria-pressed",String(pinned));button.setAttribute("aria-label",(pinned?"Unpin ":"Pin ")+name);button.title=(pinned?"Unpin ":"Pin ")+name;button.onclick=function(e){e.preventDefault();e.stopPropagation();togglePinnedProgram(programKey)};return button}
+function updateProgrammePinButtons(){Array.prototype.forEach.call(document.querySelectorAll(".programme-pin"),function(button){var p=button.dataset.programKey,pinned=pinnedProgramKeys.indexOf(p)>=0,name=PROGS[p].full;button.textContent=pinned?"📌":"📍";button.setAttribute("aria-pressed",String(pinned));button.setAttribute("aria-label",(pinned?"Unpin ":"Pin ")+name);button.title=(pinned?"Unpin ":"Pin ")+name})}
+function createProgrammeButton(programKey,label){var group=document.createElement("span");group.className="programme-choice";var button=document.createElement("button");button.type="button";button.textContent=label||PROGS[programKey].q;if(programKey===prog)button.className="on";button.onclick=function(){activateProg(programKey)};group.appendChild(button);group.appendChild(createProgrammePinButton(programKey));return group}
+function createCivilProgrammeToggle(){var details=document.createElement("details");details.id="inline-civil-toggle";details.className="inline-civil-toggle";details.open=false;var summary=document.createElement("summary");summary.textContent=PROGS.civil.q;details.appendChild(summary);var pin=createProgrammePinButton("civil");pin.className+=" inline-civil-pin";details.appendChild(pin);var content=document.createElement("div");content.className="inline-civil-content";details.appendChild(content);details.addEventListener("toggle",function(){if(details.open)activateProg("civil");else{restoreProgrammeContent();document.body.classList.add("intro-only")}});return details}
+function restoreProgrammeContent(){var home=$("programme-content-home");if(!home)return;["tabs","list","tot"].forEach(function(id){var node=$(id);if(node&&node.parentNode!==home)home.appendChild(node)})}
+var CIVIL_LEARNING_KEY="syllabuslaya:civil-learning:revised-2021:v1";
+function loadCivilLearning(){var saved=readStoredJSON(CIVIL_LEARNING_KEY,{});return{completedChapters:Array.isArray(saved.completedChapters)?saved.completedChapters:[],bookmarkedChapters:Array.isArray(saved.bookmarkedChapters)?saved.bookmarkedChapters:[],bookmarkedTopics:Array.isArray(saved.bookmarkedTopics)?saved.bookmarkedTopics:[],savedResources:Array.isArray(saved.savedResources)?saved.savedResources:[],lastVisited:saved.lastVisited&&typeof saved.lastVisited==="object"?saved.lastVisited:null}}
+var civilLearning=loadCivilLearning();
+function saveCivilLearning(){return writeStoredJSON(CIVIL_LEARNING_KEY,civilLearning)}
+function toggleLearningItem(listName,itemKey){var list=civilLearning[listName],index=list.indexOf(itemKey);if(index>=0)list.splice(index,1);else list.push(itemKey);saveCivilLearning()}
+function renderCivilProgress(){var section=$("civil-learning-dashboard"),overview=$("learning-overview"),resume=$("continue-learning");if(!section||!overview||!resume)return;section.hidden=prog!=="civil";if(prog!=="civil")return;var totalChapters=0,doneChapters=0,totalSubjects=0,doneSubjects=0,semesterTotal=0,semesterDone=0;CIVIL.forEach(function(semester,semesterIndex){semester.s.forEach(function(subject){totalSubjects++;if(done[subject[0]])doneSubjects++;var chapterCount=(subject[4]||[]).length;totalChapters+=chapterCount;doneChapters+=(subject[4]||[]).filter(function(unit,index){return civilLearning.completedChapters.indexOf(subject[0]+":"+index)>=0}).length;if(semesterIndex===cur){semesterTotal+=chapterCount+1;if(done[subject[0]])semesterDone++;semesterDone+=(subject[4]||[]).filter(function(unit,index){return civilLearning.completedChapters.indexOf(subject[0]+":"+index)>=0}).length}})});var total=totalChapters+totalSubjects,completed=doneChapters+doneSubjects,overall=total?Math.round(completed/total*100):0,semesterPercent=semesterTotal?Math.round(semesterDone/semesterTotal*100):0;overview.innerHTML="<span>"+CIVIL[cur].n+" progress · "+semesterPercent+"%</span><span>Overall programme progress · "+overall+"%</span><small>"+doneSubjects+" / "+totalSubjects+" subjects · "+doneChapters+" / "+totalChapters+" chapters completed</small>";resume.hidden=!civilLearning.lastVisited}
+function renderTopicResourceLinks(subject,topic,source){var query=encodeURIComponent("CTEVT Nepal Diploma Civil Engineering "+subject[1]+" "+topic),resourceKey=subject[0]+":"+encodeURIComponent(topic),saved=civilLearning.savedResources.indexOf(resourceKey)>=0;return '<details class="topic-resources"><summary>Resources</summary><div class="course-resources"><a href="'+source+'" target="_blank" rel="noopener noreferrer">📄 Official curriculum PDF</a><a href="https://www.google.com/search?q='+encodeURIComponent("site:ctevt.org.np "+subject[0]+" "+topic+" question paper")+'" target="_blank" rel="noopener noreferrer">📝 Search question papers</a><a href="https://www.youtube.com/results?search_query='+query+'+lesson" target="_blank" rel="noopener noreferrer">▶ Search YouTube lessons</a><button type="button" class="resource-save" data-resource-key="'+resourceKey+'" aria-pressed="'+saved+'">'+(saved?"✓ Links saved":"☆ Save links")+'</button></div></details>'}
+function topicBookmarkButton(subject,topic,key){var bookmarked=civilLearning.bookmarkedTopics.indexOf(key)>=0;return '<button type="button" class="topic-bookmark" data-topic-key="'+key+'" aria-pressed="'+bookmarked+'">'+(bookmarked?"★ Bookmarked":"☆ Bookmark topic")+'</button>'}
+function renderTopicItem(subject,topic,key,source){return '<li>'+topic+topicBookmarkButton(subject,topic,key)+renderTopicResourceLinks(subject,topic,source)+'</li>'}
+function renderCurriculumUnit(unit,unitIndex,subject,source){var title=Array.isArray(unit)?unit[0]:unit,children=Array.isArray(unit)&&Array.isArray(unit[1])?unit[1]:[],chapterKey=subject[0]+":"+unitIndex,complete=civilLearning.completedChapters.indexOf(chapterKey)>=0,bookmarked=civilLearning.bookmarkedChapters.indexOf(chapterKey)>=0,content=children.length?"<ul>"+children.map(function(child,childIndex){var topicKey=subject[0]+":"+unitIndex+":"+childIndex;if(Array.isArray(child)){var nested=Array.isArray(child[1])?"<ul>"+child[1].map(function(topic,topicIndex){return renderTopicItem(subject,topic,topicKey+":"+topicIndex,source)}).join("")+"</ul>":"";return"<li>"+child[0]+topicBookmarkButton(subject,child[0],topicKey)+renderTopicResourceLinks(subject,child[0],source)+nested+"</li>"}return renderTopicItem(subject,child,topicKey,source)}).join("")+"</ul>":"";return '<li><details class="curriculum-unit" data-chapter-key="'+chapterKey+'" data-chapter-index="'+unitIndex+'"><summary>'+title+'</summary><div class="chapter-actions"><label><input class="chapter-complete" type="checkbox" data-chapter-key="'+chapterKey+'" '+(complete?"checked":"")+'> Completed</label><button class="chapter-bookmark" type="button" data-chapter-key="'+chapterKey+'" aria-pressed="'+bookmarked+'">'+(bookmarked?"★ Bookmarked":"☆ Bookmark")+'</button></div>'+renderTopicResourceLinks(subject,title,source)+content+'</details></li>'}
+function continueCivilLearning(){var point=civilLearning.lastVisited;if(!point||!CIVIL[point.semesterIndex])return;prog="civil";D=CIVIL;PQ="Civil";cur=point.semesterIndex;document.body.classList.remove("intro-only");saveSemesterIndex(prog,cur);resetSearchField();render();var card=Array.prototype.find.call(document.querySelectorAll("#list .sub"),function(el){return el.getAttribute("data-subject-code")===point.subjectCode});if(!card)return;var subject=card.querySelector(".subject-open"),chapter=card.querySelector('[data-chapter-key="'+point.chapterKey+'"]');if(subject)subject.open=true;if(chapter)chapter.open=true;card.scrollIntoView({behavior:"smooth",block:"center"})}
 function save(){try{localStorage.setItem(key,JSON.stringify(done))}catch(e){}}
 function stats(){var a=0,d=0;D.forEach(function(x){x.s.forEach(function(s){a++;if(done[s[0]])d++})});
 var el;if(el=$("sDone"))el.textContent=d;if(el=$("sAll"))el.textContent=a;var p=a?Math.round(d/a*100):0;if(el=$("sPct"))el.textContent=p+"%";if(el=$("bar"))el.style.width=p+"%"}
-function tabs(){$("tabs").innerHTML="";var box=document.createElement("details");box.className="semester-selector";box.open=false;var title=document.createElement("summary");title.textContent="Choose Semester · "+(D[cur]?D[cur].n:"");box.appendChild(title);var row=document.createElement("div");row.className="prog-row tabs";D.forEach(function(x,i){var b=document.createElement("button");b.textContent=x.n;if(i===cur&&!$("q").value)b.className="on";b.onclick=function(){cur=i;$("q").value="";render()};row.appendChild(b)});box.appendChild(row);$("tabs").appendChild(box)}
+function tabs(){$("tabs").innerHTML="";var box=document.createElement("div");box.className="semester-selector";var label=(prog==="tu_psychology"||prog==="tu_basw"||prog==="tu_ba_socialwork")?"Academic Year":"Semester",title=document.createElement("strong");title.className="semester-selector-title";title.textContent="Choose "+label+" · "+(D[cur]?D[cur].n:"");box.appendChild(title);var row=document.createElement("div");row.className="prog-row tabs";D.forEach(function(x,i){var b=document.createElement("button");b.type="button";b.textContent=x.n;if(i===cur&&!$("q").value)b.className="on";b.setAttribute("aria-pressed",String(i===cur));b.onclick=function(){cur=i;saveSemesterIndex(prog,cur);resetSearchField();render()};row.appendChild(b)});box.appendChild(row);$("tabs").appendChild(box)}
 function render(){tabs();var q=$("q").value.trim().toLowerCase(),L=$("list");L.innerHTML="";var tot=0,n=0;
 D.forEach(function(x,i){if(!q&&i!==cur)return;if(!x.s.length){return;}x.s.forEach(function(s){
 var hay=(s[0]+" "+s[1]+" "+(s[4]||[]).join(" ")).toLowerCase();if(q&&hay.indexOf(q)<0)return;
-n++;tot+=s[3];var el=document.createElement("div");el.className="sub"+(done[s[0]]?" done":"");
-var h='<div class="row"><input type="checkbox" '+(done[s[0]]?"checked":"")+' aria-label="Mark done"><div class="t"><strong>'+s[1]+'</strong><small>'+s[0]+(q?'<span class="tag">'+x.n+'</span>':'')+(s[2]?' · '+s[2]+' hrs/week':'')+'</small></div><div class="mk">'+s[3]+' marks</div></div>';
-
-if(s[4]){function topicLinks(label){
-  var base=s[1]+" "+label;
-  var pdf="https://www.google.com/search?q="+encodeURIComponent('CTEVT Diploma '+PQ+' "'+base+'" (pdf OR notes OR "question paper" OR handout)');
-  var yt="https://www.youtube.com/results?search_query="+encodeURIComponent("CTEVT "+base+" (tutorial OR lecture OR solution OR important)");
-  return ' <span class="tlinks"><a href="'+pdf+'" target="_blank" rel="noopener" title="PDF / notes">📄</a><a href="'+yt+'" target="_blank" rel="noopener" title="YouTube">▶</a></span>';
-}
+n++;tot+=s[3];var el=document.createElement("div");el.className="sub"+(done[s[0]]?" done":"");el.setAttribute("data-subject-code",s[0]);
+var h=prog==="civil"?'<div class="row civil-subject-meta"><input type="checkbox" '+(done[s[0]]?"checked":"")+' aria-label="Mark done"><div class="t"><small>'+(s[2]?s[2]+' hrs/week':'')+'</small></div></div>':'<div class="row"><input type="checkbox" '+(done[s[0]]?"checked":"")+' aria-label="Mark done"><div class="t"><strong>'+s[1]+'</strong><small>'+s[0]+(q?'<span class="tag">'+x.n+'</span>':'')+(s[2]?' · '+s[2]+' hrs/week':'')+'</small></div><div class="mk">'+s[3]+' marks</div></div>';
+if(prog==="civil"&&s[5]){
+var source=s[5].source;
+el.innerHTML='<details class="subject-open"><summary><strong>'+s[1]+'</strong><small> · '+s[0]+' · '+s[3]+' full marks</small></summary><div class="subject-content">'+h+'<details><summary>Units & chapters ('+(s[4]||[]).length+')</summary><ul class="topics">'+(s[4]||[]).map(function(unit,index){return renderCurriculumUnit(unit,index,s,source)}).join("")+'</ul></details></div></details>';
+el.querySelector("input").onchange=function(e){if(e.target.checked)done[s[0]]=1;else delete done[s[0]];save();stats();renderCivilProgress();el.className="sub"+(done[s[0]]?" done":"")};
+Array.prototype.forEach.call(el.querySelectorAll(".chapter-complete"),function(control){control.onchange=function(){toggleLearningItem("completedChapters",control.getAttribute("data-chapter-key"));renderCivilProgress()}});
+Array.prototype.forEach.call(el.querySelectorAll(".chapter-bookmark"),function(button){button.onclick=function(){toggleLearningItem("bookmarkedChapters",button.getAttribute("data-chapter-key"));var saved=civilLearning.bookmarkedChapters.indexOf(button.getAttribute("data-chapter-key"))>=0;button.setAttribute("aria-pressed",String(saved));button.textContent=saved?"★ Bookmarked":"☆ Bookmark"}});
+Array.prototype.forEach.call(el.querySelectorAll(".topic-bookmark"),function(button){button.onclick=function(){var topicKey=button.getAttribute("data-topic-key");toggleLearningItem("bookmarkedTopics",topicKey);var saved=civilLearning.bookmarkedTopics.indexOf(topicKey)>=0;button.setAttribute("aria-pressed",String(saved));button.textContent=saved?"★ Bookmarked":"☆ Bookmark topic"}});
+Array.prototype.forEach.call(el.querySelectorAll(".resource-save"),function(button){button.onclick=function(){var resourceKey=button.getAttribute("data-resource-key");toggleLearningItem("savedResources",resourceKey);var saved=civilLearning.savedResources.indexOf(resourceKey)>=0;button.setAttribute("aria-pressed",String(saved));button.textContent=saved?"✓ Links saved":"☆ Save links"}});
+Array.prototype.forEach.call(el.querySelectorAll(".curriculum-unit"),function(chapter){chapter.addEventListener("toggle",function(){if(!chapter.open)return;civilLearning.lastVisited={semesterIndex:i,subjectCode:s[0],chapterIndex:Number(chapter.getAttribute("data-chapter-index")),chapterKey:chapter.getAttribute("data-chapter-key")};saveCivilLearning();renderCivilProgress()})});
+}else if(prog==="tu_psychology"||prog==="tu_basw"){
+el.innerHTML='<details class="subject-open"><summary><strong>'+s[1]+'</strong><small> · '+s[0]+' · '+s[3]+' full marks</small></summary><div class="subject-content">'+h+'</div></details>';
+el.querySelector("input").onchange=function(e){if(e.target.checked)done[s[0]]=1;else delete done[s[0]];save();stats();el.className="sub"+(done[s[0]]?" done":"")};
+}else{
+if(s[4]){function topicLinks(label){var base=s[1]+" "+label;var pdf="https://www.google.com/search?q="+encodeURIComponent('CTEVT Diploma '+PQ+' "'+base+'" (pdf OR notes OR "question paper" OR handout)');var yt="https://www.youtube.com/results?search_query="+encodeURIComponent("CTEVT "+base+" (tutorial OR lecture OR solution OR important)");return ' <span class="tlinks"><a href="'+pdf+'" target="_blank" rel="noopener" title="PDF / notes">📄</a><a href="'+yt+'" target="_blank" rel="noopener" title="YouTube">▶</a></span>';}
 function topicHtml(t){if(typeof t==="string")return"<li>"+t+topicLinks(t)+"</li>";var title=t[0],subs=t[1]||[];return"<li><details><summary>"+title+topicLinks(title)+"</summary><ul>"+subs.map(function(u){return"<li>"+u+topicLinks(u)+"</li>"}).join("")+"</ul></details></li>"}
 h+='<details><summary>Topics ('+s[4].length+')</summary><ul class="topics">'+s[4].map(topicHtml).join("")+'</ul></details>';}
 if(!s[4])h+='<div class="papers" style="color:var(--mute)">Topic breakdown not added yet.</div>';
 h+='<div class="papers">📄 <a href="https://www.google.com/search?q=CTEVT+Diploma+'+encodeURIComponent(PQ)+'+%22'+encodeURIComponent(s[1])+'%22+(question+paper+OR+%22old+question%22+OR+model)+ (2079+OR+2080+OR+2081+OR+2082)" target="_blank" rel="noopener">PDF search</a> · <a href="https://www.youtube.com/results?search_query=CTEVT+'+encodeURIComponent(s[1])+'+ (question+OR+%22old+question%22+OR+solution+OR+important)+ (2080+OR+2081+OR+Diploma)" target="_blank" rel="noopener">▶ YouTube</a></div>';
-el.innerHTML='<details class="subject-open"><summary><strong>'+s[1]+'</strong><small> · '+s[0]+' · '+s[3]+' marks</small></summary><div class="subject-content">'+h+'</div></details>';el.querySelector("input").onchange=function(e){if(e.target.checked)done[s[0]]=1;else delete done[s[0]];save();stats();el.className="sub"+(done[s[0]]?" done":"")};L.appendChild(el)})});
+el.innerHTML='<details class="subject-open"><summary><strong>'+s[1]+'</strong><small> · '+s[0]+' · '+s[3]+' marks</small></summary><div class="subject-content">'+h+'</div></details>';el.querySelector("input").onchange=function(e){if(e.target.checked)done[s[0]]=1;else delete done[s[0]];save();stats();el.className="sub"+(done[s[0]]?" done":"")};}
+L.appendChild(el)})});
 if(!n){var active=D[cur];if(!q&&active&&active.s.length===0){var entrance=PROGS[prog].level==="Entrance Exams";var official=PROGS[prog].official;L.innerHTML='<div class="info"><strong>'+(entrance?'Entrance Exam Syllabus Coming Soon':'Curriculum Coming Soon')+'</strong><br>Verified, current official syllabus details will be added here. No topics or exam patterns have been invented.'+(official?'<br><br><a href="'+official+'" target="_blank" rel="noopener">View official syllabus / downloads ↗</a>':'')+'</div>';}else{L.innerHTML='<div class="info">No subjects match your search.</div>';}}
-$("tot").textContent=n+" subject"+(n===1?"":"s")+" · "+tot+" total marks"}
-$("q").oninput=render;
-$("th").onclick=function(){var r=document.documentElement,dk=getComputedStyle(r).getPropertyValue("--bg").trim()==="#0b1226";r.setAttribute("data-theme",dk?"light":"dark")};
+$("tot").textContent=n+" subject"+(n===1?"":"s")+" · "+tot+" total marks";renderCivilProgress()}
+$("q").oninput=function(){render();renderSearchSuggestions(this.value)};
+$("q").addEventListener("focus",function(){renderSearchSuggestions(this.value)});
+$("q").addEventListener("keydown",function(e){
+ if(e.key==="ArrowDown"||e.key==="ArrowUp"){
+  e.preventDefault();if($("search-results").hidden)renderSearchSuggestions(this.value);
+  if(!currentSearchResults.length)return;
+  var step=e.key==="ArrowDown"?1:-1;activeSearchIndex=(activeSearchIndex+step+currentSearchResults.length)%currentSearchResults.length;setActiveSearchResult(activeSearchIndex);
+ }else if(e.key==="Enter"&&currentSearchResults.length){e.preventDefault();var index=activeSearchIndex>=0?activeSearchIndex:0;selectSearchResult(currentSearchResults[index])}
+ else if(e.key==="Escape"&&!$("search-results").hidden){e.preventDefault();hideSearchResults()}
+});
+$("search-form").addEventListener("submit",function(e){e.preventDefault();var index=activeSearchIndex>=0?activeSearchIndex:0;if(currentSearchResults[index])selectSearchResult(currentSearchResults[index])});
+$("search-form").querySelector(".search-control").addEventListener("click",function(e){if(!e.target.closest("button,select,.search-category-toggle"))$("q").focus()});
+$("clear-search").addEventListener("click",function(){$("q").value="";render();renderSearchSuggestions("");$("q").focus()});
+document.addEventListener("click",function(e){if(!$("search-form").contains(e.target))hideSearchResults()});
+$("continue-learning").addEventListener("click",continueCivilLearning);
+var savedTheme=null;try{savedTheme=localStorage.getItem("syllabuslaya:theme")}catch(e){}
+if(savedTheme==="light"||savedTheme==="dark")document.documentElement.setAttribute("data-theme",savedTheme);
+$("th").onclick=function(){var r=document.documentElement,dk=getComputedStyle(r).getPropertyValue("--bg").trim()==="#0b1226",next=dk?"light":"dark";r.setAttribute("data-theme",next);try{localStorage.setItem("syllabuslaya:theme",next)}catch(e){}};
 try{if(window.self!==window.top){document.body.classList.add('emb');document.documentElement.setAttribute('data-theme','dark')}}catch(e){document.body.classList.add('emb')}
 // Additional learning pathways: placeholders remain clearly marked until official syllabuses are verified.
 [
@@ -1175,26 +1399,53 @@ try{if(window.self!==window.top){document.body.classList.add('emb');document.doc
 PROGS['entrance-mecee-bl'].official='https://mec.gov.np/en/detail/syllabus-for-bachelor-level-common-entrance-examination-2020-revised-2026';
 PROGS['entrance-ioe'].official='https://ioe.tu.edu.np/downloads?category=445';
 
-function progs(){
-var c=$("progs");c.innerHTML="";
-var whole=document.createElement("details");whole.className="education-toggle";whole.open=false;
-var wholeTitle=document.createElement("summary");var wholeLabel=document.createElement("span");wholeLabel.textContent="Pre-School - PhD";wholeTitle.appendChild(wholeLabel);
-var searchBar=document.querySelector("header .top-search");
-if(searchBar){var searchInput=searchBar.querySelector("input");var searchUI=document.createElement("span");searchUI.className="education-search";
-var searchButton=document.createElement("button");searchButton.type="button";searchButton.className="search-icon";searchButton.setAttribute("aria-label","Close search");searchButton.setAttribute("aria-expanded","true");searchButton.textContent="⌕";
-var inputWrap=document.createElement("span");inputWrap.className="search-input-wrap";inputWrap.hidden=false;inputWrap.appendChild(searchInput);
-searchButton.addEventListener("click",function(e){e.preventDefault();e.stopPropagation();var opening=inputWrap.hidden;inputWrap.hidden=!opening;searchButton.setAttribute("aria-expanded",String(opening));searchButton.setAttribute("aria-label",opening?"Close search":"Open search");if(opening)searchInput.focus();else{searchInput.value="";render();}});
-searchInput.addEventListener("click",function(e){e.stopPropagation()});searchInput.addEventListener("keydown",function(e){e.stopPropagation();if(e.key==="Escape"){inputWrap.hidden=true;searchButton.setAttribute("aria-expanded","false");searchButton.focus()}});
-searchInput.addEventListener("input",function(){if(searchInput.value.trim()){whole.open=true;if(extra)extra.open=true;document.body.classList.remove("intro-only")}});
-searchUI.appendChild(searchButton);searchUI.appendChild(inputWrap);wholeTitle.appendChild(searchUI);
+var EDU_GROUPS=[{label:"1. Pre-School",level:"Pre-School"},{label:"2. School Level · Class 1–10",level:"School Education"},{label:"3. Higher Secondary · Class 11–12",level:"Higher Secondary"},{label:"4. Cambridge A Level",level:"A Level"},{label:"5. Technical Education · CTEVT Diploma",level:"CTEVT"},{label:"6. Bachelor’s Degree",level:"Bachelor"},{label:"7. Master’s Degree",level:"Masters"},{label:"8. PhD / Doctoral Studies",level:"PhD"},{label:"9. लोक सेवा",level:"Competitive Exams"},{label:"10. Foreign Languages · भाषा शिक्षा",level:"Foreign Language"},{label:"11. Entrance Exam Syllabuses · प्रवेश परीक्षा",level:"Entrance Exams"},{label:"12. Pre-Diploma & Skill Training",level:"Pre-Diploma & Skill Training"},{label:"13. Health & Medical Education",level:"Health & Medical Education"},{label:"14. Agriculture & Forestry Education",level:"Agriculture & Forestry Education"},{label:"15. Open & Distance Learning",level:"Open & Distance Learning"},{label:"16. Adult & Non-Formal Education",level:"Adult & Non-Formal Education"},{label:"17. Special & Inclusive Education",level:"Special & Inclusive Education"},{label:"18. Teacher Education & Licensing",level:"Teacher Education & Licensing"},{label:"19. Postgraduate & Research Pathways",level:"Postgraduate & Research"},{label:"20. Academic Disciplines & Professional Degrees",level:"Academic Disciplines"},{label:"21. Professional Licensing & Certification",level:"Professional Certification"},{label:"22. International Study & Equivalence",level:"International & Equivalence"}];
+function normalizeSearch(value){return String(value||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLocaleLowerCase().trim()}
+function matchesSearchText(text,query){var value=normalizeSearch(text),terms=normalizeSearch(query).split(/\s+/).filter(Boolean);return terms.every(function(term){return value.indexOf(term)>=0})}
+function flattenTopicText(value,output){output=output||[];if(typeof value==="string")output.push(value);else if(Array.isArray(value))value.forEach(function(item){flattenTopicText(item,output)});return output}
+function collectSearchResults(value){
+ var query=normalizeSearch(value),categories=[],programmes=[],syllabuses=[];
+ if(!query){
+  ["Pre-School","School Education","CTEVT","Bachelor","Competitive Exams","Entrance Exams"].forEach(function(level){var i=EDU_GROUPS.findIndex(function(group){return group.level===level});if(i>=0)categories.push({kind:"category",label:EDU_GROUPS[i].label,detail:"Browse this education category",groupIndex:i})});
+  ["civil","comp"].forEach(function(key){if(PROGS[key])programmes.push({kind:"programme",label:PROGS[key].q,detail:PROGS[key].full,programKey:key})});
+  return categories.concat(programmes);
+ }
+ EDU_GROUPS.forEach(function(group,index){if(matchesSearchText(group.label+" "+group.level,query))categories.push({kind:"category",label:group.label,detail:"Browse this education category",groupIndex:index})});
+ Object.keys(PROGS).forEach(function(programKey){var item=PROGS[programKey];if(matchesSearchText([item.q,item.full,item.level].join(" "),query))programmes.push({kind:"programme",label:item.q,detail:item.full+(item.level?" · "+item.level:""),programKey:programKey})});
+ Object.keys(PROGS).forEach(function(programKey){var item=PROGS[programKey];(item.d||[]).forEach(function(semester,semesterIndex){(semester.s||[]).forEach(function(subject){var topics=flattenTopicText(subject[4]||[]),searchable=[subject[0],subject[1],item.q,item.full,semester.n].concat(topics).join(" ");if(matchesSearchText(searchable,query)){var topicMatch=topics.find(function(topic){return matchesSearchText(topic,query)})||"";syllabuses.push({kind:"syllabus",label:subject[1],detail:(item.level||"CTEVT Diploma")+" · "+item.q+" · "+semester.n+" · "+subject[0]+(topicMatch?" · Topic: "+topicMatch:""),programKey:programKey,semesterIndex:semesterIndex,subjectCode:subject[0],topicMatch:topicMatch})}})})});
+ return categories.concat(programmes,syllabuses);
 }
+var currentSearchResults=[],activeSearchIndex=-1;
+function renderSearchSuggestions(value){
+ var input=$("q"),list=$("search-results"),clear=$("clear-search");currentSearchResults=collectSearchResults(value);activeSearchIndex=-1;list.innerHTML="";clear.hidden=!String(value||"").length;
+ if(!currentSearchResults.length){var empty=document.createElement("div");empty.className="search-empty";empty.setAttribute("role","option");empty.setAttribute("aria-disabled","true");empty.textContent="No matches found. Try an education level, programme, course, or subject.";list.appendChild(empty)}
+ currentSearchResults.forEach(function(item,index){var option=document.createElement("button");option.type="button";option.className="search-suggestion";option.id="search-option-"+index;option.setAttribute("role","option");option.setAttribute("aria-selected","false");
+  var mark=document.createElement("span");mark.className="suggestion-mark";mark.setAttribute("aria-hidden","true");mark.textContent=item.kind==="category"?"↳":item.kind==="programme"?"P":"S";
+  var copy=document.createElement("span");copy.className="suggestion-copy";var name=document.createElement("strong");name.textContent=item.label;var detail=document.createElement("small");detail.textContent=item.detail;copy.appendChild(name);copy.appendChild(detail);
+  var kind=document.createElement("span");kind.className="suggestion-kind";kind.textContent=item.kind==="category"?"Category":item.kind==="programme"?"Programme":"Syllabus";
+  option.appendChild(mark);option.appendChild(copy);option.appendChild(kind);option.addEventListener("click",function(){selectSearchResult(item)});list.appendChild(option);
+ });
+ list.hidden=false;input.setAttribute("aria-expanded","true");document.body.classList.add("search-active");
+}
+function setActiveSearchResult(index){var options=$("search-results").querySelectorAll('[role="option"]');Array.prototype.forEach.call(options,function(option,i){var active=i===index;option.classList.toggle("active",active);option.setAttribute("aria-selected",String(active))});if(index>=0&&options[index])$("q").setAttribute("aria-activedescendant",options[index].id);else $("q").removeAttribute("aria-activedescendant")}
+function hideSearchResults(){$("search-results").hidden=true;$("q").setAttribute("aria-expanded","false");$("q").removeAttribute("aria-activedescendant");document.body.classList.remove("search-active");activeSearchIndex=-1}
+function resetSearchField(){$("q").value="";$("clear-search").hidden=true;hideSearchResults()}
+function scrollToResult(element){if(!element)return;var behavior=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth";element.scrollIntoView({behavior:behavior,block:"start"})}
+function openEducationGroup(index){resetSearchField();document.body.classList.add("intro-only");render();var main=$("search-category-toggle"),groups=main.querySelectorAll(".prog-group"),target=groups[index],additional=main.querySelector(".additional-pathways");if(main)main.open=true;if(index>=8&&additional)additional.open=true;if(target){target.open=true;scrollToResult(target)}}
+function openSyllabusResult(result){hideSearchResults();activateProg(result.programKey);cur=result.semesterIndex;saveSemesterIndex(prog,cur);render();var cards=document.querySelectorAll("#list .sub"),card=null;Array.prototype.forEach.call(cards,function(item){if(item.getAttribute("data-subject-code")===result.subjectCode)card=item});if(!card)return;var subject=card.querySelector(".subject-open");if(subject)subject.open=true;if(result.topicMatch&&subject){var topics=subject.querySelector(".subject-content > details"),groups=subject.querySelectorAll(".topics details");if(topics)topics.open=true;Array.prototype.forEach.call(groups,function(group){if(normalizeSearch(group.textContent).indexOf(normalizeSearch(result.topicMatch))>=0)group.open=true})}scrollToResult(card)}
+function selectSearchResult(result){hideSearchResults();if(result.kind==="category")openEducationGroup(result.groupIndex);else if(result.kind==="programme"){ $("q").value="";activateProg(result.programKey)}else openSyllabusResult(result)}
+
+function progs(){
+var c=$("progs");c.innerHTML="";var priorBrowse=$("search-category-toggle");if(priorBrowse)priorBrowse.remove();
+var whole=document.createElement("details");whole.id="search-category-toggle";whole.className="education-toggle search-category-toggle";whole.open=false;
+var wholeTitle=document.createElement("summary");wholeTitle.setAttribute("aria-label","Pre-School to PhD · Browse all education categories");var wholeLabel=document.createElement("span");wholeLabel.textContent="Pre-School – PhD";wholeTitle.appendChild(wholeLabel);
 whole.appendChild(wholeTitle);
-var content=document.createElement("div");content.className="education-toggle-content";whole.appendChild(content);c.appendChild(whole);
+var content=document.createElement("div");content.className="education-toggle-content";whole.appendChild(content);var control=$("search-form").querySelector(".search-control");control.insertBefore(whole,$("q"));whole.addEventListener("toggle",function(){if(whole.open)hideSearchResults()});
 var extra=document.createElement("details");extra.className="education-toggle additional-pathways";extra.open=false;
 var extraTitle=document.createElement("summary");var extraLabel=document.createElement("span");extraLabel.textContent="Additional Education & Professional Pathways";extraTitle.appendChild(extraLabel);extra.appendChild(extraTitle);
 var extraContent=document.createElement("div");extraContent.className="education-toggle-content";extra.appendChild(extraContent);
 var groupIndex=0;
-[{label:"1. Pre-School",level:"Pre-School"},{label:"2. School Level · Class 1–10",level:"School Education"},{label:"3. Higher Secondary · Class 11–12",level:"Higher Secondary"},{label:"4. Cambridge A Level",level:"A Level"},{label:"5. Technical Education · CTEVT Diploma",level:"CTEVT"},{label:"6. Bachelor’s Degree",level:"Bachelor"},{label:"7. Master’s Degree",level:"Masters"},{label:"8. PhD / Doctoral Studies",level:"PhD"},{label:"9. लोक सेवा",level:"Competitive Exams"},{label:"10. Foreign Languages · भाषा शिक्षा",level:"Foreign Language"},{label:"11. Entrance Exam Syllabuses · प्रवेश परीक्षा",level:"Entrance Exams"},{label:"12. Pre-Diploma & Skill Training",level:"Pre-Diploma & Skill Training"},{label:"13. Health & Medical Education",level:"Health & Medical Education"},{label:"14. Agriculture & Forestry Education",level:"Agriculture & Forestry Education"},{label:"15. Open & Distance Learning",level:"Open & Distance Learning"},{label:"16. Adult & Non-Formal Education",level:"Adult & Non-Formal Education"},{label:"17. Special & Inclusive Education",level:"Special & Inclusive Education"},{label:"18. Teacher Education & Licensing",level:"Teacher Education & Licensing"},{label:"19. Postgraduate & Research Pathways",level:"Postgraduate & Research"},{label:"20. Academic Disciplines & Professional Degrees",level:"Academic Disciplines"},{label:"21. Professional Licensing & Certification",level:"Professional Certification"},{label:"22. International Study & Equivalence",level:"International & Equivalence"}].forEach(function(group){
+EDU_GROUPS.forEach(function(group){
 var box=document.createElement("details");box.className="prog-group";box.open=false;
 var title=document.createElement("summary");title.className="prog-label";
 var groupName=document.createElement("span");groupName.textContent=group.label;title.appendChild(groupName);
@@ -1235,14 +1486,14 @@ if(group.level==="Bachelor"){
  var list=document.createElement("div");list.className="university-list";
  var tu=document.createElement("details");tu.className="university-item";
  var tus=document.createElement("summary");tus.textContent="Tribhuvan University (TU)";tu.appendChild(tus);
- var tur=document.createElement("div");tur.className="prog-row tabs";
- Object.keys(PROGS).forEach(function(k){if(PROGS[k].level!=="Bachelor")return;var b=document.createElement("button");b.textContent=PROGS[k].q;if(k===prog)b.className="on";b.onclick=function(){if(k!==prog)activateProg(k)};tur.appendChild(b)});
+   var tur=document.createElement("div");tur.className="prog-row tabs";
+  Object.keys(PROGS).forEach(function(k){if(PROGS[k].level!=="Bachelor")return;tur.appendChild(createProgrammeButton(k))});
  tu.appendChild(tur);list.appendChild(tu);
- Object.keys(PROGS).forEach(function(k){if(PROGS[k].level!=="Bachelor University")return;var item=document.createElement("details");item.className="university-item";var label=document.createElement("summary");label.textContent=PROGS[k].q;item.appendChild(label);var row=document.createElement("div");row.className="prog-row tabs";var b=document.createElement("button");b.textContent="Bachelor’s Programmes";if(k===prog)b.className="on";b.onclick=function(){if(k!==prog)activateProg(k)};row.appendChild(b);item.appendChild(row);list.appendChild(item)});
+   Object.keys(PROGS).forEach(function(k){if(PROGS[k].level!=="Bachelor University")return;var item=document.createElement("details");item.className="university-item";var label=document.createElement("summary");label.textContent=PROGS[k].q;item.appendChild(label);var row=document.createElement("div");row.className="prog-row tabs";row.appendChild(createProgrammeButton(k,"Bachelor’s Programmes"));item.appendChild(row);list.appendChild(item)});
  wrap.appendChild(list);box.appendChild(wrap);
 }else if(group.level==="Competitive Exams"||group.level==="Foreign Language"){
  var row=document.createElement("div");row.className="prog-row tabs";
- Object.keys(PROGS).forEach(function(k){if(PROGS[k].level!==group.level)return;var b=document.createElement("button");b.textContent=PROGS[k].q;if(k===prog)b.className="on";b.onclick=function(){if(k!==prog)activateProg(k)};row.appendChild(b)});
+  Object.keys(PROGS).forEach(function(k){if(PROGS[k].level!==group.level)return;row.appendChild(createProgrammeButton(k))});
  box.appendChild(row);
  var note=document.createElement("p");note.className="papers";note.textContent=group.level==="Competitive Exams"?"Exam syllabuses will be added by post, service, group and level. Verify each syllabus against the relevant commission or recruiting body's current official notice.":"Language-learning courses and proficiency-exam preparation are separate. Official exam frameworks and level descriptors will be added after verification.";box.appendChild(note);
 }else if(group.level==="CTEVT"){
@@ -1255,11 +1506,11 @@ if(group.level==="Bachelor"){
  {label:"Management and Humanities",levels:["CTEVT Management and Humanities"]},
  {label:"Fashion and Design",levels:["CTEVT Fashion and Design"]}
  ];
- facultyGroups.forEach(function(faculty){var sub=document.createElement("details");sub.className="ctevt-faculty-toggle";sub.open=false;var subTitle=document.createElement("summary");subTitle.textContent=faculty.label;sub.appendChild(subTitle);var row=document.createElement("div");row.className="prog-row tabs";Object.keys(PROGS).forEach(function(k){if(faculty.levels.indexOf(PROGS[k].level||"CTEVT")<0)return;var b=document.createElement("button");b.textContent=PROGS[k].q;if(k===prog)b.className="on";b.onclick=function(){if(k!==prog)activateProg(k)};row.appendChild(b)});sub.appendChild(row);box.appendChild(sub)});
+  facultyGroups.forEach(function(faculty){var sub=document.createElement("details");sub.className="ctevt-faculty-toggle education-toggle";sub.open=false;var subTitle=document.createElement("summary");subTitle.textContent=faculty.label;sub.appendChild(subTitle);var row=document.createElement("div");row.className="prog-row tabs ctevt-programme-list";Object.keys(PROGS).forEach(function(k){if(faculty.levels.indexOf(PROGS[k].level||"CTEVT")<0)return;if(k==="civil")return;row.appendChild(createProgrammeButton(k))});if(faculty.levels.indexOf("CTEVT")>=0)row.appendChild(createCivilProgrammeToggle());sub.appendChild(row);box.appendChild(sub)});
  var note=document.createElement("p");note.className="papers";note.textContent="Programme availability and exact titles vary by current CTEVT curriculum. Entries marked Coming Soon are placeholders until verified against official curriculum documents.";box.appendChild(note);
 }else{
  var row=document.createElement("div");row.className="prog-row tabs";
- Object.keys(PROGS).forEach(function(k){if((PROGS[k].level||"CTEVT")!==group.level)return;var b=document.createElement("button");b.textContent=PROGS[k].q;if(k===prog)b.className="on";b.onclick=function(){if(k!==prog)activateProg(k)};row.appendChild(b)});
+  Object.keys(PROGS).forEach(function(k){if((PROGS[k].level||"CTEVT")!==group.level)return;row.appendChild(createProgrammeButton(k))});
  box.appendChild(row);
  var note=document.createElement("p");note.className="papers";note.textContent="Programme listings are a national pathway directory, not a claim that every programme is offered by every institution. Syllabus and eligibility details will be added only after checking the relevant official university, council or government source.";box.appendChild(note);
 }
@@ -1267,10 +1518,10 @@ if(groupIndex<8){content.appendChild(box);if(groupIndex===7)content.appendChild(
 groupIndex++;
 });
 }
-function activateProg(p){document.body.classList.remove("intro-only");setProg(p)}
-function setProg(p){prog=p;D=PROGS[p].d;key=PROGS[p].key;PQ=PROGS[p].q;cur=0;done={};try{done=JSON.parse(localStorage.getItem(key)||"{}")}catch(e){done={}}
-$("sub").textContent=(PROGS[p].level==="School Education"||PROGS[p].level==="Higher Secondary"||PROGS[p].level==="Pre-School"||PROGS[p].level==="A Level"||PROGS[p].level==="Bachelor"||PROGS[p].level==="Masters"||PROGS[p].level==="PhD"||PROGS[p].level==="Bachelor University"||PROGS[p].level==="Competitive Exams"||PROGS[p].level==="Foreign Language"||PROGS[p].level==="Entrance Exams")?PROGS[p].level+" · "+PROGS[p].q+(PROGS[p].level==="Entrance Exams"?" · Entrance Syllabus Coming Soon":" · Curriculum Coming Soon"):(PROGS[p].level||"CTEVT Diploma")+" · "+PROGS[p].full+" · 6 semesters / programme structure to be confirmed";try{localStorage.setItem("syllabuslaya:prog",p)}catch(e){}
-$("q").value="";progs();stats();render()}
+function activateProg(p){restoreProgrammeContent();if(p==="civil"&&$("inline-civil-toggle")){document.body.classList.remove("intro-only");setProg(p,true);var toggle=$("inline-civil-toggle"),panel=toggle&&toggle.querySelector(".inline-civil-content");if(toggle){toggle.open=true;var parent=toggle.parentElement;while(parent){if(parent instanceof HTMLDetailsElement)parent.open=true;parent=parent.parentElement}}if(panel)["tabs","list","tot"].forEach(function(id){var node=$(id);if(node)panel.appendChild(node)});if(toggle)scrollToResult(toggle);return}document.body.classList.remove("intro-only");setProg(p)}
+function setProg(p,preserveNavigation){prog=p;D=PROGS[p].d;key=PROGS[p].key;PQ=PROGS[p].q;cur=getSavedSemesterIndex(p,D.length);done={};try{done=JSON.parse(localStorage.getItem(key)||"{}")}catch(e){done={}}
+if(p==="civil")$("sub").textContent="CTEVT Nepal · Diploma in Civil Engineering · 3 years · 6 semesters · Diploma level · Engineering faculty · First Revision 2021";else if(PROGS[p].structure)$("sub").textContent=PROGS[p].structure+" · "+PROGS[p].notice;else $("sub").textContent=(PROGS[p].level==="School Education"||PROGS[p].level==="Higher Secondary"||PROGS[p].level==="Pre-School"||PROGS[p].level==="A Level"||PROGS[p].level==="Bachelor"||PROGS[p].level==="Masters"||PROGS[p].level==="PhD"||PROGS[p].level==="Bachelor University"||PROGS[p].level==="Competitive Exams"||PROGS[p].level==="Foreign Language"||PROGS[p].level==="Entrance Exams")?PROGS[p].level+" · "+PROGS[p].q+(PROGS[p].level==="Entrance Exams"?" · Entrance Syllabus Coming Soon":" · Curriculum Coming Soon"):(PROGS[p].level||"CTEVT Diploma")+" · "+PROGS[p].full+" · 6 semesters / programme structure to be confirmed";try{localStorage.setItem("syllabuslaya:prog",p)}catch(e){}
+resetSearchField();if(!preserveNavigation)progs();renderPinnedPrograms();stats();render()}
 document.addEventListener("toggle",function(e){var d=e.target;if(!(d instanceof HTMLDetailsElement)||!d.open)return;var parent=d.parentElement;if(!parent)return;Array.prototype.forEach.call(parent.children,function(sibling){if(sibling!==d&&sibling instanceof HTMLDetailsElement)sibling.open=false})},true);
 var sp="civil";try{sp=localStorage.getItem("syllabuslaya:prog")||"civil"}catch(e){}
 setProg(PROGS[sp]?sp:"civil");
